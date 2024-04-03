@@ -4,6 +4,7 @@
  * Description:       Countdown created with the Interactivity API
  * Requires at least: 6.1
  * Requires PHP:      7.0
+ * Requires Plugins:  gutenberg
  * Version:           0.1.0
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
