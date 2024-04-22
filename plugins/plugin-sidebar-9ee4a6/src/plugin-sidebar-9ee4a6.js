@@ -12,7 +12,7 @@ const MetaBlockField = () => {
 		<PanelBody>
 			<TextControl
 				label="Meta Block Field"
-				value={ meta?.sidebar_plugin_meta_block_field || "" }
+				value={ meta?.sidebar_plugin_meta_block_field || '' }
 				onChange={ ( newValue ) =>
 					setMeta( {
 						...meta,
