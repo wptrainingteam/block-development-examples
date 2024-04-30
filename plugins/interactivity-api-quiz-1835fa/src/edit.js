@@ -7,9 +7,9 @@ import {
 import {
 	PanelBody,
 	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
-	__experimentalToggleGroupControl as ToggleGroupControl,
+	ToggleGroupControl as ToggleGroupControl,
 	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
-	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
+	ToggleGroupControlOption as ToggleGroupControlOption,
 	TextControl,
 } from '@wordpress/components';
 import './editor.scss';
