@@ -238,6 +238,12 @@ importers:
         specifier: ^26.15.0
         version: 26.19.0(@playwright/test@1.40.1)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
 
+  plugins/post-meta-modal-2502fb:
+    devDependencies:
+      '@wordpress/scripts':
+        specifier: ^26.15.0
+        version: 26.19.0(@playwright/test@1.40.1)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
+
   plugins/minimal-block-ca6eda:
     devDependencies:
       '@wordpress/env':
