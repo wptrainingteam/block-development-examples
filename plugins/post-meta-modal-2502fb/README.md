@@ -1,6 +1,6 @@
 ### Block Development Examples - Meta Block bb1e55
 
-The goal of this example is to ...
+This example adds a modal in the Post Editor that allows users to define custom post metadata without having to use the legacy Custom Fields meta box.
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -8,14 +8,6 @@ The goal of this example is to ...
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [📁](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/meta-block-bb1e55) | Meta Block                                                                | <small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#meta">META</a></code></small> | `bb1e55`                                                                                                                                | [📦](https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/meta-block-bb1e55.zip "Install the plugin using this zip and activate it. Then use the ID of the block (bb1e55) to find it and add it to a post to see it in action") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/#%7B%22landingPage%22:%22/wp-admin/plugins.php%22,%22steps%22:%5B%7B%22step%22:%22login%22,%22username%22:%22admin%22,%22password%22:%22password%22%7D,%7B%22step%22:%22mkdir%22,%22path%22:%22/downloads%22%7D,%7B%22step%22:%22writeFile%22,%22path%22:%22/downloads/plugin.zip%22,%22data%22:%7B%22resource%22:%22url%22,%22url%22:%22https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/meta-block-bb1e55.zip%22,%22caption%22:%22Downloading%20plugin...%22%7D%7D,%7B%22step%22:%22installPlugin%22,%22pluginZipFile%22:%7B%22resource%22:%22vfs%22,%22path%22:%22/downloads/plugin.zip%22%7D%7D%5D%7D "Use the ID of the block (bb1e55) to find it and add it to a post to see it in action") |
 <!-- @TABLE EXAMPLES END -->
-
-## Understanding the Example Code
-
-Overview of the code in bullet point form.
-
-## Related resources
-
-Bulleted list of references
 
 ----
 

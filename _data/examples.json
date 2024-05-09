@@ -186,7 +186,10 @@
   },
   {
     "slug": "post-meta-modal-2502fb",
-    "tags": [],
-    "description": "Post Meta Modal"
+    "description": "Post Meta Modal",
+    "tags": [
+      "meta",
+      "no-block"
+    ]
   }
 ]
