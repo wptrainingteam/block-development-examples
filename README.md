@@ -43,6 +43,6 @@ Check the [WIKI](https://github.com/WordPress/block-development-examples/wiki) o
 2. **[Examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples)**
 3. **[Tags](https://github.com/WordPress/block-development-examples/wiki/03-Tags)**
 4. **[Why an ID for every example?](https://github.com/WordPress/block-development-examples/wiki/04-Why-an-ID-for-every-example%3F)**
-5. **[Development](https://github.com/WordPress/block-development-examples/wiki/05-Development)**
+5. **[Local Development Guide](https://github.com/WordPress/block-development-examples/wiki/05-Local-Development-Guide)**
 6. **[Conventions for examples](https://github.com/WordPress/block-development-examples/wiki/06-Conventions-for-examples)**
 7. **[Adding new examples](https://github.com/WordPress/block-development-examples/wiki/07-Adding-new-examples)**
