@@ -12,6 +12,7 @@ import {
 import { useState } from '@wordpress/element';
 import { PluginMoreMenuItem } from '@wordpress/edit-post';
 import { useEntityProp } from '@wordpress/core-data';
+import { useCommand } from '@wordpress/commands';
 import { blockMeta } from '@wordpress/icons';
 
 /**
@@ -28,9 +29,8 @@ function MetaModalManager() {
 	const [ isModalOpen, setModalOpen ] = useState( false );
 	const [ meta, setMeta ] = useEntityProp( 'postType', 'post', 'meta' );
 
-	// Allow the Command Palette to open the Preset Manager.
-	// Requires WordPress 6.3+
-	wp.commands.useCommand( {
+	// Register a command for the Command Palette.
+	useCommand( {
 		name: 'manage-post-meta',
 		label: __( 'Manage Post Meta', 'block-development-examples' ),
 		icon: blockMeta,
