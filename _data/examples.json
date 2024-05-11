@@ -103,8 +103,7 @@
       "create-block-template",
       "interactive-block",
       "interactivity-api",
-      "gutenberg-plugin",
-      "experimental"
+      "gutenberg-plugin"
     ]
   },
   {
