@@ -23,7 +23,9 @@
 		"make-json": "wp i18n make-json languages/ --no-purge"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^26.12.0"
+		"@wordpress/scripts": "^27.8.0"
 	},
-	"files": [ "*" ]
+	"files": [
+		"*"
+	]
 }

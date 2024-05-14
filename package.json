@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "pnpm -r run start",
 		"build": "pnpm -r run build",
+		"packages-update": "pnpm -r run packages-update",
 		"preinstall": "npx only-allow pnpm",
 		"plugin-zip": "pnpm -r run plugin-zip",
 		"code:get": "node ./_bin/randomHexCode.js",
@@ -51,7 +52,7 @@
 	"devDependencies": {
 		"@babel/plugin-transform-class-static-block": "^7.22.11",
 		"@wordpress/env": "^8.11.0",
-		"@wordpress/scripts": "^26.16.0",
+		"@wordpress/scripts": "^27.8.0",
 		"husky": "^8.0.0",
 		"lint-staged": "^13.2.0"
 	},
