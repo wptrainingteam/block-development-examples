@@ -33,7 +33,9 @@
 		"lint:js": "wp-scripts lint-js",
 		"lint:php": "composer run lint",
 		"format:php": "composer run fix",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"admin:clear:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -vrf '{}' +",
+		"admin:reinstall" : "npm run admin:clear:node_modules && pnpm install"
 	},
 	"lint-staged": {
 		"*.js": [
