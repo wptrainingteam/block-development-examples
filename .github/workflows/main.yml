@@ -20,6 +20,8 @@ jobs:
             - uses: pnpm/action-setup@v4
               with:
                   version: 8.7.1
+            - name: Clear build folders to avoid merge conflicts
+              run: npm run admin:clear:build
             - name: Merge trunk -> deploy
               uses: devmasx/merge-branch@master
               with:
