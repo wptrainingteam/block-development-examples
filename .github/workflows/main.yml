@@ -10,16 +10,18 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
               with:
                   ref: deploy
             - name: Set up Node.js
-              uses: actions/setup-node@v2
+              uses: actions/setup-node@v4
               with:
                   node-version: '18'
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
                   version: 8.7.1
+            - name: Clear build folders to avoid merge conflicts
+              run: npm run admin:clear:build
             - name: Merge trunk -> deploy
               uses: devmasx/merge-branch@master
               with:
