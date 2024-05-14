@@ -7,6 +7,9 @@
 	"category": "widgets",
 	"description": "Interactivity API Quiz",
 	"example": {},
+	"keywords": [
+		"1835fa"
+	],
 	"supports": {
 		"interactivity": true
 	},
@@ -29,7 +32,5 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
-	"keywords": [
-		"1835fa"
-	]
+	"viewScriptModule": "file:./view.js"
 }

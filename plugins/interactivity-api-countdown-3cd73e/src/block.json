@@ -7,6 +7,9 @@
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "Countdown created with the Interactivity API",
+	"keywords": [
+		"3cd73e"
+	],
 	"supports": {
 		"interactivity": true
 	},
@@ -21,7 +24,5 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./render.php",
-	"keywords": [
-		"3cd73e"
-	]
+	"viewScriptModule": "file:./view.js"
 }
