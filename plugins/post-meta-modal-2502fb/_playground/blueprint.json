@@ -1,0 +1,17 @@
+{
+	"landingPage": "/wp-admin/post.php?post=1&action=edit",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+			"resource": "url",
+			"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/post-meta-modal-2502fb.zip"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		}
+	]
+}

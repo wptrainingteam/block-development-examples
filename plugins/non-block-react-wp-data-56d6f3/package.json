@@ -22,13 +22,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/scripts": "^26.12.0"
+    "@wordpress/scripts": "^27.8.0"
   },
   "dependencies": {
-    "@wordpress/compose": "^4.1.3",
-    "@wordpress/data": "^5.1.3",
+    "@wordpress/compose": "^6.34.0",
+    "@wordpress/data": "^9.27.0",
     "lodash": "^4.17.21",
     "uuid": "^9.0.0"
   },
-  "files": [ "*" ]
+  "files": [
+    "*"
+  ]
 }

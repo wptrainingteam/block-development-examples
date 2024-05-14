@@ -16,8 +16,8 @@
 		"env": "wp-env start"
 	},
 	"devDependencies": {
-		"@wordpress/env": "^8.12.0",
-		"@wordpress/scripts": "^26.17.0"
+		"@wordpress/env": "^9.9.0",
+		"@wordpress/scripts": "^27.8.0"
 	},
 	"files": [
 		"*"

@@ -17,6 +17,6 @@
 		"*"
 	],
 	"devDependencies": {
-		"@wordpress/scripts": "^26.15.0"
+		"@wordpress/scripts": "^27.8.0"
 	}
 }
