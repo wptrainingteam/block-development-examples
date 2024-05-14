@@ -1,10 +1,6 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-  "preferredVersions": {
-      "php": "7.4",
-      "wp": "6.4"
-  },
-  "landingPage": "/?p=5",
+  "landingPage": "/?p=4",
   "steps": [
     {
       "step": "installPlugin",
@@ -30,7 +26,7 @@
       "code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
     },
     {
-      "step": "importFile",
+      "step": "importWxr",
       "file": {
         "resource": "url",
         "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/interactivity-api-block-833d15/_playground/export.xml"
