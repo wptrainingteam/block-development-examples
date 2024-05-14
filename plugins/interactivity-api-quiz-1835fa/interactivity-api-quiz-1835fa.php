@@ -22,14 +22,5 @@
  */
 function interactivity_api_quiz_1835fa__register_block() {
 	register_block_type( __DIR__ . '/build' );
-
-	if ( function_exists( 'gutenberg_register_module' ) ) {
-		gutenberg_register_module(
-			'interactivity_api_quiz_1835fa__view',
-			plugin_dir_url( __FILE__ ) . 'src/view.js',
-			array( '@wordpress/interactivity' ),
-			'0.1.0'
-		);
-	}
 }
 add_action( 'init', 'interactivity_api_quiz_1835fa__register_block' );

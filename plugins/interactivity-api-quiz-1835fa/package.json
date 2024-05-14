@@ -5,9 +5,10 @@
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"scripts": {
-		"build": "wp-scripts build",
-		"start": "wp-scripts start",
-		"plugin-zip": "wp-scripts plugin-zip"
+		"build": "wp-scripts build --experimental-modules",
+		"start": "wp-scripts start --experimental-modules",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"packages-update": "wp-scripts packages-update"
 	},
 	"files": [
 		"*"

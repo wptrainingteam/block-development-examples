@@ -5,9 +5,8 @@ import { useEffect } from '@wordpress/element';
 import { Button, Spinner } from '@wordpress/components';
 
 const DeletePageButton = ( { pageId } ) => {
-	const { createSuccessNotice, createErrorNotice } = useDispatch(
-		noticesStore
-	);
+	const { createSuccessNotice, createErrorNotice } =
+		useDispatch( noticesStore );
 	// useSelect returns a list of selectors if you pass the store handle
 	// instead of a callback:
 	const { getLastEntityDeleteError } = useSelect( coreDataStore );
