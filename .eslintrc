@@ -5,7 +5,8 @@
 		"@wordpress/i18n-text-domain": ["error", {
 			"allowedTextDomain": "block-development-examples"
 		}],
-		"no-console":"off"
+		"no-console":"off",
+		"jsdoc/no-undefined-types": "off"
 	},
 	"globals": {
 		"jQuery":"readonly",
