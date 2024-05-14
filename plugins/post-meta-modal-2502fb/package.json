@@ -1,0 +1,21 @@
+{
+  "name": "@block-development-examples/post-meta-modal-2502fb",
+  "version": "0.1.0",
+  "author": "The WordPress Contributors",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "plugin-zip": "wp-scripts plugin-zip"
+  },
+  "files": [
+    "*"
+  ],
+  "devDependencies": {
+    "@wordpress/scripts": "^26.15.0"
+  },
+  "description": "Post Meta Modal",
+  "dependencies": {
+    "@wordpress/icons": "^9.48.0"
+  }
+}

@@ -24,6 +24,7 @@
 		"./plugins/block-toolbar-ab967f",
 		"./plugins/interactivity-api-countdown-3cd73e",
 		"./plugins/settings-sidebar-82c525",
+		"./plugins/post-meta-modal-2502fb",
 		"https://downloads.wordpress.org/plugin/gutenberg.zip"
 	],
 	"config": {

@@ -103,8 +103,7 @@
       "create-block-template",
       "interactive-block",
       "interactivity-api",
-      "gutenberg-plugin",
-      "experimental"
+      "gutenberg-plugin"
     ]
   },
   {
@@ -130,7 +129,9 @@
   {
     "slug": "block-toolbar-ab967f",
     "description": "Block Toolbar Controls",
-    "tags": ["block-toolbar"]
+    "tags": [
+      "block-toolbar"
+    ]
   },
   {
     "slug": "recipe-card-744e8a",
@@ -181,5 +182,13 @@
     "slug": "settings-sidebar-82c525",
     "description": "Block Settings Sidebar",
     "tags": []
+  },
+  {
+    "slug": "post-meta-modal-2502fb",
+    "description": "Post Meta Modal",
+    "tags": [
+      "meta",
+      "no-block"
+    ]
   }
 ]
