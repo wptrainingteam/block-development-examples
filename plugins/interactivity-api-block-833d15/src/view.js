@@ -1,7 +1,6 @@
 /**
  * WordPress dependencies
  */
-// eslint-disable-next-line import/named
 import { store, getContext } from '@wordpress/interactivity';
 
 store( 'interactivity-api-block-833d15__store', {
