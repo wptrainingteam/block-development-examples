@@ -12,9 +12,9 @@
 		"*"
 	],
 	"devDependencies": {
-		"@wordpress/scripts": "^26.15.0"
+		"@wordpress/scripts": "^27.8.0"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^9.20.0"
+		"@wordpress/icons": "^9.48.0"
 	}
 }

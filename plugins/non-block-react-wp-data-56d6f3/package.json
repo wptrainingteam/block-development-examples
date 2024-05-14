@@ -28,7 +28,7 @@
     "@wordpress/compose": "^6.34.0",
     "@wordpress/data": "^9.27.0",
     "lodash": "^4.17.21",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   },
   "files": [
     "*"
