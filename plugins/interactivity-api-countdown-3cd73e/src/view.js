@@ -29,7 +29,9 @@ store( 'interactivity-api-countdown-3cd73e__store', {
 			// Update remaining time (in seconds).
 			const n = setInterval( () => {
 				context.remaining -= 1;
-				if ( context.remaining === 0 ) clearInterval( n );
+				if ( context.remaining === 0 ) {
+					clearInterval( n );
+				}
 			}, 1000 );
 		},
 	},
