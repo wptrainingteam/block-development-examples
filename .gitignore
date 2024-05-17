@@ -99,3 +99,4 @@ changes.json
 
 # Temp files
 _temp/
+_app/build
