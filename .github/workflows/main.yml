@@ -46,7 +46,8 @@ jobs:
                   git config --local user.email "github-actions[bot]@users.noreply.github.com"
                   git config --local user.name "github-actions[bot]"
                   git add -A
-                  git rm --cached -r plugins/*/build
+                  git rm --cached -r plugins/minimal-block-ca6eda/build
+                  git rm --cached -r plugins/interactivity-api-block-833d15/build
                   git commit -m "Add changes" --no-verify
             - name: Push changes
               uses: ad-m/github-push-action@master
