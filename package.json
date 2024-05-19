@@ -35,10 +35,10 @@
 		"lint:php": "composer run lint",
 		"format:php": "composer run fix",
 		"prepare": "husky install",
-		"admin:package-json-updates" : "pnpm -r exec npx npm-check-updates -u",
-		"admin:clear:build": "find ./plugins -name 'build' -type d -prune -exec rm -vrf '{}' +",
+		"admin:package-json-updates": "pnpm -r exec npx npm-check-updates -u",
+		"admin:clear:build": "find ./plugins -path './plugins/*/node_modules/*' -prune -o -name 'build' -type d -exec rm -vrf '{}' +",
 		"admin:clear:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -vrf '{}' +",
-		"admin:reinstall" : "npm run admin:clear:node_modules && pnpm install"
+		"admin:reinstall": "npm run admin:clear:node_modules && pnpm install"
 	},
 	"lint-staged": {
 		"*.js": [

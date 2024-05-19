@@ -17,23 +17,26 @@
 /**
  * Register the demos.
  */
-function interactive_block_demos_register() {
-	register_block_type( __DIR__ . '/build/counter-alpine-99def1' );
-	register_block_type( __DIR__ . '/build/counter-jquery-99def1' );
-	register_block_type( __DIR__ . '/build/counter-js-99def1' );
-	register_block_type( __DIR__ . '/build/counter-react-99def1' );
-	register_block_type( __DIR__ . '/build/counter-web-component-99def1' );
+function interactive_blocks_demos_99def1__auto_register_block_types() {
+	if ( file_exists( __DIR__ . '/build/' ) ) {
+			$block_json_files = glob( __DIR__ . '/build/*/block.json' );
+		foreach ( $block_json_files as $filename ) {
+				$block_folder = dirname( $filename );
+				register_block_type( $block_folder );
+		}
+	}
 
-	wp_register_script(
-		'AlpineJS',
-		'https://unpkg.com/alpinejs@3.9.6/dist/cdn.min.js',
-		array(),
-		'3.9.6',
-		true // Load it in the footer.
-	);
+		wp_register_script(
+			'AlpineJS',
+			'https://unpkg.com/alpinejs@3.9.6/dist/cdn.min.js',
+			array(),
+			'3.9.6',
+			true // Load it in the footer.
+		);
 }
+add_action( 'init', 'interactive_blocks_demos_99def1__auto_register_block_types' );
 
-add_action( 'init', 'interactive_block_demos_register' );
+/* https://developer.wordpress.org/reference/hooks/render_block_this-name/ */
 add_filter(
 	'render_block_block-development-examples/counter-jquery-99def1',
 	function ( $content ) {
