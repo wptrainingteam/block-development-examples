@@ -1,4 +1,5 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/post.php?post=10&action=edit",
 	"steps": [
 		{
@@ -14,8 +15,12 @@
 			"password": "password"
 		},
 		{
-			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+			"step": "runSql",
+			"sql": {
+				"resource": "literal",
+				"name": "schema.sql",
+				"contents": "DELETE FROM wp_posts"
+			}
 		},
 		{
 			"step": "importWxr",
