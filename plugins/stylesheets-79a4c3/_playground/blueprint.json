@@ -1,28 +1,32 @@
 {
-    "landingPage": "/?p=5",
-    "steps": [
-      {
-        "step": "installPlugin",
-        "pluginZipFile": {
-          "resource": "url",
-          "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/stylesheets-79a4c3.zip"
-        }
-      },
-      {
-        "step": "login",
-        "username": "admin",
-        "password": "password"
-      },
-      {
-        "step": "runPHP",
-        "code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
-      },
-      {
-        "step": "importFile",
-        "file": {
-          "resource": "url",
-          "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/stylesheets-79a4c3/_playground/export.xml"
-        }
-      }
-    ]
-  }
+	"landingPage": "/?p=1",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/stylesheets-79a4c3.zip"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/stylesheets-79a4c3/_playground/export.xml"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; global $wpdb; $latest_post_id = $wpdb->get_var( 'SELECT ID FROM ' . $wpdb->posts .' ORDER BY ID DESC LIMIT 1' ); if ($latest_post_id) {  $update_result = $wpdb->query( $wpdb->prepare( 'UPDATE '. $wpdb->posts .' SET ID = 1 WHERE ID = %d', $latest_post_id ) ); if ($update_result !== false) { echo 'Post ID updated successfully.<br>'; } else { throw new Exception('Failed to update post ID'); }  } else {  throw new Exception('Failed to update post ID'); } "
+		}
+	]
+}
