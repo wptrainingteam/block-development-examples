@@ -15,11 +15,8 @@
 			"password": "password"
 		},
 		{
-			"step": "importWxr",
-			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/export.xml"
-			}
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/customize-post-id"
 		},
 		{
 			"step": "writeFile",
@@ -28,6 +25,17 @@
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/customize-post-id.php"
 			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/export.xml"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "customize-post-id/index.php"
 		}
 	]
 }
