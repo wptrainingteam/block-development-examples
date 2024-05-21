@@ -7,7 +7,7 @@
  */
 
 
-function set_last_post_id_to_custom_post_id() {
+register_activation_hook( __FILE__ , function () {
     
     global $wpdb;
 
@@ -16,10 +16,19 @@ function set_last_post_id_to_custom_post_id() {
 
     if ($latest_post_id) {
         /* Update the latest post ID to 1 */
-        $update_result = $wpdb->query( $wpdb->prepare( "UPDATE $wpdb->posts SET ID = 1 WHERE ID = %d", $latest_post_id ) );
+        $update_result = $wpdb->query( $wpdb->prepare( "UPDATE $wpdb->posts SET ID = 10 WHERE ID = %d", $latest_post_id ) );
 
         if ($update_result !== false) {
             echo "Post ID updated successfully.<br>";
+
+            /* Reset the auto-increment value to $custom_post_id + 1 */
+            $reset_auto_increment = $wpdb->query("ALTER TABLE $wpdb->posts AUTO_INCREMENT = 11");
+
+            if ($reset_auto_increment !== false) {
+                echo "Auto - increment value reset successfully";
+            } else {
+                echo "Failed to reset auto - increment value";
+            }
         } else {
             echo "Failed to update post ID";
         }
@@ -27,8 +36,5 @@ function set_last_post_id_to_custom_post_id() {
         echo "No posts found";
     }
 
-}
-add_action( "init", "set_last_post_id_to_custom_post_id", 0 );
+});
 
-
-?>
