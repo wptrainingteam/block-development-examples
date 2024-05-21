@@ -26,6 +26,5 @@
 			"step": "wp-cli",
 			"command": "wp post create 10 --post_title='Demo minimal-block-ca6eda' --post_status='published' /wordpress/wp-content/minimal-block-ca6eda-content-post.html"
 		}
-
 	]
-
+}
