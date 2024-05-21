@@ -15,18 +15,6 @@
 			"password": "password"
 		},
 		{
-			"step": "mkdir",
-			"path": "/wordpress/wp-content/plugins/customize-post-id"
-		},
-		{
-			"step": "writeFile",
-			"path": "/wordpress/wp-content/plugins/customize-post-id/customize-post-id.php",
-			"data": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/customize-post-id.php"
-			}
-		},
-		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
@@ -34,8 +22,8 @@
 			}
 		},
 		{
-			"step": "activatePlugin",
-			"pluginPath": "customize-post-id/customize-post-id.php"
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php';  global $wpdb; $latest_post_id = $wpdb->get_var( 'SELECT ID FROM $wpdb->posts ORDER BY ID DESC LIMIT 1' ); if ($latest_post_id) {  $update_result = $wpdb->query( $wpdb->prepare( 'UPDATE $wpdb->posts SET ID = 1 WHERE ID = %d', $latest_post_id ) ); if ($update_result !== false) { echo 'Post ID updated successfully.<br>'; } else { echo 'Failed to update post ID';  }    } else {  echo 'No posts found';    } "
 		}
 	]
 }
