@@ -1,6 +1,6 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin/post.php?post=6&action=edit",
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
 	"steps": [
 		{
 			"step": "installPlugin",
@@ -15,27 +15,17 @@
 			"password": "password"
 		},
 		{
-			"step": "mkdir",
-			"path": "/wordpress/wp-content/plugins/customize-post-id"
-		},
-		{
 			"step": "writeFile",
-			"path": "/wordpress/wp-content/plugins/customize-post-id/customize-post-id.php",
+			"path": "/wordpress/wp-content/minimal-block-ca6eda-content-post.html",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/customize-post-id.php"
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/minimal-block-ca6eda-content-post.html"
 			}
 		},
 		{
-			"step": "importWxr",
-			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/export.xml"
-			}
-		},
-		{
-			"step": "activatePlugin",
-			"pluginPath": "customize-post-id/customize-post-id.php"
+			"step": "wp-cli",
+			"command": "wp post create 10 --post_title='Demo minimal-block-ca6eda' --post_status='published' /wordpress/wp-content/minimal-block-ca6eda-content-post.html"
 		}
+
 	]
-}
+
