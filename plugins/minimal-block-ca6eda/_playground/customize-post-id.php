@@ -22,13 +22,15 @@ register_activation_hook( __FILE__ , function () {
             echo "Post ID updated successfully.<br>";
 
             /* Reset the auto-increment value to $custom_post_id + 1 */
-            $reset_auto_increment = $wpdb->query("ALTER TABLE $wpdb->posts AUTO_INCREMENT = 11");
+            /*
+            $reset_auto_increment = $wpdb->query("ALTER TABLE $wpdb->posts SET AUTO_INCREMENT = 11");
 
             if ($reset_auto_increment !== false) {
                 echo "Auto - increment value reset successfully";
             } else {
                 echo "Failed to reset auto - increment value";
             }
+            */
         } else {
             echo "Failed to update post ID";
         }
