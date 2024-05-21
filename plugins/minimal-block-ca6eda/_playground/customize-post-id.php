@@ -7,11 +7,9 @@
  */
 
 
-require_once "wp-load.php";
-global $wpdb;
-
 function set_last_post_id_to_custom_post_id() {
     
+    global $wpdb;
     $custom_post_id = 10;
 
     /* Get the latest post ID */

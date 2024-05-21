@@ -15,6 +15,18 @@
 			"password": "password"
 		},
 		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/customize-post-id"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/customize-post-id/customize-post-id.php",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/customize-post-id.php"
+			}
+		},
+		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
@@ -22,12 +34,8 @@
 			}
 		},
 		{
-			"step": "writeFile",
-			"path": "/wordpress/wp-content/plugins/customize-post-id/index.php",
-			"data": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/customize-post-id.php"
-			}
+			"step": "activatePlugin",
+			"pluginPath": "customize-post-id/customize-post-id.php"
 		}
 	]
 }
