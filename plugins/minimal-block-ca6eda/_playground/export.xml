@@ -48,10 +48,10 @@
 
 		<item>
 			<title><![CDATA[Minimal Block Example]]></title>
-			<link>http://localhost:8888/?p=6</link>
+			<link>http://localhost:8888/?p=1</link>
 			<pubDate>Tue, 28 Nov 2023 11:19:51 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?p=6</guid>
+			<guid isPermaLink="false">http://localhost:8888/?p=1</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:block-development-examples/minimal-block-ca6eda -->
 <p class="wp-block-block-development-examples-minimal-block-ca6eda">Hello World - Frontend</p>
