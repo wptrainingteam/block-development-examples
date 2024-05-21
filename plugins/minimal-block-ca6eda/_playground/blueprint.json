@@ -1,6 +1,6 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin/post.php?post=6&action=edit",
+	"landingPage": "/wp-admin/post.php?post=1&action=edit",
 	"steps": [
 		{
 			"step": "installPlugin",
@@ -13,6 +13,10 @@
 			"step": "login",
 			"username": "admin",
 			"password": "password"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
 		},
 		{
 			"step": "importWxr",
