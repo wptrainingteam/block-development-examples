@@ -1,54 +1,41 @@
 <?php
-/**
- * The render.php file for this block.
- *
- * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
- *
- * @package block-development-examples
- */
-
-if ( function_exists( 'gutenberg_enqueue_module' ) ) {
-	gutenberg_enqueue_module( 'interactivity_api_quiz_1835fa__view' );
-}
-
+// phpcs:ignoreFile
 $unique_id = substr( uniqid(), -5 );
 
-
-wp_store(
+// render.php
+wp_interactivity_state(
+	'quiz-1835fa-project-store',
 	array(
-		'state' => array(
-			'interactivity_api_quiz_1835fa__store' => array(
-				'selected'    => null,
-				'openText'    => __( 'Open menu', 'block-development-examples' ),
-				'closeText'   => __( 'Close menu', 'block-development-examples' ),
-				'isActive'    => false,
-				'quizzes'     => array(
-					$unique_id => array(
-						'current' => null,
-						'correct' => $attributes['answer'],
-					),
-				),
-				'inputAnswer' => null,
+		'quizSelected' => null,
+		'openText'     => __( 'Open menu' ),
+		'closeText'    => __( 'Close menu' ),
+		'quizzes'      => array(
+			$unique_id => array(
+				'current' => null,
+				'correct' => $attributes['answer'],
 			),
 		),
+		'toggleText'   => __( 'Open menu' ),
+		'isActive'     => false,
+		'inputAnswer'  => null,
 	)
 );
+
 
 ?>
 
 <div
 	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
-	data-wp-interactive='{"namespace": "interactivity_api_quiz_1835fa__store"}'
+	data-wp-interactive='{"namespace": "quiz-1835fa-project-store"}'
 	data-wp-context='{ "id": "<?php echo esc_attr( $unique_id ); ?>" , "answer": null }'
 	data-wp-on--keydown="actions.closeOnEsc"
+	data-wp-watch="callbacks.log"
 >
 	<div>
 		<strong>
 			<?php echo esc_html__( 'Question', 'block-development-examples' ) . ': '; ?>
 		</strong>
-
-		<?php echo wp_kses_post( $attributes['question'] ); ?>
-
+		<span><?php echo wp_kses_post( $attributes['question'] ); ?></span>
 		<button
 			data-wp-on--click="actions.toggle"
 			data-wp-bind--aria-expanded="state.isOpen"
