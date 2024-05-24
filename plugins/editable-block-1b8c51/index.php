@@ -19,17 +19,23 @@ function editable_block_1b8c51__load_textdomain() {
 }
 add_action( 'init', 'editable_block_1b8c51__load_textdomain' );
 
+
 /**
- * Registers all block assets so that they can be enqueued through Gutenberg in
- * the corresponding context.
+ * Automatically registers block types by scanning the build/blocks folder.
  *
- * Passes translations to JavaScript.
+ * This function searches for JSON files within each subfolder and registers
+ * them as block types. It is triggered on WordPress 'init' action.
+ *
+ * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function editable_block_1b8c51__register_block() {
-
-	// Register the block by passing the location of block.json to register_block_type.
-	register_block_type( __DIR__ . '/build' );
-
+	if ( file_exists( __DIR__ . '/build/blocks/' ) ) {
+			$block_json_files = glob( __DIR__ . '/build/blocks/*/block.json' );
+		foreach ( $block_json_files as $filename ) {
+				$block_folder = dirname( $filename );
+				register_block_type( $block_folder );
+		}
+	}
 	if ( function_exists( 'wp_set_script_translations' ) ) {
 		/**
 		 * May be extended to wp_set_script_translations( 'my-handle', 'my-domain',
