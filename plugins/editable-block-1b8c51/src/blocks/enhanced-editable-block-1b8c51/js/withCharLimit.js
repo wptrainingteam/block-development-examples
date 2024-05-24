@@ -1,4 +1,4 @@
-import { useState } from '@wordpress/element';
+import { useState, useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
 const withCharLimit = ( Component ) => {
@@ -24,6 +24,12 @@ const withCharLimit = ( Component ) => {
 				onChange( value );
 			}
 		};
+
+		useEffect( () => {
+			if ( content ) {
+				handleContentChange( content );
+			}
+		}, [] );
 
 		const progressBarStyle = {
 			width: `${ ( charCount / 100 ) * 100 }%`,
