@@ -1,4 +1,4 @@
-# Block Static Rendering b16608
+# Editable Block 1b8c51
 
 The goal of this example is to showcase how to create a block that is editable and how core components can be enhanced.
 
