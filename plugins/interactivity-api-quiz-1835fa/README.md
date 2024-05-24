@@ -1,4 +1,4 @@
-# Quiz 1835fa
+# Interactivity Api Quiz 1835fa
 
 The goal of this example is to show how to use the Interactivity API to communicate info between two blocks.
 
