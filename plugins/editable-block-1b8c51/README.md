@@ -25,7 +25,6 @@ Some key ideas for this example:
 
 -   [`RichText` reference in the Block Editor Handbook](https://developer.wordpress.org/block-editor/reference-guides/richtext/)
 -   [`RichText` component documentation on GitHub](https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/rich-text/README.md)
-    check out the .
 
 ---
 
