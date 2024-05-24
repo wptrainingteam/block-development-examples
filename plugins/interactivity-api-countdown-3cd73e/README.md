@@ -29,7 +29,7 @@ The block of the example has dynamic render defined at `render.php` and it enabl
 ## Related resources
 
 Check the following resources for more info about the Interactivity API:
-- [Interactivity API docs](https://github.com/WordPress/gutenberg/tree/trunk/packages/interactivity/docs)
+- [Interactivity API docs](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/)
 - [`@wordpress/interactivity` package](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/README.md)
 - [Proposal: The Interactivity API – A better developer experience in building interactive blocks](https://make.wordpress.org/core/2023/03/30/proposal-the-interactivity-api-a-better-developer-experience-in-building-interactive-blocks/)
 - [“Interactivity API” category](https://github.com/WordPress/gutenberg/discussions/categories/interactivity-api) in Gutenberg repo discussions
