@@ -1,8 +1,8 @@
 {
 	"$schema": "https://json.schemastore.org/block.json",
 	"apiVersion": 2,
-	"name": "block-development-examples/editable-block-1b8c51",
-	"title": "⭐️ Example: Editable Block",
+	"name": "block-development-examples/enhanced-editable-block-1b8c51",
+	"title": "Enhanced Editable Block",
 	"textdomain": "block-development-examples",
 	"icon": "universal-access-alt",
 	"category": "widgets",
