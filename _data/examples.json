@@ -1,194 +1,147 @@
 [
-  {
-    "slug": "block-dynamic-rendering-64756b",
-    "description": "Basic Block with Dynamic Rendering",
-    "tags": [
-      "dynamic-rendering",
-      "create-block"
-    ]
-  },
-  {
-    "slug": "basic-block-translations-3df23d",
-    "description": "Basic Block with Translations",
-    "tags": [
-      "static-rendering"
-    ]
-  },
-  {
-    "slug": "block-static-rendering-b16608",
-    "description": "Block with Static Rendering",
-    "tags": [
-      "static-rendering",
-      "create-block"
-    ]
-  },
-  {
-    "slug": "editable-block-1b8c51",
-    "description": "Block Editable",
-    "tags": []
-  },
-  {
-    "slug": "non-block-react-wp-data-56d6f3",
-    "description": "Non-block wp data with React",
-    "tags": [
-      "no-block",
-      "wp-data"
-    ]
-  },
-  {
-    "slug": "minimal-block-ca6eda",
-    "description": "Minimal Block",
-    "tags": [
-      "minimal",
-      "featured"
-    ]
-  },
-  {
-    "slug": "minimal-block-no-build-e621a6",
-    "description": "Minimal Gutenberg Block (No Build)",
-    "tags": [
-      "minimal",
-      "no-build"
-    ]
-  },
-  {
-    "slug": "interactive-blocks-demos-99def1",
-    "description": "Interactive Blocks",
-    "tags": [
-      "interactive-block",
-      "multi-block"
-    ]
-  },
-  {
-    "slug": "format-api-f14b86",
-    "description": "Format API",
-    "tags": [
-      "no-block"
-    ]
-  },
-  {
-    "slug": "stylesheets-79a4c3",
-    "description": "Stylesheets",
-    "tags": [
-      "styles",
-      "featured"
-    ]
-  },
-  {
-    "slug": "basic-esnext-a2ab62",
-    "description": "Basic ESNext",
-    "tags": [
-      "minimal"
-    ]
-  },
-  {
-    "slug": "block-supports-6aa4dd",
-    "description": "Block Supports",
-    "tags": [
-      "supports",
-      "featured"
-    ]
-  },
-  {
-    "slug": "dynamic-block-b0bce7",
-    "description": "Dynamic Block",
-    "tags": [
-      "dynamic-rendering"
-    ]
-  },
-  {
-    "slug": "interactivity-api-block-833d15",
-    "description": "Interactivity API Block",
-    "tags": [
-      "create-block-template",
-      "interactive-block",
-      "interactivity-api",
-      "gutenberg-plugin"
-    ]
-  },
-  {
-    "slug": "meta-block-bb1e55",
-    "description": "Meta Block",
-    "tags": [
-      "meta"
-    ]
-  },
-  {
-    "slug": "inner-blocks-dcd824",
-    "description": "Inner Blocks",
-    "tags": []
-  },
-  {
-    "slug": "slotfill-2fb190",
-    "description": "SlotFill",
-    "tags": [
-      "no-block",
-      "slotfill"
-    ]
-  },
-  {
-    "slug": "block-toolbar-ab967f",
-    "description": "Block Toolbar Controls",
-    "tags": [
-      "block-toolbar"
-    ]
-  },
-  {
-    "slug": "recipe-card-744e8a",
-    "description": "Recipe",
-    "tags": []
-  },
-  {
-    "slug": "plugin-sidebar-9ee4a6",
-    "description": "Plugin Sidebar",
-    "tags": [
-      "slotfill",
-      "meta",
-      "no-block"
-    ]
-  },
-  {
-    "slug": "data-basics-59c8f8",
-    "description": "Data Basics - @wordpress/data",
-    "tags": [
-      "no-block",
-      "wp-data",
-      "featured"
-    ]
-  },
-  {
-    "slug": "copyright-date-block-09aac3",
-    "description": "Copyright Date Block",
-    "tags": [
-      "dynamic-rendering",
-      "static-rendering",
-      "create-block",
-      "featured"
-    ]
-  },
-  {
-    "slug": "interactivity-api-countdown-3cd73e",
-    "description": "Interactivity API Countdown",
-    "tags": [
-      "dynamic-rendering",
-      "interactive-block",
-      "interactivity-api",
-      "gutenberg-plugin",
-      "experimental",
-      "block-toolbar"
-    ]
-  },
-  {
-    "slug": "settings-sidebar-82c525",
-    "description": "Block Settings Sidebar",
-    "tags": []
-  },
-  {
-    "slug": "post-meta-modal-2502fb",
-    "description": "Post Meta Modal",
-    "tags": [
-      "meta",
-      "no-block"
-    ]
-  }
+	{
+		"slug": "block-dynamic-rendering-64756b",
+		"description": "Basic Block with Dynamic Rendering",
+		"tags": [ "dynamic-rendering", "create-block" ]
+	},
+	{
+		"slug": "basic-block-translations-3df23d",
+		"description": "Basic Block with Translations",
+		"tags": [ "static-rendering" ]
+	},
+	{
+		"slug": "block-static-rendering-b16608",
+		"description": "Block with Static Rendering",
+		"tags": [ "static-rendering", "create-block" ]
+	},
+	{
+		"slug": "editable-block-1b8c51",
+		"description": "Block Editable",
+		"tags": []
+	},
+	{
+		"slug": "non-block-react-wp-data-56d6f3",
+		"description": "Non-block wp data with React",
+		"tags": [ "no-block", "wp-data" ]
+	},
+	{
+		"slug": "minimal-block-ca6eda",
+		"description": "Minimal Block",
+		"tags": [ "minimal", "featured" ]
+	},
+	{
+		"slug": "minimal-block-no-build-e621a6",
+		"description": "Minimal Gutenberg Block (No Build)",
+		"tags": [ "minimal", "no-build" ]
+	},
+	{
+		"slug": "interactive-blocks-demos-99def1",
+		"description": "Interactive Blocks",
+		"tags": [ "interactive-block", "multi-block" ]
+	},
+	{
+		"slug": "format-api-f14b86",
+		"description": "Format API",
+		"tags": [ "no-block" ]
+	},
+	{
+		"slug": "stylesheets-79a4c3",
+		"description": "Stylesheets",
+		"tags": [ "styles", "featured" ]
+	},
+	{
+		"slug": "basic-esnext-a2ab62",
+		"description": "Basic ESNext",
+		"tags": [ "minimal" ]
+	},
+	{
+		"slug": "block-supports-6aa4dd",
+		"description": "Block Supports",
+		"tags": [ "supports", "featured" ]
+	},
+	{
+		"slug": "dynamic-block-b0bce7",
+		"description": "Dynamic Block",
+		"tags": [ "dynamic-rendering" ]
+	},
+	{
+		"slug": "interactivity-api-block-833d15",
+		"description": "Interactivity API Block",
+		"tags": [
+			"create-block-template",
+			"interactive-block",
+			"interactivity-api"
+		]
+	},
+	{
+		"slug": "meta-block-bb1e55",
+		"description": "Meta Block",
+		"tags": [ "meta" ]
+	},
+	{
+		"slug": "inner-blocks-dcd824",
+		"description": "Inner Blocks",
+		"tags": []
+	},
+	{
+		"slug": "slotfill-2fb190",
+		"description": "SlotFill",
+		"tags": [ "no-block", "slotfill" ]
+	},
+	{
+		"slug": "block-toolbar-ab967f",
+		"description": "Block Toolbar Controls",
+		"tags": [ "block-toolbar" ]
+	},
+	{
+		"slug": "recipe-card-744e8a",
+		"description": "Recipe",
+		"tags": []
+	},
+	{
+		"slug": "plugin-sidebar-9ee4a6",
+		"description": "Plugin Sidebar",
+		"tags": [ "slotfill", "meta", "no-block" ]
+	},
+	{
+		"slug": "data-basics-59c8f8",
+		"description": "Data Basics - @wordpress/data",
+		"tags": [ "no-block", "wp-data", "featured" ]
+	},
+	{
+		"slug": "copyright-date-block-09aac3",
+		"description": "Copyright Date Block",
+		"tags": [
+			"dynamic-rendering",
+			"static-rendering",
+			"create-block",
+			"featured"
+		]
+	},
+	{
+		"slug": "interactivity-api-countdown-3cd73e",
+		"description": "Interactivity API Countdown",
+		"tags": [
+			"dynamic-rendering",
+			"interactive-block",
+			"interactivity-api",
+			"experimental",
+			"block-toolbar"
+		]
+	},
+	{
+		"slug": "settings-sidebar-82c525",
+		"description": "Block Settings Sidebar",
+		"tags": []
+	},
+	{
+		"slug": "post-meta-modal-2502fb",
+		"description": "Post Meta Modal",
+		"tags": [ "meta", "no-block" ]
+	},
+	{
+		"slug": "interactivity-api-quiz-1835fa",
+		"description": "Interactivity API Quiz",
+		"tags": [ "interactive-block", "interactivity-api" ]
+	}
 ]
