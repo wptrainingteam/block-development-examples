@@ -21,16 +21,16 @@ const { state } = store( 'quiz-1835fa-project-store', {
 	actions: {
 		toggle: () => {
 			const { id: quizId } = getContext();
-			if ( state.quizSelected === quizId ) {
-				state.quizSelected = null;
+			if ( state.selected === quizId ) {
+				state.selected = null;
 			} else {
-				state.quizSelected = quizId;
+				state.selected = quizId;
 			}
 		},
 		closeOnEsc: ( event ) => {
 			const { ref } = getElement();
 			if ( event.key === 'Escape' ) {
-				state.quizSelected = null;
+				state.selected = null;
 				ref.querySelector( 'button[aria-controls^="quiz-"]' ).focus();
 			}
 		},

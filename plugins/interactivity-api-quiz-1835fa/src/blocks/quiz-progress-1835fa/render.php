@@ -26,7 +26,7 @@ wp_interactivity_state(
 		<strong><?php echo __( 'Correct' ); ?></strong>: 
 		<span data-wp-text="state.correct"></span>
 		<span data-wp-bind--hidden="!state.allCorrect">
-			<?php echo __( 'All correct, congratulations! 🎉' ); ?>
+			<?php echo __( 'All correct, congratulations!' ); ?>
 		</span>
 	</div>
 
