@@ -1,15 +1,13 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "block-development-examples/interactivity-api-quiz-1835fa",
-	"version": "0.1.0",
-	"title": "Quiz 1835fa",
+	"name": "block-development-examples/quiz-1835fa",
+	"version": "1.0.0",
+	"title": "Quiz",
 	"category": "widgets",
-	"description": "Interactivity API Quiz",
-	"example": {},
-	"keywords": [
-		"1835fa"
-	],
+	"keywords": [ "1835fa" ],
+	"icon": "smiley",
+	"description": "Make a quiz",
 	"supports": {
 		"interactivity": true
 	},
@@ -19,11 +17,11 @@
 		},
 		"typeOfQuiz": {
 			"type": "string",
-			"enum": ["boolean", "input"],
+			"enum": [ "boolean", "input" ],
 			"default": "boolean"
 		},
 		"answer": {
-			"type": ["string", "boolean"],
+			"type": [ "string", "boolean" ],
 			"default": true
 		}
 	},

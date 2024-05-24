@@ -1,6 +1,6 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin/post.php?post=1&action=edit",
+	"landingPage": "/wp-admin/post.php?post=6&action=edit",
 	"steps": [
 		{
 			"step": "installPlugin",
@@ -19,15 +19,16 @@
 			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
 		},
 		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
+			"data": "<?php add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
+		},
+		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/minimal-block-ca6eda/_playground/export.xml"
 			}
-		},
-		{
-			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; global $wpdb; $latest_post_id = $wpdb->get_var( 'SELECT ID FROM ' . $wpdb->posts .' ORDER BY ID DESC LIMIT 1' ); if ($latest_post_id) {  $update_result = $wpdb->query( $wpdb->prepare( 'UPDATE '. $wpdb->posts .' SET ID = 1 WHERE ID = %d', $latest_post_id ) ); if ($update_result !== false) { echo 'Post ID updated successfully.<br>'; } else { throw new Exception('Failed to update post ID'); }  } else {  throw new Exception('Failed to update post ID'); } "
 		}
 	]
 }

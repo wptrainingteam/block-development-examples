@@ -7,8 +7,17 @@
 	"scripts": {
 		"build": "wp-scripts build --experimental-modules",
 		"start": "wp-scripts start --experimental-modules",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:php": "composer run lint",
+		"format:php": "composer run fix",
+		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"packages-update": "wp-scripts packages-update"
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
 	},
 	"files": [
 		"*"

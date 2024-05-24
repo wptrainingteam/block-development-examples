@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
@@ -6,13 +7,11 @@ import {
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 	TextControl,
 } from '@wordpress/components';
-import './editor.scss';
+import './editor.css';
 
 export default function Edit( { attributes, setAttributes } ) {
 	return (
@@ -20,15 +19,12 @@ export default function Edit( { attributes, setAttributes } ) {
 			<div { ...useBlockProps() }>
 				<div>
 					<strong>
-						{ __( 'Question', 'block-development-examples' ) }
+						{ __( 'Question', 'block-development-examples' ) }:{ ' ' }
 					</strong>
 					<RichText
 						value={ attributes.question }
 						tagname="p"
-						placeholder={ __(
-							'Write your question here',
-							'block-development-examples'
-						) }
+						placeholder={ __( 'Write your question here' ) }
 						onChange={ ( value ) =>
 							setAttributes( { question: value } )
 						}
@@ -37,21 +33,12 @@ export default function Edit( { attributes, setAttributes } ) {
 			</div>
 
 			<InspectorControls>
-				<PanelBody
-					title={ __(
-						'Quiz Configuration',
-						'block-development-examples'
-					) }
-				>
+				<PanelBody title={ __( 'Quiz Configuration' ) }>
 					<ToggleGroupControl
-						label={ __(
-							'Type of quiz',
-							'block-development-examples'
-						) }
+						label={ __( 'Type of quiz' ) }
 						value={ attributes.typeOfQuiz }
 						help={ __(
-							'Choose the type of quiz that you want to use.',
-							'block-development-examples'
+							'Choose the type of quiz that you want to use.'
 						) }
 						onChange={ ( value ) => {
 							const newAttributes = { typeOfQuiz: value };
@@ -63,30 +50,20 @@ export default function Edit( { attributes, setAttributes } ) {
 					>
 						<ToggleGroupControlOption
 							value="boolean"
-							label={ __(
-								'Yes/No',
-								'block-development-examples'
-							) }
+							label={ __( 'Yes/No' ) }
 						/>
 						<ToggleGroupControlOption
 							value="input"
-							label={ __(
-								'Text Input',
-								'block-development-examples'
-							) }
+							label={ __( 'Text Input' ) }
 						/>
 					</ToggleGroupControl>
 
 					{ attributes.typeOfQuiz === 'boolean' && (
 						<ToggleGroupControl
-							label={ __(
-								'Answer',
-								'block-development-examples'
-							) }
+							label={ __( 'Answer' ) }
 							value={ attributes.answer }
 							help={ __(
-								'Choose the correct answer for your quiz.',
-								'block-development-examples'
+								'Choose the correct answer for your quiz.'
 							) }
 							onChange={ ( value ) =>
 								setAttributes( { answer: value } )
@@ -95,17 +72,11 @@ export default function Edit( { attributes, setAttributes } ) {
 						>
 							<ToggleGroupControlOption
 								value={ true }
-								label={ __(
-									'Yes',
-									'block-development-examples'
-								) }
+								label={ __( 'Yes' ) }
 							/>
 							<ToggleGroupControlOption
 								value={ false }
-								label={ __(
-									'No',
-									'block-development-examples'
-								) }
+								label={ __( 'No' ) }
 							/>
 						</ToggleGroupControl>
 					) }
@@ -113,15 +84,9 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ attributes.typeOfQuiz === 'input' && (
 						<TextControl
 							__nextHasNoMarginBottom
-							label={ __(
-								'Answer',
-								'block-development-examples'
-							) }
+							label={ __( 'Answer' ) }
 							value={ attributes.answer }
-							placeholder={ __(
-								'Write the answer here',
-								'block-development-examples'
-							) }
+							placeholder={ __( 'Write the answer here' ) }
 							onChange={ ( value ) =>
 								setAttributes( { answer: value } )
 							}
