@@ -18,7 +18,7 @@ This block also show the use of e2e testing for a block.
 Some key ideas for this example:
 
 -   The use of `RichText` component as the most versatile editable component in `basic-editable-block-1b8c51`
--   The capacity of enhancing `RichText` component (or any other component) by using Higher Order Components (or custom hooks). See `withCharLimit.js` in the `enhanced-editable-block-1b8c51` block. Props to @ndiego for the original code this implementation is based on.
+-   The capacity of enhancing `RichText` component (or any other component) by using Higher Order Components (or custom hooks). See `withCharLimit.js` in the `enhanced-editable-block-1b8c51` block. Props to [@ndiego](https://github.com/ndiego) for the original code this implementation is based on.
 -   The use of attributes to store data of the block and how we can set the attribute to store (and read from) the html itself
 
 ## Related resources
