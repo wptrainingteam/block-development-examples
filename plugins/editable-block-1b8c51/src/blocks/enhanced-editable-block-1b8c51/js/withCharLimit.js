@@ -1,35 +1,12 @@
-import { useState, useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import useCharLimit from './useCharLimit';
 
 const withCharLimit = ( Component ) => {
 	return ( props ) => {
 		const { value: content, onChange } = props;
-
-		const [ errorMessage, setErrorMessage ] = useState( '' );
-		const [ charCount, setCharCount ] = useState(
-			props.content?.length ?? 0
+		const { charCount, errorMessage, handleContentChange } = useCharLimit(
+			content,
+			onChange
 		);
-
-		const handleContentChange = ( value ) => {
-			setCharCount( value.length );
-			if ( value.length > 100 ) {
-				setErrorMessage(
-					__(
-						'Character limit exceeded. Please enter no more than 100 characters.',
-						'block-development-examples'
-					)
-				);
-			} else {
-				setErrorMessage( '' );
-				onChange( value );
-			}
-		};
-
-		useEffect( () => {
-			if ( content ) {
-				handleContentChange( content );
-			}
-		}, [] );
 
 		const progressBarStyle = {
 			width: `${ ( charCount / 100 ) * 100 }%`,
