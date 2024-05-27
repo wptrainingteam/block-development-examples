@@ -24,7 +24,7 @@ function useCharLimit( content = '', onChange ) {
 		if ( content ) {
 			handleContentChange( content );
 		}
-	} );
+	}, [] );
 
 	return { charCount, errorMessage, handleContentChange };
 }
