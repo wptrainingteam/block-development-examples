@@ -13,7 +13,7 @@ import {
 /**
  * Internal dependencies
  */
-import json from '../src/block.json';
+import json from '../src/blocks/basic-editable-block-1b8c51/block.json';
 const { title, name } = json;
 
 describe( `"${ title }" block`, () => {
@@ -48,9 +48,8 @@ describe( `"${ title }" block`, () => {
 
 		const editedPostContent = await getEditedPostContent();
 		const regExFindComments = /<!--(.*)-->/g;
-		const commentsEditedPostContent = editedPostContent.match(
-			regExFindComments
-		);
+		const commentsEditedPostContent =
+			editedPostContent.match( regExFindComments );
 
 		expect( commentsEditedPostContent[ 0 ] ).toBe(
 			`<!-- wp:${ name } -->`
@@ -60,9 +59,8 @@ describe( `"${ title }" block`, () => {
 		);
 
 		const regExFindClasses = /class="(.*)"/g;
-		const classesEditedPostContent = regExFindClasses.exec(
-			editedPostContent
-		);
+		const classesEditedPostContent =
+			regExFindClasses.exec( editedPostContent );
 
 		expect( classesEditedPostContent[ 1 ] ).toBe(
 			`wp-block-${ name.replace( '/', '-' ) }`
