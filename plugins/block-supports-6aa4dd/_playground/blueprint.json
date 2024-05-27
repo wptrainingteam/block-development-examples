@@ -18,7 +18,7 @@
 			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
 		},
 		{
-			"step": "importFile",
+			"step": "importWxr",
 			"file": {
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/block-supports-6aa4dd/_playground/export.xml"
