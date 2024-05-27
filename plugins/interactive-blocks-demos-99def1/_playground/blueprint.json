@@ -1,5 +1,5 @@
 {
-	"landingPage": "/wp-admin/post.php?post=4&action=edit",
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
 	"steps": [
 		{
 			"step": "installPlugin",

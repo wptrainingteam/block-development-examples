@@ -1,28 +1,28 @@
 {
-    "landingPage": "/wp-admin/post.php?post=5&action=edit",
-    "steps": [
-      {
-        "step": "installPlugin",
-        "pluginZipFile": {
-          "resource": "url",
-          "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/settings-sidebar-82c525.zip"
-        }
-      },
-      {
-        "step": "login",
-        "username": "admin",
-        "password": "password"
-      },
-      {
-        "step": "runPHP",
-        "code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
-      },
-      {
-        "step": "importFile",
-        "file": {
-          "resource": "url",
-          "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/settings-sidebar-82c525/_playground/export.xml"
-        }
-      }
-    ]
-  }
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/settings-sidebar-82c525.zip"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+		},
+		{
+			"step": "importFile",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/settings-sidebar-82c525/_playground/export.xml"
+			}
+		}
+	]
+}
