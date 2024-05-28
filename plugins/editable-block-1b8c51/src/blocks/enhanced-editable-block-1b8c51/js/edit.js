@@ -1,6 +1,6 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import withCharLimit from './withCharLimit';
-const RichTextWithCharLimit = withCharLimit( RichText );
+const RichTextWithCharLimit = withCharLimit( 100 )( RichText );
 
 const Edit = ( props ) => {
 	const {

@@ -1,17 +1,21 @@
 import { useState, useEffect } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 
-function useCharLimit( content = '', onChange ) {
+function useCharLimit( content = '', onChange, limit ) {
 	const [ charCount, setCharCount ] = useState( content?.length ?? 0 );
 	const [ errorMessage, setErrorMessage ] = useState( '' );
 
 	const handleContentChange = ( value ) => {
 		setCharCount( value.length );
-		if ( value.length > 100 ) {
+		if ( value.length > limit ) {
 			setErrorMessage(
-				__(
-					'Character limit exceeded. Please enter no more than 100 characters.',
-					'block-development-examples'
+				sprintf(
+					/* translators: %d: maximum number of character allowed */
+					__(
+						`Character limit exceeded. Please enter no more than %d characters.`,
+						'block-development-examples'
+					),
+					limit
 				)
 			);
 		} else {
