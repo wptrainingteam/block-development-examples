@@ -1,17 +1,20 @@
 import useCharLimit from './useCharLimit';
 
-const withCharLimit = ( Component ) => {
+const withCharLimit = ( limit ) => ( Component ) => {
 	return ( props ) => {
 		const { value: content, onChange } = props;
 		const { charCount, errorMessage, handleContentChange } = useCharLimit(
 			content,
-			onChange
+			onChange,
+			limit
 		);
 
+		const colorState = charCount > limit ? 'red' : 'green';
+
 		const progressBarStyle = {
-			width: `${ ( charCount / 100 ) * 100 }%`,
+			width: `${ ( charCount / limit ) * limit }%`,
 			height: '5px',
-			backgroundColor: charCount > 100 ? 'red' : 'green',
+			backgroundColor: colorState,
 			marginTop: '5px',
 		};
 
@@ -28,7 +31,9 @@ const withCharLimit = ( Component ) => {
 					</div>
 				) }
 				<div className="progress-bar" style={ progressBarStyle }></div>
-				<div className="char-count">{ charCount } / 100</div>
+				<div className="char-count" style={ { color: colorState } }>
+					{ charCount } / { limit }
+				</div>
 			</>
 		);
 	};
