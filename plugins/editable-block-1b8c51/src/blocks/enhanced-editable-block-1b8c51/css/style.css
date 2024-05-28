@@ -3,8 +3,8 @@
  * editor-specific styles using the same selectors will take precedence.
  */
 .wp-block-block-development-examples-enhanced-editable-block-1b8c51 {
-	color: #8b0000;
-	background: #fcc;
+	color: #00198b;
+	background: rgb(204, 248, 255);
 	border: 2px solid #c99;
 	padding: 20px;
 }
