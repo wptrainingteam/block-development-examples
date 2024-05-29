@@ -1,0 +1,10 @@
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+.wp-block-block-development-examples-basic-editable-block-1b8c51 {
+	color: #00198b;
+	background: rgb(204, 248, 255);
+	border: 2px solid #c99;
+	padding: 20px;
+}
