@@ -61,7 +61,15 @@
 
 <!-- wp:block-development-examples/enhanced-editable-block-1b8c51 -->
 <p class="wp-block-block-development-examples-enhanced-editable-block-1b8c51">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
-<!-- /wp:block-development-examples/enhanced-editable-block-1b8c51 -->]]></content:encoded>
+<!-- /wp:block-development-examples/enhanced-editable-block-1b8c51 -->
+
+<!-- wp:paragraph -->
+<p><strong>Basic Editable Block (no build)</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:block-development-examples/basic-editable-block-no-build-1b8c51 -->
+<p class="wp-block-block-development-examples-basic-editable-block-no-build-1b8c51">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+<!-- /wp:block-development-examples/basic-editable-block-no-build-1b8c51 -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>10</wp:post_id>
 		<wp:post_date><![CDATA[2024-05-16 06:56:41]]></wp:post_date>
