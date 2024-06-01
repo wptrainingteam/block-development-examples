@@ -33,7 +33,7 @@
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"lint:php": "composer lint",
-		"format:php": "composer format",
+		"format:php": "composer fix",
 		"prepare": "husky install",
 		"admin:package-json-updates": "pnpm -r exec npx npm-check-updates -u",
 		"admin:clear:build": "find ./plugins -path './plugins/*/node_modules/*' -prune -o -name 'build' -type d -exec rm -vrf '{}' +",
