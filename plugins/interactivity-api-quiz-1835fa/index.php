@@ -1,5 +1,4 @@
 <?php
-// phpcs:ignoreFile
 /**
  * Plugin Name:       Block Development Examples - Quiz 1835fa
  * Version:           1.0.0
