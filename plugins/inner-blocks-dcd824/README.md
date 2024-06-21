@@ -1,6 +1,6 @@
 ### Block Development Examples - Inner Blocks dcd824
 
-The goal of this example is to ...
+The goal of this example is to show how the component `InnerBlocks` allows to create custom blocks that accepts other blocks inside. 
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -11,11 +11,12 @@ The goal of this example is to ...
 
 ## Understanding the Example Code
 
-Overview of the code in bullet point form.
+At `edit.js` we can see how we import `InnerBlocks` from `@wordpress/block-editor` and use it inside our `Edit` component by setting a specific "template" for this block every time is inserted. From `block.json` we define the "allowedBlocks" that are allowed to be inserted within the `InnerBlocks` part of the block.
 
 ## Related resources
 
-Bulleted list of references
+- [Nested Blocks: Using InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
+- [`templateLock` docs](https://github.com/WordPress/gutenberg/blob/bb73da7b19ca11be56b0d3c430434b7b4093059f/packages/block-editor/src/components/inner-blocks/README.md#templatelock)
 
 ----
 
