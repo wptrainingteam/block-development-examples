@@ -8,7 +8,7 @@
  *     $block (WP_Block): The block instance.
  *
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
- * @package create-block
+ * @package BlockDevelopmentExamples\InteractivityAPIBlock833d15
  */
 
 // Generate unique id for aria-controls.
@@ -21,7 +21,7 @@ if ( function_exists( 'gutenberg_enqueue_module' ) ) {
 ?>
 
 <div
-	<?php echo get_block_wrapper_attributes(); // phpcs:ignore ?>
+	<?php echo get_block_wrapper_attributes(); ?>
 	data-wp-interactive='{ "namespace": "interactivity-api-block-833d15__store" }'
 	data-wp-context='{ "isOpen": false }'
 	data-wp-watch="callbacks.logIsOpen"
