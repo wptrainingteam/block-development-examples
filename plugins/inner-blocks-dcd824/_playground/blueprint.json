@@ -1,6 +1,5 @@
 {
-	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin",
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
 	"steps": [
 		{
 			"step": "installPlugin",
@@ -13,6 +12,16 @@
 			"step": "login",
 			"username": "admin",
 			"password": "password"
+		},
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/inner-blocks-dcd824/_playground/export.xml"
+			}
 		}
 	]
 }
