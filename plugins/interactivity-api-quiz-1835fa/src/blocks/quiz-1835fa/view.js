@@ -1,55 +1,64 @@
-import { store, getContext, getElement } from '@wordpress/interactivity';
+/**
+ * WordPress dependencies
+ */
+import { store, getContext, getElement } from "@wordpress/interactivity";
 
-const { state } = store( 'quiz-1835fa-project-store', {
-	state: {
-		get isOpen() {
-			const { id: quizId } = getContext();
-			return state.selected === quizId;
-		},
-		get toggleText() {
-			return state.isOpen ? state.closeText : state.openText;
-		},
-		get isActive() {
-			const { id: quizId, thisAnswer } = getContext();
-			return state.quizzes[ quizId ].current === thisAnswer;
-		},
-		get inputAnswer() {
-			const { id: quizId } = getContext();
-			return state.quizzes[ quizId ].current || '';
-		},
-	},
-	actions: {
-		toggle: () => {
-			const { id: quizId } = getContext();
-			if ( state.selected === quizId ) {
-				state.selected = null;
-			} else {
-				state.selected = quizId;
-			}
-		},
-		closeOnEsc: ( event ) => {
-			const { ref } = getElement();
-			if ( event.key === 'Escape' ) {
-				state.selected = null;
-				ref.querySelector( 'button[aria-controls^="quiz-"]' ).focus();
-			}
-		},
-		answerBoolean: () => {
-			const { id: quizId, thisAnswer } = getContext();
-			const quiz = state.quizzes[ quizId ];
-			quiz.current = quiz.current !== thisAnswer ? thisAnswer : null;
-		},
-		answerInput: ( event ) => {
-			const { id: quizId } = getContext();
-			state.quizzes[ quizId ].current = event.target.value || null;
-		},
-	},
-	callbacks: {
-		focusOnOpen: () => {
-			const { ref } = getElement();
-			if ( state.isOpen ) {
-				ref.focus();
-			}
-		},
-	},
-} );
+const { state } = store("quiz-1835fa-project-store", {
+  state: {
+    get isOpen() {
+      const { id } = getContext();
+      return state.selected === id;
+    },
+    get toggleText() {
+      return state.isOpen ? state.closeText : state.openText;
+    },
+    get isActive() {
+      const { id, thisAnswer } = getContext();
+      return state.quizzes[id].current === thisAnswer;
+    },
+    get inputAnswer() {
+      const { id } = getContext();
+      return state.quizzes[id].current || "";
+    },
+  },
+  actions: {
+    toggle() {
+      const { id } = getContext();
+
+      if (state.selected === id) {
+        state.selected = null;
+      } else {
+        state.selected = id;
+      }
+    },
+    closeOnEsc(event) {
+      if (event.key === "Escape") {
+        state.selected = null;
+        const { ref } = getElement();
+        ref.querySelector('button[aria-controls^="quiz-"]').focus();
+      }
+    },
+    answerBoolean() {
+      const { id, thisAnswer } = getContext();
+      const quiz = state.quizzes[id];
+
+      if (quiz.current !== thisAnswer) {
+        quiz.current = thisAnswer;
+      } else {
+        quiz.current = null;
+      }
+    },
+    answerInput(event) {
+      const { id } = getContext();
+      state.quizzes[id].current = event.target.value || null;
+    },
+  },
+  callbacks: {
+    focusOnOpen() {
+      if (state.isOpen) {
+        const { ref } = getElement();
+        ref.focus();
+      }
+    },
+  },
+});

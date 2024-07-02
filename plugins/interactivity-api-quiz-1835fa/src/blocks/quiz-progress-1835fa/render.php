@@ -11,7 +11,7 @@
  * @package BlockDevelopmentExamples\QuizProgress1835fa
  */
 
-wp_interactivity_state(
+$state = wp_interactivity_state(
 	'quiz-1835fa-project-store',
 	array(
 		'showAnswers' => false,
@@ -26,11 +26,11 @@ wp_interactivity_state(
 
 <div
 	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
-	data-wp-interactive='{"namespace": "quiz-1835fa-project-store"}'
+	data-wp-interactive="quiz-1835fa-project-store"
 >
 	<div>
 		<strong><?php echo wp_kses_data( __( 'Answered' ) ); ?></strong>: 
-		<span data-wp-text="state.answered"></span> / <span data-wp-text="state.totalQuizzes"></span>
+		<span data-wp-text="state.answered"></span>/<?php echo count( $state['quizzes'] ); ?>
 	</div>
 
 	<div>
@@ -40,7 +40,6 @@ wp_interactivity_state(
 			<?php echo wp_kses_data( __( 'All correct, congratulations!' ) ); ?>
 		</span>
 	</div>
-
 	<div>
 		<button
 			data-wp-bind--hidden="state.showAnswers"
