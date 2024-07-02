@@ -36,9 +36,9 @@ $state = wp_interactivity_state(
 	<div>
 		<strong><?php echo wp_kses_data( __( 'Correct' ) ); ?></strong>: 
 		<span data-wp-text="state.correct"></span>
-		<span data-wp-bind--hidden="!state.allCorrect">
-			<?php echo wp_kses_data( __( 'All correct, congratulations!' ) ); ?>
-		</span>
+		<div data-wp-bind--hidden="!state.allCorrect">
+			<?php echo wp_kses_data( __( 'All correct, congratulations! 🎉' ) ); ?>
+		</div>
 	</div>
 	<div>
 		<button

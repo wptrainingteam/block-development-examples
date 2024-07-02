@@ -42,7 +42,7 @@ $context = array(
 	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
 	data-wp-interactive="quiz-1835fa-project-store"
 	data-wp-on--keydown="actions.closeOnEsc"
-	<?php echo wp_interactivity_data_wp_context( $context ); ?>
+	<?php echo wp_kses_data( wp_interactivity_data_wp_context( $context ) ); ?>
 >
 	<div>
 		<strong>
@@ -54,6 +54,7 @@ $context = array(
 			data-wp-bind--aria-expanded="state.isOpen"
 			aria-controls="<?php echo esc_attr( $unique_id ); ?>"
 			data-wp-text="state.toggleText"
+			data-wp-bind--disabled="state.showAnswers"
 		></button>
 	</div>
 
