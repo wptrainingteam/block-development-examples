@@ -59,6 +59,10 @@ $state = wp_interactivity_state(
 	<hr>
 
 	<div>
-		<?php echo wp_kses_data( $content ); ?>
+		
+		<?php
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $content;
+		?>
 	</div>
 </div>
