@@ -11,35 +11,38 @@
  * @package BlockDevelopmentExamples\Quiz1835fa
  */
 
-$unique_id = substr( uniqid(), -5 );
+$unique_id = wp_unique_id( 'quiz-' );
 
 wp_interactivity_state(
 	'quiz-1835fa-project-store',
 	array(
-		'quizSelected' => null,
-		'openText'     => __( 'Open menu' ),
-		'closeText'    => __( 'Close menu' ),
-		'quizzes'      => array(
+		'openText'    => __( 'Open' ),
+		'closeText'   => __( 'Close' ),
+		'selected'    => null,
+		'isOpen'      => false,
+		'toggleText'  => __( 'Open' ),
+		'isActive'    => false,
+		'inputAnswer' => '',
+		'quizzes'     => array(
 			$unique_id => array(
 				'current' => null,
 				'correct' => $attributes['answer'],
 			),
 		),
-		'toggleText'   => __( 'Open menu' ),
-		'isActive'     => false,
-		'inputAnswer'  => null,
 	)
 );
 
-
+$context = array(
+	'id'     => $unique_id,
+	'answer' => null,
+);
 ?>
 
 <div
 	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
-	data-wp-interactive='{"namespace": "quiz-1835fa-project-store"}'
-	data-wp-context='{ "id": "<?php echo esc_attr( $unique_id ); ?>" , "answer": null }'
+	data-wp-interactive="quiz-1835fa-project-store"
 	data-wp-on--keydown="actions.closeOnEsc"
-	data-wp-watch="callbacks.log"
+	<?php echo wp_kses_data( wp_interactivity_data_wp_context( $context ) ); ?>
 >
 	<div>
 		<strong>
@@ -49,15 +52,15 @@ wp_interactivity_state(
 		<button
 			data-wp-on--click="actions.toggle"
 			data-wp-bind--aria-expanded="state.isOpen"
+			aria-controls="<?php echo esc_attr( $unique_id ); ?>"
 			data-wp-text="state.toggleText"
-			aria-controls="quiz-<?php echo esc_attr( $unique_id ); ?>"
-		>
-		</button>
+			data-wp-bind--disabled="state.showAnswers"
+		></button>
 	</div>
 
 	<div
 		data-wp-bind--hidden="!state.isOpen"
-		id="quiz-<?php echo esc_attr( $unique_id ); ?>"
+		id="<?php echo esc_attr( $unique_id ); ?>"
 	>
 		<?php if ( 'boolean' === $attributes['typeOfQuiz'] ) : ?>
 			<button

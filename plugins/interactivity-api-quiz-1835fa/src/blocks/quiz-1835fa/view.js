@@ -1,55 +1,40 @@
-import { store, getContext, getElement } from '@wordpress/interactivity';
+/**
+ * WordPress dependencies
+ */
+import { store } from '@wordpress/interactivity';
 
 const { state } = store( 'quiz-1835fa-project-store', {
 	state: {
-		get isOpen() {
-			const { id: quizId } = getContext();
-			return state.selected === quizId;
+		get answered() {
+			return Object.values( state.quizzes ).filter(
+				( v ) => v.current !== null
+			).length;
 		},
-		get toggleText() {
-			return state.isOpen ? state.closeText : state.openText;
+		get allAnswered() {
+			return state.answered === Object.keys( state.quizzes ).length;
 		},
-		get isActive() {
-			const { id: quizId, thisAnswer } = getContext();
-			return state.quizzes[ quizId ].current === thisAnswer;
+		get correct() {
+			return state.showAnswers
+				? Object.values( state.quizzes ).filter(
+						( v ) => v.current === v.correct
+				  ).length
+				: '?';
 		},
-		get inputAnswer() {
-			const { id: quizId } = getContext();
-			return state.quizzes[ quizId ].current || '';
+		get allCorrect() {
+			return state.correct === Object.keys( state.quizzes ).length;
 		},
 	},
 	actions: {
-		toggle: () => {
-			const { id: quizId } = getContext();
-			if ( state.selected === quizId ) {
-				state.selected = null;
-			} else {
-				state.selected = quizId;
-			}
+		checkAnswers: () => {
+			state.showAnswers = true;
+			state.selected = null;
 		},
-		closeOnEsc: ( event ) => {
-			const { ref } = getElement();
-			if ( event.key === 'Escape' ) {
-				state.selected = null;
-				ref.querySelector( 'button[aria-controls^="quiz-"]' ).focus();
-			}
-		},
-		answerBoolean: () => {
-			const { id: quizId, thisAnswer } = getContext();
-			const quiz = state.quizzes[ quizId ];
-			quiz.current = quiz.current !== thisAnswer ? thisAnswer : null;
-		},
-		answerInput: ( event ) => {
-			const { id: quizId } = getContext();
-			state.quizzes[ quizId ].current = event.target.value || null;
-		},
-	},
-	callbacks: {
-		focusOnOpen: () => {
-			const { ref } = getElement();
-			if ( state.isOpen ) {
-				ref.focus();
-			}
+		reset: () => {
+			state.showAnswers = false;
+			state.selected = null;
+			Object.values( state.quizzes ).forEach( ( quiz ) => {
+				quiz.current = null;
+			} );
 		},
 	},
 } );

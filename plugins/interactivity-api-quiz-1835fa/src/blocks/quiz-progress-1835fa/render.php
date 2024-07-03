@@ -11,7 +11,7 @@
  * @package BlockDevelopmentExamples\QuizProgress1835fa
  */
 
-wp_interactivity_state(
+$state = wp_interactivity_state(
 	'quiz-1835fa-project-store',
 	array(
 		'showAnswers' => false,
@@ -26,21 +26,20 @@ wp_interactivity_state(
 
 <div
 	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
-	data-wp-interactive='{"namespace": "quiz-1835fa-project-store"}'
+	data-wp-interactive="quiz-1835fa-project-store"
 >
 	<div>
 		<strong><?php echo wp_kses_data( __( 'Answered' ) ); ?></strong>: 
-		<span data-wp-text="state.answered"></span> / <span data-wp-text="state.totalQuizzes"></span>
+		<span data-wp-text="state.answered"></span>/<?php echo count( $state['quizzes'] ); ?>
 	</div>
 
 	<div>
 		<strong><?php echo wp_kses_data( __( 'Correct' ) ); ?></strong>: 
 		<span data-wp-text="state.correct"></span>
-		<span data-wp-bind--hidden="!state.allCorrect">
-			<?php echo wp_kses_data( __( 'All correct, congratulations!' ) ); ?>
-		</span>
+		<div data-wp-bind--hidden="!state.allCorrect">
+			<?php echo wp_kses_data( __( 'All correct, congratulations! 🎉' ) ); ?>
+		</div>
 	</div>
-
 	<div>
 		<button
 			data-wp-bind--hidden="state.showAnswers"
@@ -60,6 +59,10 @@ wp_interactivity_state(
 	<hr>
 
 	<div>
-		<?php echo wp_kses_data( $content ); ?>
+		
+		<?php
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $content;
+		?>
 	</div>
 </div>
