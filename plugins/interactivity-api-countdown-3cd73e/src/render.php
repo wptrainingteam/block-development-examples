@@ -29,7 +29,7 @@ $context = array(
 ?>
 
 <div 
-	<?php echo get_block_wrapper_attributes(); // phpcs:ignore ?> 
+	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
 	data-wp-interactive='{"namespace": "interactivity-api-countdown-3cd73e__store"}' 
 	data-wp-context='<?php echo wp_json_encode( $context ); ?>' 
 	data-wp-init="callbacks.startCountdown"
