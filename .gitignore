@@ -46,9 +46,6 @@ dist/
 
 # Ingnore "build" folders 
 build/
-#Except for some examples as a reference
-!*/minimal-block-ca6eda/build/ 
-!*/interactivity-api-block-833d15/build/ 
 
 # Project files
 node_modules/
