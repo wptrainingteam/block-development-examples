@@ -22,6 +22,8 @@ $state = wp_interactivity_state(
 	)
 );
 
+$number_of_quizzes = isset( $state['quizzes'] ) ? count( $state['quizzes'] ) : 0;
+
 ?>
 
 <div
@@ -30,7 +32,7 @@ $state = wp_interactivity_state(
 >
 	<div>
 		<strong><?php echo wp_kses_data( __( 'Answered' ) ); ?></strong>: 
-		<span data-wp-text="state.answered"></span> / <span data-wp-text="state.totalQuizzes"></span>
+		<span data-wp-text="state.answered"></span> / <?php echo wp_kses_data( $number_of_quizzes ); ?>
 	</div>
 
 	<div>
