@@ -30,7 +30,7 @@ $state = wp_interactivity_state(
 >
 	<div>
 		<strong><?php echo wp_kses_data( __( 'Answered' ) ); ?></strong>: 
-		<span data-wp-text="state.answered"></span>/<?php echo count( $state['quizzes'] ); ?>
+		<span data-wp-text="state.answered"></span> / <span data-wp-text="state.totalQuizzes"></span>
 	</div>
 
 	<div>
