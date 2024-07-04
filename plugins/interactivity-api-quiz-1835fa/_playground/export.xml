@@ -47,13 +47,15 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://127.0.0.1:8000/?p=1</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:block-development-examples/quiz-progress-1835fa /-->
-
-<!-- wp:block-development-examples/quiz-1835fa {"question":"Singer of Led Zeppelin was...","typeOfQuiz":"input","answer":"Robert Plant"} /-->
-
-<!-- wp:block-development-examples/quiz-1835fa {"question":"Revolver was an album of The Beatles..."} /-->
-
-<!-- wp:block-development-examples/quiz-1835fa {"question":"\u0022All along the watchtower\u0022 was originally composed by...","typeOfQuiz":"input","answer":"Bob Dylan"} /-->]]></content:encoded>
+		<content:encoded>
+		<![CDATA[
+			<!-- wp:block-development-examples/quiz-progress-1835fa -->
+				<!-- wp:block-development-examples/quiz-1835fa {"question":"Singer of Led Zeppelin was...","typeOfQuiz":"input","answer":"Robert Plant"} /-->
+				<!-- wp:block-development-examples/quiz-1835fa {"question":"Revolver was an album of The Beatles..."} /-->
+				<!-- wp:block-development-examples/quiz-1835fa {"question":"\u0022All along the watchtower\u0022 was originally composed by...","typeOfQuiz":"input","answer":"Bob Dylan"} /-->
+			<!-- /wp:block-development-examples/quiz-progress-1835fa -->
+		]]>
+		</content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>10</wp:post_id>
 		<wp:post_date><![CDATA[2024-05-21 05:43:47]]></wp:post_date>
