@@ -20,6 +20,9 @@ const { state } = store( 'quiz-1835fa-project-store', {
 			const { id } = getContext();
 			return state.quizzes[ id ].current || '';
 		},
+		get totalQuizzes() {
+			return state.quizzes?.length || 0;
+		},
 	},
 	actions: {
 		toggle() {
