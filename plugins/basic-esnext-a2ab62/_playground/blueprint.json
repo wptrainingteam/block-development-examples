@@ -1,35 +1,25 @@
 {
-    "landingPage": "/wp-admin/post.php?post=4&action=edit",
-    "steps": [
-        {
-            "step": "login",
-            "username": "admin",
-            "password": "password"
-        },
-        {
-            "step": "mkdir",
-            "path": "/downloads"
-        },
-        {
-            "step": "writeFile",
-            "path": "/downloads/plugin.zip",
-            "data": {
-            "resource": "url",
-            "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/basic-esnext-a2ab62.zip",
-            "caption": "Downloading plugin..."
-            }
-        },
-        {
-            "step": "installPlugin",
-            "pluginZipFile": {
-            "resource": "vfs",
-            "path": "/downloads/plugin.zip"
-            }
-        },
-        {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/post.php?post=4&action=edit",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/basic-esnext-a2ab62.zip"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+            "step": "resetData"
+        }
+		{
             "step": "runPHP",
             "code": "<?php require '/wordpress/wp-load.php'; wp_insert_post( array('post_title'    => 'Test block','post_content'  => '<!-- wp:block-development-examples/basic-esnext-a2ab62 --><div style=\"background-color:#900;color:#fff;padding:20px\" class=\"wp-block-block-development-examples-basic-esnext-a2ab62\">Hello World, step 1 (from the frontend).</div><!-- /wp:block-development-examples/basic-esnext-a2ab62 -->', 'post_status'   => 'publish', 'post_author'   => 1 ) );"
         }
-    ]
+	]
 }
-  
