@@ -1,0 +1,8 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"login": true,
+	"plugins": [
+		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/slotfill-2fb190.zip"
+	],
+	"landingPage": "/wp-admin/site-editor.php"
+}
