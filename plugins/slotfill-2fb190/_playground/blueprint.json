@@ -12,7 +12,7 @@
 		},
 		{
 			"step": "writeFile",
-			"path": "/wordpress/plugins/slotfill-2fb190/includes/individual-example-add-on.php",
+			"path": "/wordpress/wp-content/plugins/slotfill-2fb190/individual-example-add-on.php",
 			"data": "<?php  function set_individual_example() { wp_localize_script( 'slotfill-2fb190', 'individualExample', 'PluginSidebar' ); }"
 		},
 		{
