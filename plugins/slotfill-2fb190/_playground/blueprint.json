@@ -17,7 +17,7 @@
 		},
 		{
 			"step": "activatePlugin",
-			"pluginName": "slotfill-2fb190/index.php"
+			"pluginPath": "slotfill-2fb190/slotfill-2fb190.php"
 		}
 	]
 }
