@@ -12,7 +12,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* SLOTFILL_2FB190_EXAMPLE_LOAD can set to load individual slotFillExamples at src/index.js */ require '/wordpress/wp-load.php'; define('SLOTFILL_2FB190_EXAMPLE_LOAD', ''; );"
+			"code": "<?php /* SLOTFILL_2FB190_EXAMPLE_LOAD can set to load individual slotFillExamples at src/index.js */ require '/wordpress/wp-load.php'; define('SLOTFILL_2FB190_EXAMPLE_LOAD', '');"
 		},
 		{
 			"step": "writeFile",
