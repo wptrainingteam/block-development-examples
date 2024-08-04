@@ -27,6 +27,12 @@ add_action(
 				true
 			);
 		}
+
+		$individual_example_add_on = plugin_dir_path( __FILE__ ) . '/individual-example-add-on.php';
+		if ( file_exists( $individual_example_add_on ) ) {
+			require_once $individual_example_add_on;
+			set_individual_example();
+		}
 	}
 );
 
