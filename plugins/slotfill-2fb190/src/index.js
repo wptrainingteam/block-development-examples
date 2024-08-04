@@ -6,7 +6,7 @@ const slotFillExamples = {
 	PluginDocumentSettingPanel: registerSlotFillWithPluginDocumentSettingPanel,
 };
 
-const individualExample = { window };
+const { individualExample } = window;
 
 if ( individualExample ) {
 	console.log( 'individualExample', individualExample );
