@@ -6,11 +6,11 @@ const slotFillExamples = {
 	PluginDocumentSettingPanel: registerSlotFillWithPluginDocumentSettingPanel,
 };
 
-const { individualExample } = window;
+const { slotFill2FB190ExampleLoad } = window;
 
-if ( individualExample ) {
-	console.log( 'individualExample', individualExample );
-	slotFillExamples[ individualExample ]();
+if ( slotFill2FB190ExampleLoad ) {
+	console.log( 'individualExample', slotFill2FB190ExampleLoad );
+	slotFillExamples[ slotFill2FB190ExampleLoad ]();
 } else {
 	console.log( 'running all Examples' );
 	for ( const example in slotFillExamples ) {
