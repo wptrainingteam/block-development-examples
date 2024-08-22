@@ -15,17 +15,23 @@
 add_action(
 	'enqueue_block_editor_assets',
 	function () {
-		$slotfill_2fb190_file = plugin_dir_path( __FILE__ ) . '/build/slotfill-2fb190.asset.php';
+		$slotfill_2fb190_index_file = plugin_dir_path( __FILE__ ) . '/build/index.asset.php';
 
-		if ( file_exists( $slotfill_2fb190_file ) ) {
-			$assets = include $slotfill_2fb190_file;
+		if ( file_exists( $slotfill_2fb190_index_file ) ) {
+			$assets = include $slotfill_2fb190_index_file;
 			wp_enqueue_script(
 				'slotfill-2fb190',
-				plugin_dir_url( __FILE__ ) . '/build/slotfill-2fb190.js',
+				plugin_dir_url( __FILE__ ) . '/build/index.js',
 				$assets['dependencies'],
 				$assets['version'],
 				true
 			);
+		}
+
+		$individual_example_add_on = plugin_dir_path( __FILE__ ) . '/individual-example-add-on.php';
+		if ( file_exists( $individual_example_add_on ) ) {
+			require_once $individual_example_add_on;
+			set_individual_example();
 		}
 	}
 );

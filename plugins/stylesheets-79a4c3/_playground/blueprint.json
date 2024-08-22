@@ -1,28 +1,33 @@
 {
-    "landingPage": "/?p=5",
-    "steps": [
-      {
-        "step": "installPlugin",
-        "pluginZipFile": {
-          "resource": "url",
-          "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/stylesheets-79a4c3.zip"
-        }
-      },
-      {
-        "step": "login",
-        "username": "admin",
-        "password": "password"
-      },
-      {
-        "step": "runPHP",
-        "code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
-      },
-      {
-        "step": "importFile",
-        "file": {
-          "resource": "url",
-          "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/stylesheets-79a4c3/_playground/export.xml"
-        }
-      }
-    ]
-  }
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/stylesheets-79a4c3.zip"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "runSql",
+			"sql": {
+				"resource": "literal",
+				"name": "schema.sql",
+				"contents": "DELETE FROM wp_posts"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/stylesheets-79a4c3/_playground/export.xml"
+			}
+		}
+	]
+}

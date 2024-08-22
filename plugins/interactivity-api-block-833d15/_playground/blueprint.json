@@ -1,36 +1,36 @@
 {
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-  "landingPage": "/?p=4",
-  "steps": [
-    {
-      "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/interactivity-api-block-833d15.zip"
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "wordpress.org/plugins",
-        "slug": "gutenberg"
-      }
-    },
-    {
-      "step": "login",
-      "username": "admin",
-      "password": "password"
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
-    },
-    {
-      "step": "importWxr",
-      "file": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/interactivity-api-block-833d15/_playground/export.xml"
-      }
-    }
-  ]
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/?p=10",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/interactivity-api-block-833d15.zip"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "gutenberg"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/interactivity-api-block-833d15/_playground/export.xml"
+			}
+		}
+	]
 }

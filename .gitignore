@@ -44,6 +44,9 @@ build-style.js
 build-types/
 dist/
 
+# Ingnore "build" folders 
+build/
+
 # Project files
 node_modules/
 vendor/
@@ -100,3 +103,5 @@ changes.json
 # Temp files
 _temp/
 _app/build
+
+*.code-workspace

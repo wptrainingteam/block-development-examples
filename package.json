@@ -32,13 +32,13 @@
 		"lint": "npm run lint:css && npm run lint:js && npm run lint:php",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"lint:php": "composer run lint",
-		"format:php": "composer run fix",
+		"lint:php": "composer lint",
+		"format:php": "composer fix",
 		"prepare": "husky install",
-		"admin:package-json-updates" : "pnpm -r exec npx npm-check-updates -u",
-		"admin:clear:build": "find ./plugins -name 'build' -type d -prune -exec rm -vrf '{}' +",
+		"admin:package-json-updates": "pnpm -r exec npx npm-check-updates -u",
+		"admin:clear:build": "find ./plugins -path './plugins/*/node_modules/*' -prune -o -name 'build' -type d -exec rm -vrf '{}' +",
 		"admin:clear:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -vrf '{}' +",
-		"admin:reinstall" : "npm run admin:clear:node_modules && pnpm install"
+		"admin:reinstall": "npm run admin:clear:node_modules && pnpm install"
 	},
 	"lint-staged": {
 		"*.js": [
@@ -56,6 +56,7 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/plugin-transform-class-static-block": "^7.22.11",
+		"@playwright/test": "^1.44.1",
 		"@wordpress/env": "^8.11.0",
 		"@wordpress/scripts": "^27.8.0",
 		"husky": "^8.0.0",
@@ -66,6 +67,7 @@
 		"chalk": "4.1.1",
 		"commander": "9.2.0",
 		"copyfiles": "^2.4.1",
+		"eslint-plugin-jest": "^28.5.0",
 		"execa": "4.0.2",
 		"fs-extra": "^11.1.1",
 		"make-dir-cli": "^3.1.0",

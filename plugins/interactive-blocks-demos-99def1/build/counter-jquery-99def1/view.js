@@ -1,1 +1,0 @@
-window.addEventListener("load",(()=>{const e=jQuery,t=".wp-block-block-development-examples-counter-jquery-99def1",n=e(t+"__value"),a=parseInt(n.attr("step"));e(t+"__increment").click((()=>{const e=parseInt(n.val());n.val(e+a)})),e(t+"__decrement").click((()=>{const e=parseInt(n.val());n.val(e-a)}))}));

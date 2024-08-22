@@ -8,6 +8,6 @@
 
 global $post;
 ?>
-<p <?php echo get_block_wrapper_attributes(); // phpcs:ignore ?>>
-	<?php esc_html_e( get_post_meta( $post->ID, 'myguten_meta_block_field', true ) ); // phpcs:ignore ?>
+<p <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>>
+	<?php wp_kses_data( get_post_meta( $post->ID, 'myguten_meta_block_field', true ) ); ?>
 </p>

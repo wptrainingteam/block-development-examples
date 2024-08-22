@@ -28,7 +28,7 @@ jobs:
                   type: now
                   from_branch: trunk
                   target_branch: deploy
-                  github_token: ${{ secrets.GH_ACTION_BLOCK_EXAMPLES }}
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
             - name: Show current branch
               run: git branch --show-current
             - name: Show last commit
@@ -46,7 +46,6 @@ jobs:
                   git config --local user.email "github-actions[bot]@users.noreply.github.com"
                   git config --local user.name "github-actions[bot]"
                   git add -A
-                  git rm --cached -r plugins/*/build
                   git commit -m "Add changes" --no-verify
             - name: Push changes
               uses: ad-m/github-push-action@master
