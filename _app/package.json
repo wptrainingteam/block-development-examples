@@ -3,8 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@wordpress/components": "^27.6.0",
-		"@wordpress/dataviews": "^1.2.0",
+		"@wordpress/dataviews": "^4.2.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-scripts": "5.0.1"
@@ -16,6 +15,7 @@
 		"admin:data:copy": "cp -r ../_data/ ./src/_data/",
 		"admin:data:update": "cp -r ../_data/ ./src/_data/"
 	},
+	"homepage": "https://wordpress.github.io/block-development-examples",
 	"eslintConfig": {
 		"extends": [
 			"react-app"
@@ -32,5 +32,9 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"gh-pages": "^6.1.1",
+		"sass": "^1.77.8"
 	}
 }
