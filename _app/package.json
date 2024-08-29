@@ -17,23 +17,6 @@
 		"admin:data:update": "cp -r ../_data/ ./src/_data/"
 	},
 	"homepage": "https://wordpress.github.io/block-development-examples",
-	"eslintConfig": {
-		"extends": [
-			"react-app"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
 	"devDependencies": {
 		"gh-pages": "^6.1.1",
 		"sass": "^1.77.8"
