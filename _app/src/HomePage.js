@@ -5,7 +5,6 @@ import { getItemsForFilter } from './utils';
 import './styles.scss';
 
 import data from './_data/examples.json';
-// const tagsForFilter = getItemsForFilter( 'tags' )( data );
 
 const fields = [
 	{
@@ -77,7 +76,6 @@ const fields = [
 		id: 'tags',
 		label: 'Tags',
 		elements: getItemsForFilter( 'tags' )( data ),
-		enableGlobalSearch: true,
 		enableSorting: false,
 		render: ( { item } ) => {
 			return (
@@ -95,16 +93,18 @@ const fields = [
 	},
 ];
 
+const defaultLayouts = {
+	table: {
+		layout: {
+			primaryField: 'slug',
+		},
+	},
+};
+
 const DEFAULT_VIEW = {
 	type: 'table',
 	hiddenFields: [],
-	perPage: 10,
-	layout: {
-		page: 1,
-		perPage: 10,
-		layout: {},
-		columnFields: [],
-	},
+	perPage: 100,
 	filters: [],
 	fields: [ 'slug', 'folder', 'demo', 'zip', 'description', 'tags' ],
 };
@@ -171,6 +171,7 @@ const Examples = () => {
 				getItemId={ ( item ) => item.slug }
 				onChangeView={ onChangeView }
 				paginationInfo={ paginationInfo }
+				defaultLayouts={ defaultLayouts }
 			/>
 		</>
 	);
