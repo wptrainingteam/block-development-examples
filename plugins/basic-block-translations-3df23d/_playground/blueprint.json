@@ -1,0 +1,13 @@
+{
+	"landingPage": "/wp-admin/post.php?post=4&action=edit",
+	"login": true,
+	"plugins": [
+		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/basic-block-translations-3df23d.zip"
+	],
+	"steps": [
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; wp_insert_post( array('post_title'    => 'Test block','post_content'  => '<!-- wp:block-development-examples/minimal-block-no-build-e621a6 --><p>Hello World - Frontend</p><!-- /wp:block-development-examples/basic-block-translations-3df23d -->', 'post_status'   => 'publish', 'post_author'   => 1 ) );"
+		}
+	]
+}
