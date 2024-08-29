@@ -5,6 +5,7 @@ import { getItemsForFilter } from './utils';
 import './styles.scss';
 
 import data from './_data/examples.json';
+// const tagsForFilter = getItemsForFilter( 'tags' )( data );
 
 const fields = [
 	{
@@ -163,19 +164,6 @@ const Examples = () => {
 
 	return (
 		<>
-			<div>
-				{ filterTags ? (
-					<span>
-						Showing results for: <pre>{ filterTags }</pre>
-					</span>
-				) : (
-					<p>Showing all results</p>
-				) }
-			</div>
-			<div>
-				<pre>{ JSON.stringify( view ) }</pre>
-			</div>
-
 			<DataViews
 				data={ processedData }
 				fields={ fields }
