@@ -18,6 +18,15 @@ body {
 	min-width: 600px;
 }
 
+.intro {
+	padding: 0 50px;
+	font-weight: 700;
+
+	a {
+		margin: 0 5px;
+	}
+}
+
 .tags_example {
 	display: flex;
 	flex-wrap: wrap;
