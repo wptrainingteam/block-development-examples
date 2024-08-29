@@ -1,34 +1,19 @@
 {
-  "landingPage": "/wp-admin/post.php?post=4&action=edit",
-  "steps": [
-    {
-      "step": "login",
-      "username": "admin",
-      "password": "password"
-    },
-    {
-      "step": "mkdir",
-      "path": "/downloads"
-    },
-    {
-      "step": "writeFile",
-      "path": "/downloads/plugin.zip",
-      "data": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/minimal-block-no-build-e621a6.zip",
-        "caption": "Downloading plugin..."
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "vfs",
-        "path": "/downloads/plugin.zip"
-      }
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php require '/wordpress/wp-load.php'; wp_insert_post( array('post_title'    => 'Test block','post_content'  => '<!-- wp:block-development-examples/minimal-block-no-build-e621a6 --><p>Hello World - Frontend</p><!-- /wp:block-development-examples/minimal-block-no-build-e621a6 -->', 'post_status'   => 'publish', 'post_author'   => 1 ) );"
-    }
-  ]
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"login": true,
+	"plugins": [
+		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/basic-esnext-a2ab62.zip"
+	],
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/basic-esnext-a2ab62/_playground/export.xml"
+			}
+		}
+	]
 }
