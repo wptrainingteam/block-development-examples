@@ -1,0 +1,19 @@
+{
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"login": true,
+	"plugins": [
+		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/meta-block-bb1e55.zip"
+	],
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/meta-block-bb1e55/_playground/export.xml"
+			}
+		}
+	]
+}
