@@ -38,7 +38,8 @@
 		"admin:package-json-updates": "pnpm -r exec npx npm-check-updates -u",
 		"admin:clear:build": "find ./plugins -path './plugins/*/node_modules/*' -prune -o -name 'build' -type d -exec rm -vrf '{}' +",
 		"admin:clear:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -vrf '{}' +",
-		"admin:reinstall": "npm run admin:clear:node_modules && pnpm install"
+		"admin:reinstall": "npm run admin:clear:node_modules && pnpm install",
+		"gh:deploy": "gh-pages -d _app/build"
 	},
 	"lint-staged": {
 		"*.js": [
@@ -59,8 +60,11 @@
 		"@playwright/test": "^1.44.1",
 		"@wordpress/env": "^8.11.0",
 		"@wordpress/scripts": "^27.8.0",
+		"gh-pages": "^6.1.1",
 		"husky": "^8.0.0",
-		"lint-staged": "^13.2.0"
+		"lint-staged": "^13.2.0",
+		"prettier-eslint": "^16.3.0",
+		"stylelint-config-prettier": "^9.0.5"
 	},
 	"dependencies": {
 		"@inquirer/prompts": "^3.1.1",

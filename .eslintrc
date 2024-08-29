@@ -19,6 +19,14 @@
 		"no-console": "off",
 		"jsdoc/no-undefined-types": "off"
 	},
+	"overrides": [
+		{
+			"files": [ "_app/**/*.js" ],
+			"rules": {
+				"import/no-unresolved": "off"
+			}
+		}
+	],
 	"globals": {
 		"jQuery": "readonly",
 		"HTMLElement": true

@@ -101,5 +101,7 @@ changes.json
 
 # Temp files
 _temp/
+_app/build
 
 *.code-workspace
+_app/src/data

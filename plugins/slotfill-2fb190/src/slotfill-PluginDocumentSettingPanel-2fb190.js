@@ -5,7 +5,7 @@ import { __ } from '@wordpress/i18n';
 import { TextControl } from '@wordpress/components';
 import { useEntityProp } from '@wordpress/core-data';
 import { useSelect } from '@wordpress/data';
-import { PluginDocumentSettingPanel } from '@wordpress/edit-post';
+import { PluginDocumentSettingPanel } from '@wordpress/editor';
 import { registerPlugin } from '@wordpress/plugins';
 
 const ExamplePluginDocumentSettingPanel = () => {
@@ -49,6 +49,11 @@ const ExamplePluginDocumentSettingPanel = () => {
 			name="example-07-slotfills-esnext"
 			title={ __( 'Example Meta Box', 'block-development-examples' ) }
 			className="example-07-slotfills-esnext"
+			icon={
+				<svg xmlns="http://www.w3.org/2000/svg">
+					<circle r="10" cx="10" cy="10" fill="red" />
+				</svg>
+			}
 		>
 			<TextControl
 				label={ __(
@@ -61,6 +66,9 @@ const ExamplePluginDocumentSettingPanel = () => {
 		</PluginDocumentSettingPanel>
 	);
 };
-registerPlugin( 'slotfill-2fb190', {
-	render: ExamplePluginDocumentSettingPanel,
-} );
+
+export const registerSlotFillWithPluginDocumentSettingPanel = () => {
+	registerPlugin( 'slotfill-plugindocumentsettingpanel', {
+		render: ExamplePluginDocumentSettingPanel,
+	} );
+};

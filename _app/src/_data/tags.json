@@ -1,0 +1,76 @@
+[
+    {
+        "slug": "interactivity-api",
+        "name": "INTERACTIVITY API"
+    },
+    {
+        "slug": "interactive-block",
+        "name": "INTERACTIVE BLOCK"
+    },
+    {
+        "slug": "create-block-template",
+        "name": "CREATE BLOCK TEMPLATE"
+    },
+    {
+        "slug": "no-build",
+        "name": "NO BUILD"
+    },
+    {
+        "slug": "no-block",
+        "name": "NO BLOCK"
+    },
+    {
+        "slug": "dynamic-rendering",
+        "name": "DYNAMIC RENDERING"
+    },
+    {
+        "slug": "static-rendering",
+        "name": "STATIC RENDERING"
+    },
+    {
+        "slug": "wp-data",
+        "name": "WP DATA"
+    },
+    {
+        "slug": "create-block",
+        "name": "CREATE BLOCK"
+    },
+    {
+        "slug": "gutenberg-plugin",
+        "name": "GUTENBERG PLUGIN"
+    },
+    {
+        "slug": "minimal",
+        "name": "MINIMAL"
+    },
+    {
+        "slug": "multi-block",
+        "name": "MULTI BLOCK"
+    },
+    {
+        "slug": "styles",
+        "name": "STYLES"
+    },
+    {
+        "slug": "supports",
+        "name": "SUPPORTS"
+    },
+    {
+        "slug": "meta",
+        "name": "META"
+    },
+    {
+        "slug": "slotfill",
+        "name": "SLOTFILL"
+    },
+    {
+        "slug": "featured",
+        "name": "FEATURED"
+    },
+    {
+        "slug": "block-toolbar",
+        "name": "BLOCK TOOLBAR"
+    }
+    
+
+]
