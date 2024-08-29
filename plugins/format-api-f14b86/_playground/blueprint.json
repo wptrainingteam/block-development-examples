@@ -1,0 +1,19 @@
+{
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"login": true,
+	"plugins": [
+		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/format-api-f14b86.zip"
+	],
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/format-api-f14b86/_playground/export.xml"
+			}
+		}
+	]
+}
