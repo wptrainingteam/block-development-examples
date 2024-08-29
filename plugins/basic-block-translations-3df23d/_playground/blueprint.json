@@ -12,7 +12,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/block-supports-6aa4dd/_playground/export.xml"
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/basic-block-translations-3df23d/_playground/export.xml"
 			}
 		}
 	]
