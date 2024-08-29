@@ -2,7 +2,7 @@
 	"$schema": "https://json.schemastore.org/block.json",
 	"apiVersion": 3,
 	"name": "block-development-examples/basic-block-translations-3df23d",
-	"title": "Example: Basic block",
+	"title": "Basic block Translations",
 	"textdomain": "block-development-examples",
 	"icon": "smiley",
 	"category": "widgets",
