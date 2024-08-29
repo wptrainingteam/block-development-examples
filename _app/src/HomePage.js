@@ -164,6 +164,16 @@ const Examples = () => {
 
 	return (
 		<>
+			<p>
+				Dynamic table of examples at
+				<a
+					href={
+						'https://github.com/WordPress/block-development-examples'
+					}
+				>
+					WordPress/block-development-examples
+				</a>
+			</p>
 			<DataViews
 				data={ processedData }
 				fields={ fields }
