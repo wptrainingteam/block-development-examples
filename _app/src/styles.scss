@@ -20,10 +20,18 @@ body {
 
 .intro {
 	padding: 0 50px;
-	font-weight: 700;
 
-	a {
-		margin: 0 5px;
+	.main {
+		font-weight: 700;
+
+		a {
+			margin: 0 5px;
+		}
+	}
+
+	code {
+		background-color: rgb(239, 235, 235);
+		padding: 2px;
 	}
 }
 
