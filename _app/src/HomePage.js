@@ -205,18 +205,6 @@ const Examples = () => {
 
 	return (
 		<>
-			<div className="intro">
-				<p>
-					Dynamic table of examples at
-					<a
-						href={
-							'https://github.com/WordPress/block-development-examples'
-						}
-					>
-						WordPress/block-development-examples
-					</a>
-				</p>
-			</div>
 			{ activeLayout === 'list' ? (
 				<div className="viewsContainer">
 					<div className="dataViewsContainer">
