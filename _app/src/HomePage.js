@@ -225,11 +225,13 @@ const Examples = () => {
 						<_DataViews />
 					</div>
 					<div className="iframeContainer">
-						<iframe
-							src={ `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExample }/_playground/blueprint.json` }
-							title="Example Iframe" // Title for accessibility
-							loading="lazy" // Optional: Defer loading the iframe until it is visible
-						/>
+						{ selectedExample && (
+							<iframe
+								src={ `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExample }/_playground/blueprint.json` }
+								title="Example Iframe" // Title for accessibility
+								loading="lazy" // Optional: Defer loading the iframe until it is visible
+							/>
+						) }
 					</div>
 				</div>
 			) : (
