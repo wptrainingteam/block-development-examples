@@ -12,6 +12,19 @@ const fields = [
 		label: 'Slug',
 		enableGlobalSearch: true,
 		enableHiding: false,
+		// render: ( { item } ) => {
+		// 	return (
+		// 		<span className="link_example">
+		// 			<a
+		// 				target="_blank"
+		// 				href={ `https://github.com/WordPress/block-development-examples/tree/trunk/plugins/${ item.slug }/README.md` }
+		// 				rel="noreferrer"
+		// 			>
+		// 				{ item.slug }
+		// 			</a>
+		// 		</span>
+		// 	);
+		// },
 	},
 	{
 		id: 'folder',
@@ -99,18 +112,25 @@ const defaultLayouts = {
 			primaryField: 'slug',
 		},
 	},
+	list: {
+		layout: {
+			primaryField: 'slug',
+		},
+	},
 };
 
 const DEFAULT_VIEW = {
-	type: 'table',
+	type: 'list',
 	hiddenFields: [],
-	perPage: 100,
+	perPage: 5,
 	filters: [],
 	fields: [ 'slug', 'folder', 'demo', 'zip', 'description', 'tags' ],
 };
 
 const Examples = () => {
 	const [ searchParams, setSearchParams ] = useSearchParams();
+	const [ activeLayout, setActiveLayout ] = useState();
+	const [ selectedExample, setSelectedExample ] = useState();
 	const [ filterTags, setFilterTags ] = useState( () => {
 		try {
 			return searchParams.get( 'tags' ) || '';
@@ -144,7 +164,14 @@ const Examples = () => {
 	}, [ view ] );
 
 	const onChangeView = ( newView ) => {
+		const layout = newView.type;
 		const filters = newView?.filters || [];
+		setActiveLayout( layout );
+		if ( layout === 'list' ) {
+			console.log( 'enable something...' );
+		} else {
+			console.log( 'disable something...' );
+		}
 		if ( filters.length ) {
 			setFilterTags( filters.map( ( { value } ) => value ).join( ',' ) );
 			setFilterOperator( filters[ 0 ].operator );
@@ -154,6 +181,9 @@ const Examples = () => {
 		}
 		setView( newView );
 	};
+	const onChangeSelection = ( [ selectedExampleSlug ] ) => {
+		setSelectedExample( selectedExampleSlug );
+	};
 	useEffect( () => {
 		if ( filterTags ) {
 			setSearchParams( { tags: filterTags, operator: filterOperator } );
@@ -161,6 +191,19 @@ const Examples = () => {
 			setSearchParams( {} );
 		}
 	}, [ filterTags, filterOperator, setSearchParams ] );
+
+	const _DataViews = () => (
+		<DataViews
+			data={ processedData }
+			fields={ fields }
+			view={ view }
+			getItemId={ ( item ) => item.slug }
+			onChangeView={ onChangeView }
+			onChangeSelection={ onChangeSelection }
+			paginationInfo={ paginationInfo }
+			defaultLayouts={ defaultLayouts }
+		/>
+	);
 
 	return (
 		<>
@@ -176,15 +219,22 @@ const Examples = () => {
 					</a>
 				</p>
 			</div>
-			<DataViews
-				data={ processedData }
-				fields={ fields }
-				view={ view }
-				getItemId={ ( item ) => item.slug }
-				onChangeView={ onChangeView }
-				paginationInfo={ paginationInfo }
-				defaultLayouts={ defaultLayouts }
-			/>
+			{ activeLayout === 'list' ? (
+				<div className="viewsContainer">
+					<div className="dataViewsContainer">
+						<_DataViews />
+					</div>
+					<div className="iframeContainer">
+						<iframe
+							src={ `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExample }/_playground/blueprint.json` }
+							title="Example Iframe" // Title for accessibility
+							loading="lazy" // Optional: Defer loading the iframe until it is visible
+						/>
+					</div>
+				</div>
+			) : (
+				<_DataViews />
+			) }
 		</>
 	);
 };
