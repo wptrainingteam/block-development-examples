@@ -122,7 +122,7 @@ const defaultLayouts = {
 const DEFAULT_VIEW = {
 	type: 'list',
 	hiddenFields: [],
-	perPage: 5,
+	perPage: 10,
 	filters: [],
 	fields: [ 'slug', 'folder', 'demo', 'zip', 'description', 'tags' ],
 };
