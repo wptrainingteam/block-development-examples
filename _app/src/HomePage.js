@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import { DataViews, filterSortAndPaginate } from '@wordpress/dataviews';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { getItemsForFilter } from './utils';
 import './styles.scss';
 
@@ -130,7 +130,7 @@ const DEFAULT_VIEW = {
 const Examples = () => {
 	const [ searchParams, setSearchParams ] = useSearchParams();
 	const [ activeLayout, setActiveLayout ] = useState();
-	const [ selectedExample, setSelectedExample ] = useState();
+	const iframeRef = useRef( null );
 	const [ filterTags, setFilterTags ] = useState( () => {
 		try {
 			return searchParams.get( 'tags' ) || '';
@@ -177,7 +177,9 @@ const Examples = () => {
 		setView( newView );
 	};
 	const onChangeSelection = ( [ selectedExampleSlug ] ) => {
-		setSelectedExample( selectedExampleSlug );
+		const selectedExamplePlaygroundDemoUrl = `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExampleSlug }/_playground/blueprint.json`;
+		iframeRef.current.contentWindow.location.href =
+			selectedExamplePlaygroundDemoUrl;
 	};
 
 	useEffect( () => {
@@ -221,15 +223,13 @@ const Examples = () => {
 						<_DataViews />
 					</div>
 					<div className="iframeContainer">
-						{ selectedExample ? (
-							<iframe
-								src={ `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExample }/_playground/blueprint.json` }
-								title="Example Iframe" // Title for accessibility
-								loading="lazy" // Optional: Defer loading the iframe until it is visible
-							/>
-						) : (
-							<p>👈 Select an example to view the demo</p>
-						) }
+						<iframe
+							ref={ iframeRef }
+							src={ `https://playground.wordpress.net` }
+							title="Example Iframe" // Title for accessibility
+							loading="lazy" // Optional: Defer loading the iframe until it is visible
+							id="myIframe"
+						/>
 					</div>
 				</div>
 			) : (
