@@ -158,7 +158,6 @@ const Examples = () => {
 			: [],
 	} ) );
 
-	console.log( { filterTags, view } );
 	const { data: processedData, paginationInfo } = useMemo( () => {
 		return filterSortAndPaginate( data, view, fields );
 	}, [ view ] );
@@ -167,11 +166,7 @@ const Examples = () => {
 		const layout = newView.type;
 		const filters = newView?.filters || [];
 		setActiveLayout( layout );
-		if ( layout === 'list' ) {
-			console.log( 'enable something...' );
-		} else {
-			console.log( 'disable something...' );
-		}
+
 		if ( filters.length ) {
 			setFilterTags( filters.map( ( { value } ) => value ).join( ',' ) );
 			setFilterOperator( filters[ 0 ].operator );
