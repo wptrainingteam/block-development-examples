@@ -179,6 +179,7 @@ const Examples = () => {
 	const onChangeSelection = ( [ selectedExampleSlug ] ) => {
 		setSelectedExample( selectedExampleSlug );
 	};
+
 	useEffect( () => {
 		if ( filterTags ) {
 			setSearchParams( { tags: filterTags, operator: filterOperator } );
@@ -220,12 +221,14 @@ const Examples = () => {
 						<_DataViews />
 					</div>
 					<div className="iframeContainer">
-						{ selectedExample && (
+						{ selectedExample ? (
 							<iframe
 								src={ `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExample }/_playground/blueprint.json` }
 								title="Example Iframe" // Title for accessibility
 								loading="lazy" // Optional: Defer loading the iframe until it is visible
 							/>
+						) : (
+							<p>👈 Select an example to view the demo</p>
 						) }
 					</div>
 				</div>
