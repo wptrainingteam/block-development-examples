@@ -1,8 +1,13 @@
 import { useSearchParams } from 'react-router-dom';
 import { DataViews, filterSortAndPaginate } from '@wordpress/dataviews';
+import { ToggleControl } from '@wordpress/components';
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { getItemsForFilter } from './utils';
 import './styles.scss';
+
+import { remark } from 'remark';
+import html from 'remark-html';
+import gfm from 'remark-gfm';
 
 import data from './_data/examples.json';
 
@@ -130,6 +135,9 @@ const DEFAULT_VIEW = {
 const Examples = () => {
 	const [ searchParams, setSearchParams ] = useSearchParams();
 	const [ activeLayout, setActiveLayout ] = useState();
+	const [ displayReadme, setDisplayReadme ] = useState( false );
+	//	const [ htmlReadmeContent, setHtmlReadmeContent ] = useState( '' );
+
 	const iframeRef = useRef( null );
 	const [ filterTags, setFilterTags ] = useState( () => {
 		try {
@@ -176,10 +184,29 @@ const Examples = () => {
 		}
 		setView( newView );
 	};
-	const onChangeSelection = ( [ selectedExampleSlug ] ) => {
-		const selectedExamplePlaygroundDemoUrl = `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExampleSlug }/_playground/blueprint.json`;
-		iframeRef.current.contentWindow.location.href =
-			selectedExamplePlaygroundDemoUrl;
+	const onChangeSelection = async ( [ selectedExampleSlug ] ) => {
+		if ( ! displayReadme ) {
+			const selectedExamplePlaygroundDemoUrl = `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExampleSlug }/_playground/blueprint.json`;
+			iframeRef.current.contentWindow.location.href =
+				selectedExamplePlaygroundDemoUrl;
+		} else {
+			const selectedExampleReadmeUrl = `https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExampleSlug }/README.md`;
+			let markdownReadmeContent = await fetch(
+				selectedExampleReadmeUrl
+			).then( ( response ) => response.text() );
+
+			if ( markdownReadmeContent ) {
+				markdownReadmeContent = markdownReadmeContent.replace(
+					/<!-- @TABLE EXAMPLES BEGIN -->([\s\S]*?)<!-- @TABLE EXAMPLES END -->/g,
+					''
+				);
+				const processedContent = await remark()
+					.use( gfm )
+					.use( html )
+					.process( markdownReadmeContent );
+				iframeRef.current.srcdoc = processedContent.toString();
+			}
+		}
 	};
 
 	useEffect( () => {
@@ -207,9 +234,34 @@ const Examples = () => {
 		<>
 			{ activeLayout === 'list' ? (
 				<div className="viewsContainer">
+					<div className="toggleBox">
+						<p>
+							By default, in <code>list</code> layout, click on
+							any example to see its demo (powered by
+							<a href="https://wordpress.org/playground/">
+								WordPress Playground
+							</a>
+							) on the right side.
+						</p>
+						<p>
+							If you would like to open the <code>README.md</code>
+							of each example instead on selection, toggle the
+							following checkbox.
+						</p>
+						<ToggleControl
+							checked={ !! displayReadme }
+							label={
+								'Display README on iFrame when selecting an Example'
+							}
+							onChange={ ( checkedState ) =>
+								setDisplayReadme( checkedState )
+							}
+						/>
+					</div>
 					<div className="dataViewsContainer">
 						<_DataViews />
 					</div>
+
 					<div className="iframeContainer">
 						<iframe
 							ref={ iframeRef }
