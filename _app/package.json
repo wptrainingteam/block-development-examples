@@ -3,11 +3,15 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@wordpress/components": "^28.6.0",
 		"@wordpress/dataviews": "^4.2.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-router-dom": "^6.26.1",
-		"react-scripts": "5.0.1"
+		"react-scripts": "5.0.1",
+		"remark": "^15.0.1",
+		"remark-gfm": "^4.0.0",
+		"remark-html": "^16.0.1"
 	},
 	"scripts": {
 		"start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
