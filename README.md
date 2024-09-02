@@ -2,6 +2,11 @@
 
 [![zips on deploy branch](https://github.com/WordPress/block-development-examples/actions/workflows/main.yml/badge.svg)](https://github.com/WordPress/block-development-examples/actions/workflows/main.yml) [![Static Linting](https://github.com/WordPress/block-development-examples/actions/workflows/pull-request-actions.yml/badge.svg)](https://github.com/WordPress/block-development-examples/actions/workflows/pull-request-actions.yml)
 
+> [!IMPORTANT]  
+> Go to the Block Development Examples Web App to navigate through the examples
+> 
+> [<kbd> <br>Go to the Block Development Examples Web App<br> </kbd>](https://wordpress.github.io/block-development-examples)
+
 Welcome to the `block-development-examples` repo on GitHub. Here you can find a bunch of block-related examples for WordPress that you can use to learn about Block Development.
 
 **Check the code 📁, download the plugin zip 📦 or see a [playground](https://developer.wordpress.org/playground/)-powered live demo ![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg) of each example (plugin)**
