@@ -116,6 +116,12 @@ iframe {
 	text-decoration: none;
 }
 
+.dataviews-view-list__fields > .dataviews-view-list__field:nth-of-type(4) {
+	flex: 1 1 100%;
+	order: -1;
+	font-size: 1.7em;
+}
+
 .dataviews-view-list__fields > .dataviews-view-list__field:nth-of-type(5) {
 	flex: 1 1 100%;
 }
