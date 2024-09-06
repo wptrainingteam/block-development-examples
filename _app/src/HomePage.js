@@ -15,8 +15,6 @@ const fields = [
 	{
 		id: 'slug',
 		label: 'Slug',
-		enableGlobalSearch: true,
-		enableHiding: false,
 		// render: ( { item } ) => {
 		// 	return (
 		// 		<span className="link_example">
@@ -89,6 +87,7 @@ const fields = [
 		id: 'description',
 		label: 'Description',
 		enableGlobalSearch: true,
+		enableHiding: false,
 	},
 	{
 		id: 'tags',
@@ -112,14 +111,14 @@ const fields = [
 ];
 
 const defaultLayouts = {
-	table: {
-		layout: {
-			primaryField: 'slug',
-		},
-	},
+	// table: {
+	// 	layout: {
+	// 		primaryField: 'description',
+	// 	},
+	// },
 	list: {
 		layout: {
-			primaryField: 'slug',
+			primaryField: 'description',
 		},
 	},
 };
@@ -127,9 +126,9 @@ const defaultLayouts = {
 const DEFAULT_VIEW = {
 	type: 'list',
 	hiddenFields: [],
-	perPage: 10,
+	perPage: 7,
 	filters: [],
-	fields: [ 'slug', 'folder', 'demo', 'zip', 'description', 'tags' ],
+	fields: [ 'description', 'folder', 'demo', 'zip', 'tags' ],
 };
 
 const Examples = () => {
@@ -184,6 +183,10 @@ const Examples = () => {
 		}
 		setView( newView );
 	};
+
+	useEffect( () => {
+		console.log( 'view', view );
+	}, [ view ] );
 	const onChangeSelection = async ( [ selectedExampleSlug ] ) => {
 		if ( ! displayReadme ) {
 			const selectedExamplePlaygroundDemoUrl = `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ selectedExampleSlug }/_playground/blueprint.json`;
