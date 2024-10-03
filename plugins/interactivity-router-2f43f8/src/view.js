@@ -13,14 +13,13 @@ const { state } = store( 'router-2f43f8', {
 	},
 	actions: {
 		*navigate( e ) {
+			console.log( 'navigate', e );
 			e.preventDefault();
 			const { actions } = yield import(
 				'@wordpress/interactivity-router'
 			);
 			state.urlRegionDisplay = e.target.href;
-			yield actions.navigate( state.urlRegionDisplaySlug, {
-				replace: false,
-			} );
+			yield actions.navigate( state.urlRegionDisplaySlug );
 		},
 	},
 } );
