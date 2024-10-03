@@ -143,5 +143,10 @@
 		"slug": "interactivity-api-quiz-1835fa",
 		"description": "Interactivity API Quiz",
 		"tags": [ "interactive-block", "interactivity-api" ]
+	},
+	{
+		"slug": "interactivity-router-2f43f8",
+		"tags": [ "interactivity-api", "interactivity-router" ],
+		"description": "Example of how interactivity router works"
 	}
 ]

@@ -250,6 +250,16 @@ importers:
         specifier: ^27.8.0
         version: 27.9.0(@playwright/test@1.46.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.5.4)
 
+  plugins/interactivity-router-2f43f8:
+    dependencies:
+      '@wordpress/interactivity':
+        specifier: ^5.6.0
+        version: 5.6.0(@preact/signals-core@1.6.0)
+    devDependencies:
+      '@wordpress/scripts':
+        specifier: ^27.8.0
+        version: 27.8.0(@playwright/test@1.46.1)(@types/eslint@8.56.10)(@types/node@20.12.12)(@types/webpack@4.41.38)(babel-plugin-macros@3.1.0)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@3.13.1)(typescript@5.4.5)
+
   plugins/meta-block-bb1e55:
     devDependencies:
       '@wordpress/scripts':
