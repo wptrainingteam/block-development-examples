@@ -2,13 +2,21 @@ import { store } from '@wordpress/interactivity';
 
 const { state } = store( 'router-2f43f8', {
 	state: {
+		urlPathname: '',
 		urlRegionDisplay: window.location.href,
 		get urlRegionDisplaySlug() {
-			const { pathname } = new URL( state.urlRegionDisplay );
-			const isHome = pathname === '/';
+			const isHome = state.urlPathname === '/';
 			return isHome
 				? '/'
-				: '/' + pathname.split( '/' ).filter( Boolean ).pop();
+				: '/' + state.urlPathname.split( '/' ).filter( Boolean ).pop();
+		},
+		get isPlayground() {
+			return state.urlPathname.includes( 'scope' );
+		},
+	},
+	callbacks: {
+		setUrlPathname: () => {
+			state.urlPathname = new URL( state.urlRegionDisplay ).pathname;
 		},
 	},
 	actions: {
