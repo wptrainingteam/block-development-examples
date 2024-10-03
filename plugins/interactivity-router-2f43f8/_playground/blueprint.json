@@ -5,6 +5,9 @@
 	"plugins": [
 		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/interactivity-router-2f43f8.zip"
 	],
+	"features": {
+		"networking": true
+	},
 	"steps": [
 		{
 			"step": "writeFile",
