@@ -21,7 +21,6 @@ import {
 export const EditInspectorControls = ( props ) => {
 	const { attributes, setAttributes } = props;
 
-	console.log( 'attributes', attributes );
 	const [ next, setNext ] = useState( attributes.next || '' );
 	const [ prev, setPrev ] = useState( attributes.prev || '' );
 

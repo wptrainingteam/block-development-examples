@@ -4,7 +4,11 @@ const { state } = store( 'router-2f43f8', {
 	state: {
 		urlRegionDisplay: window.location.href,
 		get urlRegionDisplaySlug() {
-			return state.urlRegionDisplay.split( '/' ).filter( Boolean ).pop();
+			const { pathname } = new URL( state.urlRegionDisplay );
+			const isHome = pathname === '/';
+			return isHome
+				? '/'
+				: '/' + pathname.split( '/' ).filter( Boolean ).pop();
 		},
 	},
 	actions: {
@@ -14,7 +18,7 @@ const { state } = store( 'router-2f43f8', {
 				'@wordpress/interactivity-router'
 			);
 			state.urlRegionDisplay = e.target.href;
-			yield actions.navigate( e.target.href );
+			yield actions.navigate( state.urlRegionDisplaySlug );
 		},
 	},
 } );
