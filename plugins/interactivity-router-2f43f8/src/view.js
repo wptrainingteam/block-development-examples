@@ -18,7 +18,9 @@ const { state } = store( 'router-2f43f8', {
 				'@wordpress/interactivity-router'
 			);
 			state.urlRegionDisplay = e.target.href;
-			yield actions.navigate( state.urlRegionDisplaySlug );
+			yield actions.navigate( state.urlRegionDisplaySlug, {
+				replace: false,
+			} );
 		},
 	},
 } );
