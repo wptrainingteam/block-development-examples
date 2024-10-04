@@ -2,8 +2,8 @@
 
 This example demonstrates how to use regions with the `@wordpress/interactivity-router` package (see [video](https://youtu.be/ffbTQ1jv-ZA))
 
-> **Info**
-> The Interactivity API, [introduced in WordPress 6.5](https://make.wordpress.org/core/2024/02/19/merge-announcement-interactivity-api/), provides a standard way for developers to add interactions to the front end of their blocks.
+> [!Warning]
+> This example works well locally, but there are some issues with the live preview powered by Playground that have been reported (see [#1843](https://github.com/WordPress/wordpress-playground/issues/1843)). To quickly replicate this example on any WordPress installation you can install the plugin from the zip and import the demo content from [`_playground/export.xml`](https://github.com/WordPress/block-development-examples/blob/trunk/plugins/interactivity-router-2f43f8/_playground/export.xml) file
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
