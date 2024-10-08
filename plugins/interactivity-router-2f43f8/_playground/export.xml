@@ -26,13 +26,13 @@
 
 	<channel>
 		<title>interactivity-router-2f43f8</title>
-		<link>http://localhost:8888</link>
+		<link></link>
 		<description></description>
 		<pubDate>Thu, 03 Oct 2024 13:07:38 +0000</pubDate>
 		<language>en-US</language>
 		<wp:wxr_version>1.2</wp:wxr_version>
-		<wp:base_site_url>http://localhost:8888</wp:base_site_url>
-		<wp:base_blog_url>http://localhost:8888</wp:base_blog_url>
+		<wp:base_site_url></wp:base_site_url>
+		<wp:base_blog_url></wp:base_blog_url>
 
 		<wp:author>
 			<wp:author_id>1</wp:author_id>
@@ -75,10 +75,10 @@
 
 		<item>
 			<title><![CDATA[Ringo Starr]]></title>
-			<link>http://localhost:8888/ringo-starr/</link>
+			<link>/ringo-starr/</link>
 			<pubDate>Wed, 02 Oct 2024 12:08:34 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?p=1</guid>
+			<guid isPermaLink="false">/?p=1</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:block-development-examples/interactivity-router-2f43f8 {"prev":"/george-harrison"} -->
@@ -152,10 +152,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[Sample Page]]></title>
-			<link>http://localhost:8888/sample-page/</link>
+			<link>/sample-page/</link>
 			<pubDate>Wed, 02 Oct 2024 12:08:34 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?page_id=2</guid>
+			<guid isPermaLink="false">/?page_id=2</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:paragraph -->
 <p>This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
@@ -174,7 +174,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 <!-- /wp:quote -->
 
 <!-- wp:paragraph -->
-<p>As a new WordPress user, you should go to <a href="http://localhost:8888/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>
+<p>As a new WordPress user, you should go to <a href="/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>
 <!-- /wp:paragraph -->]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 			<wp:post_id>2</wp:post_id>
@@ -198,16 +198,16 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[Privacy Policy]]></title>
-			<link>http://localhost:8888/?page_id=3</link>
+			<link>/?page_id=3</link>
 			<pubDate>Wed, 02 Oct 2024 12:08:34 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?page_id=3</guid>
+			<guid isPermaLink="false">/?page_id=3</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:heading -->
 <h2 class="wp-block-heading">Who we are</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p><strong class="privacy-policy-tutorial">Suggested text: </strong>Our website address is: http://localhost:8888.</p>
+<p><strong class="privacy-policy-tutorial">Suggested text: </strong>Our website address is: .</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading -->
 <h2 class="wp-block-heading">Comments</h2>
@@ -298,10 +298,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[Paul McCartney]]></title>
-			<link>http://localhost:8888/paul-mccartney/</link>
+			<link>/paul-mccartney/</link>
 			<pubDate>Wed, 02 Oct 2024 12:08:35 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?p=4</guid>
+			<guid isPermaLink="false">/?p=4</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:block-development-examples/interactivity-router-2f43f8 {"next":"/john-lennon", "prev":"/"} -->
@@ -359,10 +359,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[John Lennon]]></title>
-			<link>http://localhost:8888/john-lennon/</link>
+			<link>/john-lennon/</link>
 			<pubDate>Wed, 02 Oct 2024 12:08:35 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?p=5</guid>
+			<guid isPermaLink="false">/?p=5</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:block-development-examples/interactivity-router-2f43f8 {"next":"/george-harrison", "prev":"/paul-mccartney"} -->
@@ -420,10 +420,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[George Harrison]]></title>
-			<link>http://localhost:8888/george-harrison/</link>
+			<link>/george-harrison/</link>
 			<pubDate>Wed, 02 Oct 2024 12:08:35 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?p=6</guid>
+			<guid isPermaLink="false">/?p=6</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:block-development-examples/interactivity-router-2f43f8 {"next":"/ringo-starr", "prev":"/john-lennon"} -->
@@ -489,10 +489,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[Navigation]]></title>
-			<link>http://localhost:8888/navigation/</link>
+			<link>/navigation/</link>
 			<pubDate>Wed, 02 Oct 2024 12:12:59 +0000</pubDate>
 			<dc:creator><![CDATA[]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/?p=7</guid>
+			<guid isPermaLink="false">/?p=7</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:page-list /-->]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -513,10 +513,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[Custom Styles]]></title>
-			<link>http://localhost:8888/wp-global-styles-twentytwentyfive/</link>
+			<link>/wp-global-styles-twentytwentyfive/</link>
 			<pubDate>Wed, 02 Oct 2024 12:13:37 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/wp-global-styles-twentytwentyfive/</guid>
+			<guid isPermaLink="false">/wp-global-styles-twentytwentyfive/</guid>
 			<description></description>
 			<content:encoded><![CDATA[{"version": 3, "isGlobalStylesUserThemeJSON": true }]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -538,10 +538,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[Custom Styles]]></title>
-			<link>http://localhost:8888/wp-global-styles-twentytwentyfour/</link>
+			<link>/wp-global-styles-twentytwentyfour/</link>
 			<pubDate>Thu, 03 Oct 2024 10:21:09 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/wp-global-styles-twentytwentyfour/</guid>
+			<guid isPermaLink="false">/wp-global-styles-twentytwentyfour/</guid>
 			<description></description>
 			<content:encoded><![CDATA[{"version": 3, "isGlobalStylesUserThemeJSON": true }]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -563,10 +563,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[Blog Home]]></title>
-			<link>http://localhost:8888/home/</link>
+			<link>/home/</link>
 			<pubDate>Thu, 03 Oct 2024 10:21:33 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/home/</guid>
+			<guid isPermaLink="false">/home/</guid>
 			<description></description>
 			<content:encoded><![CDATA[<!-- wp:template-part {"slug":"header","theme":"twentytwentyfour","tagName":"header","area":"header"} /-->
 
@@ -617,7 +617,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 <!-- /wp:spacer -->
 
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","align":"wide","className":"is-style-rounded"} -->
-<figure class="wp-block-image alignwide size-full is-style-rounded"><img src="http://localhost:8888/wp-content/themes/twentytwentyfour/assets/images/building-exterior.webp" alt="Building exterior in Toronto, Canada"/></figure>
+<figure class="wp-block-image alignwide size-full is-style-rounded"><img src="/wp-content/themes/twentytwentyfour/assets/images/building-exterior.webp" alt="Building exterior in Toronto, Canada"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -748,7 +748,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="http://localhost:8888/wp-content/themes/twentytwentyfour/assets/images/tourist-and-building.webp" alt="Tourist taking photo of a building"/></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/themes/twentytwentyfour/assets/images/tourist-and-building.webp" alt="Tourist taking photo of a building"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -760,7 +760,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|60"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-rounded"} -->
-<figure class="wp-block-image size-large is-style-rounded"><img src="http://localhost:8888/wp-content/themes/twentytwentyfour/assets/images/windows.webp" alt="Windows of a building in Nuremberg, Germany"/></figure>
+<figure class="wp-block-image size-large is-style-rounded"><img src="/wp-content/themes/twentytwentyfour/assets/images/windows.webp" alt="Windows of a building in Nuremberg, Germany"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -910,10 +910,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[paul]]></title>
-			<link>http://localhost:8888/paul-mccartney/paul/</link>
+			<link>/paul-mccartney/paul/</link>
 			<pubDate>Thu, 03 Oct 2024 10:35:08 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/wp-content/uploads/2024/10/paul.webp</guid>
+			<guid isPermaLink="false">/wp-content/uploads/2024/10/paul.webp</guid>
 			<description></description>
 			<content:encoded><![CDATA[]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -931,7 +931,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 			<wp:post_type><![CDATA[attachment]]></wp:post_type>
 			<wp:post_password><![CDATA[]]></wp:post_password>
 			<wp:is_sticky>0</wp:is_sticky>
-			<wp:attachment_url><![CDATA[http://localhost:8888/wp-content/uploads/2024/10/paul.webp]]></wp:attachment_url>
+			<wp:attachment_url><![CDATA[/wp-content/uploads/2024/10/paul.webp]]></wp:attachment_url>
 			<wp:postmeta>
 				<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 				<wp:meta_value><![CDATA[2024/10/paul.webp]]></wp:meta_value>
@@ -943,10 +943,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[john-lennon-2-d956917ebc604faeae6345dfc74cfb00]]></title>
-			<link>http://localhost:8888/john-lennon/john-lennon-2-d956917ebc604faeae6345dfc74cfb00/</link>
+			<link>/john-lennon/john-lennon-2-d956917ebc604faeae6345dfc74cfb00/</link>
 			<pubDate>Thu, 03 Oct 2024 11:08:31 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/wp-content/uploads/2024/10/john-lennon-2-d956917ebc604faeae6345dfc74cfb00.webp</guid>
+			<guid isPermaLink="false">/wp-content/uploads/2024/10/john-lennon-2-d956917ebc604faeae6345dfc74cfb00.webp</guid>
 			<description></description>
 			<content:encoded><![CDATA[]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -964,7 +964,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 			<wp:post_type><![CDATA[attachment]]></wp:post_type>
 			<wp:post_password><![CDATA[]]></wp:post_password>
 			<wp:is_sticky>0</wp:is_sticky>
-			<wp:attachment_url><![CDATA[http://localhost:8888/wp-content/uploads/2024/10/john-lennon-2-d956917ebc604faeae6345dfc74cfb00.webp]]></wp:attachment_url>
+			<wp:attachment_url><![CDATA[/wp-content/uploads/2024/10/john-lennon-2-d956917ebc604faeae6345dfc74cfb00.webp]]></wp:attachment_url>
 			<wp:postmeta>
 				<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 				<wp:meta_value><![CDATA[2024/10/john-lennon-2-d956917ebc604faeae6345dfc74cfb00.webp]]></wp:meta_value>
@@ -976,10 +976,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[512px-George_Harrison_1974]]></title>
-			<link>http://localhost:8888/george-harrison/512px-george_harrison_1974/</link>
+			<link>/george-harrison/512px-george_harrison_1974/</link>
 			<pubDate>Thu, 03 Oct 2024 11:36:26 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/wp-content/uploads/2024/10/512px-George_Harrison_1974.webp</guid>
+			<guid isPermaLink="false">/wp-content/uploads/2024/10/512px-George_Harrison_1974.webp</guid>
 			<description></description>
 			<content:encoded><![CDATA[]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -997,7 +997,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 			<wp:post_type><![CDATA[attachment]]></wp:post_type>
 			<wp:post_password><![CDATA[]]></wp:post_password>
 			<wp:is_sticky>0</wp:is_sticky>
-			<wp:attachment_url><![CDATA[http://localhost:8888/wp-content/uploads/2024/10/512px-George_Harrison_1974.webp]]></wp:attachment_url>
+			<wp:attachment_url><![CDATA[/wp-content/uploads/2024/10/512px-George_Harrison_1974.webp]]></wp:attachment_url>
 			<wp:postmeta>
 				<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 				<wp:meta_value><![CDATA[2024/10/512px-George_Harrison_1974.webp]]></wp:meta_value>
@@ -1009,10 +1009,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[ringo-starr-formerly-of-the-beatles-london-october-1973]]></title>
-			<link>http://localhost:8888/ringo-starr/ringo-starr-formerly-of-the-beatles-london-october-1973/</link>
+			<link>/ringo-starr/ringo-starr-formerly-of-the-beatles-london-october-1973/</link>
 			<pubDate>Thu, 03 Oct 2024 11:43:19 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/wp-content/uploads/2024/10/ringo-starr-formerly-of-the-beatles-london-october-1973.webp</guid>
+			<guid isPermaLink="false">/wp-content/uploads/2024/10/ringo-starr-formerly-of-the-beatles-london-october-1973.webp</guid>
 			<description></description>
 			<content:encoded><![CDATA[]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1030,7 +1030,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 			<wp:post_type><![CDATA[attachment]]></wp:post_type>
 			<wp:post_password><![CDATA[]]></wp:post_password>
 			<wp:is_sticky>0</wp:is_sticky>
-			<wp:attachment_url><![CDATA[http://localhost:8888/wp-content/uploads/2024/10/ringo-starr-formerly-of-the-beatles-london-october-1973.webp]]></wp:attachment_url>
+			<wp:attachment_url><![CDATA[/wp-content/uploads/2024/10/ringo-starr-formerly-of-the-beatles-london-october-1973.webp]]></wp:attachment_url>
 			<wp:postmeta>
 				<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 				<wp:meta_value><![CDATA[2024/10/ringo-starr-formerly-of-the-beatles-london-october-1973.webp]]></wp:meta_value>
@@ -1042,10 +1042,10 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 		</item>
 		<item>
 			<title><![CDATA[musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963]]></title>
-			<link>http://localhost:8888/ringo-starr/musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963/</link>
+			<link>/ringo-starr/musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963/</link>
 			<pubDate>Thu, 03 Oct 2024 11:44:34 +0000</pubDate>
 			<dc:creator><![CDATA[admin]]></dc:creator>
-			<guid isPermaLink="false">http://localhost:8888/wp-content/uploads/2024/10/musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963.webp</guid>
+			<guid isPermaLink="false">/wp-content/uploads/2024/10/musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963.webp</guid>
 			<description></description>
 			<content:encoded><![CDATA[]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1063,7 +1063,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 			<wp:post_type><![CDATA[attachment]]></wp:post_type>
 			<wp:post_password><![CDATA[]]></wp:post_password>
 			<wp:is_sticky>0</wp:is_sticky>
-			<wp:attachment_url><![CDATA[http://localhost:8888/wp-content/uploads/2024/10/musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963.webp]]></wp:attachment_url>
+			<wp:attachment_url><![CDATA[/wp-content/uploads/2024/10/musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963.webp]]></wp:attachment_url>
 			<wp:postmeta>
 				<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 				<wp:meta_value><![CDATA[2024/10/musician-ringo-starr-of-the-beatles-playing-the-drums-in-1963.webp]]></wp:meta_value>
