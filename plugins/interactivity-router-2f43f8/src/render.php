@@ -11,6 +11,7 @@
  * @package block-development-examples
  */
 
+$base_url = get_site_url();
 ?>
 <div
 	<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
@@ -27,13 +28,13 @@
 			<?php if ( isset( $attributes['prev'] ) ) : ?>
 				<a
 					data-wp-on--click="actions.navigate"
-					href="<?php echo esc_attr( $attributes['prev'] ); ?>"
+					href="<?php echo esc_url( $base_url . esc_attr( $attributes['prev'] ) ); ?>"
 				>&lt; Prev</a>
 			<?php endif; ?>
 			<?php if ( isset( $attributes['next'] ) ) : ?>
 				<a
 					data-wp-on--click="actions.navigate"
-					href="<?php echo esc_attr( $attributes['next'] ); ?>"
+					href="<?php echo esc_url( $base_url . esc_attr( $attributes['next'] ) ); ?>"
 				>Next &gt;</a>
 			<?php endif; ?>
 		</nav>
@@ -42,10 +43,7 @@
 			<p>block (region in display) attributes: <code style="text-align: left;">
 				<?php echo wp_json_encode( $attributes ); ?>
 			</code></p>
-
 			<p>state.urlRegionDisplay: <code data-wp-text="state.urlRegionDisplay"></code></p>
-
-
 		</div>
 
 
