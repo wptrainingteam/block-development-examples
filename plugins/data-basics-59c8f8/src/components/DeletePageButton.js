@@ -34,7 +34,7 @@ const DeletePageButton = ( { pageId } ) => {
 		}
 	};
 	const { deleteEntityRecord } = useDispatch( coreDataStore );
-	const { isDeleting, error } = useSelect(
+	const { isDeleting } = useSelect(
 		( select ) => ( {
 			isDeleting: select( coreDataStore ).isDeletingEntityRecord(
 				'postType',
