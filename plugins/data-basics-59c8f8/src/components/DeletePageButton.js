@@ -1,7 +1,6 @@
 import { store as noticesStore } from '@wordpress/notices';
 import { store as coreDataStore } from '@wordpress/core-data';
 import { useSelect, useDispatch } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
 import { Button, Spinner } from '@wordpress/components';
 
 const DeletePageButton = ( { pageId } ) => {
@@ -42,19 +41,8 @@ const DeletePageButton = ( { pageId } ) => {
 				'page',
 				pageId
 			),
-			error: select( coreDataStore ).getLastEntityDeleteError(
-				'postType',
-				'page',
-				pageId
-			),
-		} ),
-		[ pageId ]
+		} )
 	);
-	useEffect( () => {
-		if ( error ) {
-			// Display the error
-		}
-	}, [ error ] );
 	return (
 		<Button
 			variant="primary"
