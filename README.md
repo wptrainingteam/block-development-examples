@@ -1,4 +1,4 @@
-# Block Development Examples
+## Block Development Examples
 
 [![zips on deploy branch](https://github.com/WordPress/block-development-examples/actions/workflows/main.yml/badge.svg)](https://github.com/WordPress/block-development-examples/actions/workflows/main.yml) [![Static Linting](https://github.com/WordPress/block-development-examples/actions/workflows/pull-request-actions.yml/badge.svg)](https://github.com/WordPress/block-development-examples/actions/workflows/pull-request-actions.yml)
 
