@@ -10,6 +10,7 @@ This example demonstrates how to build a simple block that is rendered on the se
 
 - This is a dynamic block that renders content on the server side. However, instead of using a `render.php` file, it uses a render callback function.
 - In the Editor, the block content defined in the callback function is rendered using the `ServerSideRender` component.
+- It's best practice to wrap the `ServerSideRender` component in a `Disabled` component. This ensures that users can't mistakenly interact with or modify the block's content directly in the editor, especially when such interaction is not intended.  
 - This example also demonstrates how to register a custom attribute for the block and how to use it in the callback function.
 
 ## Related resources
