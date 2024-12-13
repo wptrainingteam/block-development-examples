@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "es2018",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"rootDir": ".",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"declaration": true,
+		"lib": [ "ES2021" ]
+	},
+	"exclude": [ "node_modules", "webpack.config.js", "webpack.config.prod.js" ]
+}
