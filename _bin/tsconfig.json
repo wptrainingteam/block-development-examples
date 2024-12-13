@@ -15,5 +15,5 @@
 		"declaration": true,
 		"lib": [ "ES2021" ]
 	},
-	"exclude": [ "node_modules", "webpack.config.js", "webpack.config.prod.js" ]
+	"exclude": [ "node_modules" ]
 }

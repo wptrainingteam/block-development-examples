@@ -2,6 +2,37 @@
 
 All notable changes to the build scripts will be documented in this file.
 
+## [0.1.4] - 2024-03-XX
+
+### Changed
+
+-   Improved error handling architecture:
+
+    -   Introduced `compose.ts` with `withErrorHandling` higher-order function
+    -   Replaced callback-based error handling with function composition
+    -   Separated base functions from error handling wrappers
+    -   Made error handling more functional and type-safe
+
+-   Refactored constants organization:
+
+    -   Grouped related constants by purpose
+    -   Created base paths and URLs sections
+    -   Improved URL construction with base URLs
+    -   Added repository branch configuration
+    -   Centralized data directory paths
+
+-   Enhanced code structure:
+    -   Moved error handling logic to dedicated utilities
+    -   Improved type safety across the codebase
+    -   Better separation of concerns in services
+    -   Cleaner and more maintainable code organization
+
+### Removed
+
+-   Removed `withSyncErrorHandling` in favor of `withErrorHandling` composition
+-   Eliminated redundant error handling boilerplate
+-   Removed unnecessary path construction duplication
+
 ## [0.1.3] - 2024-03-XX
 
 ### Added
