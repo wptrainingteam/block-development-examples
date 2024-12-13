@@ -1,39 +1,51 @@
-import fs from 'fs';
-import path from 'path';
-import { EXAMPLES_DATA_PATH, TAGS_DATA_PATH } from '../constants';
+import { readJsonFile, readTextFile, writeFile } from '../utils/fileOperations';
+import { Example, Tag } from '../types/example';
+import { info } from '../utils/logging';
+import {
+	EXAMPLES_DATA_PATH,
+	TAGS_DATA_PATH,
+	URL_WIKI,
+	URL_REPO,
+	URL_ASSETS,
+	URL_EXAMPLE_ZIP,
+	URL_PLAYGROUND_BLUEPRINT,
+	WIKI_PAGE_TAGS,
+	WIKI_PAGE_WHY_ID,
+	SLUG_EXAMPLE_MARKER,
+} from '../constants';
+import {
+	withSyncErrorHandling,
+	validatePath,
+	validateRequiredData,
+} from '../utils/errors';
 
-interface Example {
-	id: string;
-	title: string;
-	description: string;
-	tags: string[];
-	folder: string;
-}
+export function generateTables( readmePath: string ): void {
+	return withSyncErrorHandling( () => {
+		info( `📝 Updating ${ readmePath }...` );
 
-interface Tag {
-	id: string;
-	title: string;
-	description: string;
-}
+		validatePath( readmePath );
 
-export function generateTables( readmePath: string ) {
-	// Read examples and tags data
-	const examples: Example[] = JSON.parse(
-		fs.readFileSync( EXAMPLES_DATA_PATH, 'utf8' )
-	);
-	const tags: Tag[] = JSON.parse( fs.readFileSync( TAGS_DATA_PATH, 'utf8' ) );
+		// Read examples and tags data using utility functions
+		const examples = readJsonFile< Example[] >( EXAMPLES_DATA_PATH );
+		const tags = readJsonFile< Tag[] >( TAGS_DATA_PATH );
 
-	// Read the README file
-	let content = fs.readFileSync( readmePath, 'utf8' );
+		validateRequiredData( examples, 'No examples data found' );
+		validateRequiredData( tags, 'No tags data found' );
 
-	// Generate table content
-	const tableContent = generateTableContent( examples, tags );
+		// Read the README file as text
+		let content = readTextFile( readmePath );
 
-	// Replace content between markers
-	content = replaceTableContent( content, tableContent );
+		// Generate table content
+		const tableContent = generateTableContent( examples, tags );
 
-	// Write back to file
-	fs.writeFileSync( readmePath, content );
+		// Replace content between markers
+		content = replaceTableContent( content, tableContent );
+
+		// Write back to file using utility function
+		writeFile( readmePath, content );
+
+		info( `✅ Updated ${ readmePath }` );
+	} );
 }
 
 function generateTableContent( examples: Example[], tags: Tag[] ): string {
@@ -42,16 +54,33 @@ function generateTableContent( examples: Example[], tags: Tag[] ): string {
 			const tagLinks = example.tags
 				.map(
 					( tag ) =>
-						`<small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#${ tag.toLowerCase() }">${ tag }</a></code></small>`
+						`<small><code><a href="${ URL_WIKI }/${ WIKI_PAGE_TAGS }#${ tag.toLowerCase() }">${ tag }</a></code></small>`
 				)
 				.join( ' ' );
 
-			return `| [📁](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/${ example.folder }) | ${ example.description } | ${ tagLinks } | \`${ example.id }\` | [📦](https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/${ example.folder }.zip "Install the plugin using this zip and activate it. Then use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/${ example.folder }/_playground/blueprint.json "Use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") |`;
+			// Replace the marker in URLs with the actual folder name
+			const exampleZipUrl = URL_EXAMPLE_ZIP.replace(
+				SLUG_EXAMPLE_MARKER,
+				example.folder
+			);
+			const playgroundBlueprintUrl = URL_PLAYGROUND_BLUEPRINT.replace(
+				SLUG_EXAMPLE_MARKER,
+				example.folder
+			);
+			const repoFolderUrl = `${ URL_REPO }/plugins/${ example.folder }`;
+
+			return (
+				`| [📁](${ repoFolderUrl }) | ` +
+				`${ example.description } | ` +
+				`${ tagLinks } | ` +
+				`\`${ example.id }\` | ` +
+				`[📦](${ exampleZipUrl } "Install the plugin using this zip and activate it. Then use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") | ` +
+				`[![](${ URL_ASSETS }/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=${ playgroundBlueprintUrl } "Use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") |`
+			);
 		} )
 		.join( '\n' );
 
-	const header =
-		'| Folder | <span style="display: inline-block; width:250px">Short description</span> | Tags | ID ([❓](https://github.com/WordPress/block-development-examples/wiki/04-Why-an-ID-for-every-example%3F "Why an ID for every example?")) | Download .zip | Live Demo |';
+	const header = `| Folder | <span style="display: inline-block; width:250px">Short description</span> | Tags | ID ([❓](${ URL_WIKI }/${ WIKI_PAGE_WHY_ID } "Why an ID for every example?")) | Download .zip | Live Demo |`;
 	const separator =
 		'| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |';
 

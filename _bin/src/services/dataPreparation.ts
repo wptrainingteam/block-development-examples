@@ -1,6 +1,11 @@
 import { join } from 'path';
 import fs from 'fs';
 import { Example, Tag } from '../types/example';
+import {
+	withSyncErrorHandling,
+	validatePath,
+	validateRequiredData,
+} from '../utils/errors';
 
 interface ExamplesPerTag {
 	[ key: string ]: Example[];
@@ -18,10 +23,18 @@ export class DataPreparationService {
 	}
 
 	public prepareData(): ExamplesPerTag {
-		const examplesJson = this.readExamplesJson();
-		const tagsJson = this.readTagsJson();
+		return withSyncErrorHandling( () => {
+			validatePath( this.examplesJsonPath );
+			validatePath( this.tagsJsonPath );
 
-		return this.groupExamplesByTag( examplesJson, tagsJson );
+			const examplesJson = this.readExamplesJson();
+			const tagsJson = this.readTagsJson();
+
+			validateRequiredData( examplesJson, 'No examples data found' );
+			validateRequiredData( tagsJson, 'No tags data found' );
+
+			return this.groupExamplesByTag( examplesJson, tagsJson );
+		} );
 	}
 
 	private readExamplesJson(): Example[] {

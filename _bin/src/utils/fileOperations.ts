@@ -15,6 +15,17 @@ export const readJsonFile = < T >( path: string ): T => {
 	}
 };
 
+export const readTextFile = ( path: string ): string => {
+	try {
+		return fs.readFileSync( path, 'utf8' );
+	} catch ( err ) {
+		if ( err instanceof Error ) {
+			throw new FileOperationError( 'read', path, err );
+		}
+		throw err;
+	}
+};
+
 export const writeFile = ( path: string, content: string ): void => {
 	try {
 		fs.writeFileSync( path, content );
