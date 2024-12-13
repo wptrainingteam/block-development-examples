@@ -2,7 +2,11 @@ export interface Example {
 	slug: string;
 	description: string;
 	tags: string[];
-	[ key: string ]: any;
+	contributors?: string[];
+	folder?: string;
+	id?: string;
+	created?: string;
+	lastModified?: string;
 }
 
 export interface Tag {

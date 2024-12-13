@@ -1,0 +1,30 @@
+name: Generate Contributors JSON
+
+on:
+    workflow_dispatch:
+
+jobs:
+    github-contributors:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+
+            - name: Generate Contributors JSON
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: node .github/workflows/scripts/github-contributors.js
+
+            - name: Commit and Push Changes
+              run: |
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  git add _data/contributors.json
+                  git commit -m "Update contributors.json" || echo "No changes to commit"
+                  git push

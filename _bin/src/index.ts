@@ -1,16 +1,22 @@
-import { generateTables } from './services/tableMarkdown';
-import { PLUGINS_PATH, ROOT_README_PATH } from './constants';
 import { ValidationError } from './types/errors';
-import { validatePath } from './utils/errors';
-import path from 'path';
-import fs from 'fs';
 import { withErrorHandling } from './utils/compose';
+import { contributorsService } from './services/ContributorsService';
+import { datesService } from './services/DatesService';
 
 const command = process.argv[ 2 ];
 const target = process.argv[ 3 ];
 
-const mainBase = (): void => {
+const mainBase = async (): Promise< void > => {
 	if ( command === 'generate' ) {
+		// Lazy load table generation functionality
+		const { generateTables } = await import( './services/tableMarkdown' );
+		const { validatePath } = await import( './utils/errors' );
+		const { PLUGINS_PATH, ROOT_README_PATH } = await import(
+			'./constants'
+		);
+		const path = await import( 'path' );
+		const fs = await import( 'fs' );
+
 		if ( ! target ) {
 			validatePath( ROOT_README_PATH );
 			generateTables( ROOT_README_PATH );
@@ -40,13 +46,20 @@ const mainBase = (): void => {
 			validatePath( pluginPath );
 			generateTables( pluginPath );
 		}
+	} else if ( command === 'contributors' ) {
+		await contributorsService.updateContributors();
+	} else if ( command === 'dates' ) {
+		await datesService.updateDates();
 	} else {
 		throw new ValidationError(
-			'Unknown command. Use "generate", "generate all", or "generate <plugin-name>"'
+			'Unknown command. Use "generate", "generate all", "generate <plugin-name>", "contributors", or "dates"'
 		);
 	}
 };
 
 const main = withErrorHandling( mainBase );
 
-main();
+main().catch( ( error: Error ) => {
+	console.error( 'Error:', error );
+	process.exit( 1 );
+} );
