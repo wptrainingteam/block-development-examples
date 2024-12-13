@@ -1,11 +1,8 @@
 import { join } from 'path';
 import fs from 'fs';
 import { Example, Tag } from '../types/example';
-import {
-	withSyncErrorHandling,
-	validatePath,
-	validateRequiredData,
-} from '../utils/errors';
+import { validatePath, validateRequiredData } from '../utils/errors';
+import { withErrorHandling } from '../utils/compose';
 
 interface ExamplesPerTag {
 	[ key: string ]: Example[];
@@ -22,20 +19,20 @@ export class DataPreparationService {
 		this.tagsJsonPath = join( rootPath, '_data/tags.json' );
 	}
 
-	public prepareData(): ExamplesPerTag {
-		return withSyncErrorHandling( () => {
-			validatePath( this.examplesJsonPath );
-			validatePath( this.tagsJsonPath );
+	private prepareDataBase(): ExamplesPerTag {
+		validatePath( this.examplesJsonPath );
+		validatePath( this.tagsJsonPath );
 
-			const examplesJson = this.readExamplesJson();
-			const tagsJson = this.readTagsJson();
+		const examplesJson = this.readExamplesJson();
+		const tagsJson = this.readTagsJson();
 
-			validateRequiredData( examplesJson, 'No examples data found' );
-			validateRequiredData( tagsJson, 'No tags data found' );
+		validateRequiredData( examplesJson, 'No examples data found' );
+		validateRequiredData( tagsJson, 'No tags data found' );
 
-			return this.groupExamplesByTag( examplesJson, tagsJson );
-		} );
+		return this.groupExamplesByTag( examplesJson, tagsJson );
 	}
+
+	public prepareData = withErrorHandling( this.prepareDataBase.bind( this ) );
 
 	private readExamplesJson(): Example[] {
 		return JSON.parse( fs.readFileSync( this.examplesJsonPath, 'utf8' ) );

@@ -13,40 +13,30 @@ import {
 	WIKI_PAGE_WHY_ID,
 	SLUG_EXAMPLE_MARKER,
 } from '../constants';
-import {
-	withSyncErrorHandling,
-	validatePath,
-	validateRequiredData,
-} from '../utils/errors';
+import { validatePath, validateRequiredData } from '../utils/errors';
+import { withErrorHandling } from '../utils/compose';
 
-export function generateTables( readmePath: string ): void {
-	return withSyncErrorHandling( () => {
-		info( `📝 Updating ${ readmePath }...` );
+// Base function without error handling
+function generateTablesBase( readmePath: string ): void {
+	info( `📝 Updating ${ readmePath }...` );
+	validatePath( readmePath );
 
-		validatePath( readmePath );
+	const examples = readJsonFile< Example[] >( EXAMPLES_DATA_PATH );
+	const tags = readJsonFile< Tag[] >( TAGS_DATA_PATH );
 
-		// Read examples and tags data using utility functions
-		const examples = readJsonFile< Example[] >( EXAMPLES_DATA_PATH );
-		const tags = readJsonFile< Tag[] >( TAGS_DATA_PATH );
+	validateRequiredData( examples, 'No examples data found' );
+	validateRequiredData( tags, 'No tags data found' );
 
-		validateRequiredData( examples, 'No examples data found' );
-		validateRequiredData( tags, 'No tags data found' );
+	let content = readTextFile( readmePath );
+	const tableContent = generateTableContent( examples, tags );
+	content = replaceTableContent( content, tableContent );
 
-		// Read the README file as text
-		let content = readTextFile( readmePath );
-
-		// Generate table content
-		const tableContent = generateTableContent( examples, tags );
-
-		// Replace content between markers
-		content = replaceTableContent( content, tableContent );
-
-		// Write back to file using utility function
-		writeFile( readmePath, content );
-
-		info( `✅ Updated ${ readmePath }` );
-	} );
+	writeFile( readmePath, content );
+	info( `✅ Updated ${ readmePath }` );
 }
+
+// Composed function with error handling
+export const generateTables = withErrorHandling( generateTablesBase );
 
 function generateTableContent( examples: Example[], tags: Tag[] ): string {
 	const tableRows = examples
