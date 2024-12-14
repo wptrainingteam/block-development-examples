@@ -1,30 +1,36 @@
-name: Generate Contributors JSON
+name: Update GitHub Contributors at examples.json
 
 on:
     workflow_dispatch:
 
 jobs:
-    github-contributors:
+    update-github-contributors:
         runs-on: ubuntu-latest
         permissions:
-            contents: write
+            contents: write # Needed to push changes
+
         steps:
             - uses: actions/checkout@v4
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: '20'
+ - name: Make script executable
+              run: chmod +x .github/workflows/scripts/fetch_contributors.sh
 
-            - name: Generate Contributors JSON
+            - name: Update contributors
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: node .github/workflows/scripts/github-contributors.js
+                  REPO_OWNER: ${{ github.repository_owner }}
+                  REPO_NAME: ${{ github.event.repository.name }}
+              run: ./.github/workflows/scripts/fetch_contributors.sh
 
-            - name: Commit and Push Changes
+            - name: Commit changes
               run: |
-                  git config --local user.email "action@github.com"
-                  git config --local user.name "GitHub Action"
-                  git add _data/contributors.json
-                  git commit -m "Update contributors.json" || echo "No changes to commit"
-                  git push
+                  git config --local user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --local user.name "github-actions[bot]"
+                  git add _data/examples.json
+                  git diff --quiet && git diff --staged --quiet || git commit -m "Update contributors"
+
+            - name: Push changes
+              uses: ad-m/github-push-action@master
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  branch: ${{ github.ref }}
