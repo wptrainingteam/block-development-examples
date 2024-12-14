@@ -12,7 +12,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
- - name: Make script executable
+            - name: Make script executable
               run: chmod +x .github/workflows/scripts/fetch_contributors.sh
 
             - name: Update contributors
