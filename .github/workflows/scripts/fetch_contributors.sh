@@ -26,7 +26,7 @@ update_example_contributors() {
     local folder=$1
     local contributors=$(curl -s -H "Authorization: token $TOKEN" \
         "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/commits?path=$folder" \
-        | jq -r '.[].author.login' | sort | uniq)    # Added missing closing parenthesis
+        | jq -r '.[].author.login' | sort | uniq)
     echo "$contributors"
 }
 
@@ -38,9 +38,19 @@ UPDATED_EXAMPLES=$(echo "$EXAMPLES" | jq -c '.[]' | while read -r example; do
     slug=$(echo "$example" | jq -r '.slug')
     folder=$(get_folder_name "$slug")
     if [ -d "$folder" ]; then
+        # Get existing contributors
+        existing_contributors=$(echo "$example" | jq -r '.contributors[]?' | sort)
+        
+        # Get new contributors from git history
         new_contributors=$(update_example_contributors "$folder")
-        # Convert contributors to JSON array format before passing to jq
-        contributors_json=$(echo "$new_contributors" | jq -R -s 'split("\n")[:-1]')
+        
+        # Combine existing and new contributors, remove duplicates
+        all_contributors=$(printf "%s\n%s\n" "$existing_contributors" "$new_contributors" | sort | uniq)
+        
+        # Convert combined contributors to JSON array format
+        contributors_json=$(echo "$all_contributors" | jq -R -s 'split("\n")[:-1]')
+        
+        # Update the example with combined contributors
         echo "$example" | jq --argjson contributors "$contributors_json" '.contributors = $contributors'
     else
         echo "$example"
