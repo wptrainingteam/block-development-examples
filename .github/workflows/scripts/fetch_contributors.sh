@@ -1,4 +1,12 @@
 #!/bin/bash
+# Function to get contributor's full name
+get_contributor_full_name() {
+    local username=$1
+    local full_name=$(curl -s -H "Authorization: token $TOKEN" \
+        "https://api.github.com/users/$username" \
+        | jq -r '.name // .login')
+    echo "$full_name"
+}
 
 echo "Starting contributor update process..."
 
