@@ -1,78 +1,97 @@
 [
 	{
 		"slug": "interactivity-api",
-		"name": "INTERACTIVITY API"
+		"name": "INTERACTIVITY API",
+		"description": "These examples show the use of the experimental [Interactivity API](https://make.wordpress.org/core/2023/03/30/proposal-the-interactivity-api-a-better-developer-experience-in-building-interactive-blocks/) in Blocks via the [`@wordpress/interactivity` package](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/README.md)"
 	},
 	{
 		"slug": "interactive-block",
-		"name": "INTERACTIVE BLOCK"
+		"name": "INTERACTIVE BLOCK",
+		"description": "These examples show how to add behaviour for the frontend in your blocks. This behaviour is usually applied on an extra file (defined with the [property `viewScript` of your `block.json`](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script)) that is loades only when the block is displayed in the frontend."
 	},
 	{
 		"slug": "create-block-template",
-		"name": "CREATE BLOCK TEMPLATE"
+		"name": "CREATE BLOCK TEMPLATE",
+		"description": "These examples shows the result of using a template with the [`create-block`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/) tool with any of his variants or options."
 	},
 	{
 		"slug": "no-build",
-		"name": "NO BUILD"
+		"name": "NO BUILD",
+		"description": "These examples shows block development that doesn't require a build process, mostly because they don't use ESNext or JSX syntax."
 	},
 	{
 		"slug": "no-block",
-		"name": "NO BLOCK"
+		"name": "NO BLOCK",
+		"description": "These examples shows the development of a feature or behaviour for WordPress using gutenberg packages and React without the creation of a block."
 	},
 	{
 		"slug": "dynamic-rendering",
-		"name": "DYNAMIC RENDERING"
+		"name": "DYNAMIC RENDERING",
+		"description": "These examples shows the so called [dynamic blocks](https://developer.wordpress.org/block-editor/getting-started/glossary/#dynamic-block)."
 	},
 	{
 		"slug": "static-rendering",
-		"name": "STATIC RENDERING"
+		"name": "STATIC RENDERING",
+		"description": "These examples shows the so called [static blocks](https://developer.wordpress.org/block-editor/getting-started/glossary/#static-block)."
 	},
 	{
 		"slug": "wp-data",
-		"name": "WP DATA"
+		"name": "WP DATA",
+		"description": "These examples demonstrate how to use the `@wordpress/data` package for state management in WordPress applications."
 	},
 	{
 		"slug": "create-block",
-		"name": "CREATE BLOCK"
+		"name": "CREATE BLOCK",
+		"description": "These examples shows the result of using the [`create-block`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/) tool with any of his variants or options."
 	},
 	{
 		"slug": "gutenberg-plugin",
-		"name": "GUTENBERG PLUGIN"
+		"name": "GUTENBERG PLUGIN",
+		"description": "These examples shows some experimentatal feature that require the latest version of the Gutenberg Plugin in order to work properly"
 	},
 	{
 		"slug": "minimal",
-		"name": "MINIMAL"
+		"name": "MINIMAL",
+		"description": "These examples shows the most simple version of specific types of blocks"
 	},
 	{
 		"slug": "multi-block",
-		"name": "MULTI BLOCK"
+		"name": "MULTI BLOCK",
+		"description": "These examples are plugins registering several blocks."
 	},
 	{
 		"slug": "styles",
-		"name": "STYLES"
+		"name": "STYLES",
+		"description": "These examples show how to add styles to a block"
 	},
 	{
 		"slug": "supports",
-		"name": "SUPPORTS"
+		"name": "SUPPORTS",
+		"description": "These examples show how to to declare support for certain features via the [`supports` property](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/) of `block.json`"
 	},
 	{
 		"slug": "meta",
-		"name": "META"
+		"name": "META",
+		"description": "These examples how to [make use of the custom meta boxes of an entity from a block](https://developer.wordpress.org/block-editor/how-to-guides/metabox/). The [More info Creating a custom block that stores post meta](https://developer.wordpress.org/news/2023/03/creating-a-custom-block-that-stores-post-meta/) blog post of the [Developer Blog](https://developer.wordpress.org/news) is an interesting read about this."
 	},
 	{
 		"slug": "slotfill",
-		"name": "SLOTFILL"
+		"name": "SLOTFILL",
+		"description": "These examples use [Slot and Fill](https://developer.wordpress.org/block-editor/reference-guides/components/slot-fill/) components which enable developers to render elsewhere in a React element tree, a pattern often referred to as \"portal\" rendering."
 	},
 	{
 		"slug": "featured",
-		"name": "FEATURED"
+		"name": "FEATURED",
+		"description": "These examples are featured because they are considered especially good for learning about block development or because they show how a highlighted feature is implemented."
 	},
 	{
 		"slug": "block-toolbar",
-		"name": "BLOCK TOOLBAR"
+		"name": "BLOCK TOOLBAR",
+		"description": "These examples show how to add custom controls to the Block Toolbar that appears when the block is selected"
 	},
 	{
 		"slug": "interactivity-router",
-		"name": "INTERACTIVITY ROUTER"
+		"name": "INTERACTIVITY ROUTER",
+		"description": "These examples demonstrate how to implement client-side routing using the WordPress Interactivity API's router functionality."
 	}
 ]
