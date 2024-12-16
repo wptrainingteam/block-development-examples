@@ -57,7 +57,7 @@ UPDATED_EXAMPLES=$(echo "$EXAMPLES" | jq -c '.[]' | while read -r example; do
     fi
 done | jq -s '.')
 
-# Write the updated content back to examples.json
-echo "$UPDATED_EXAMPLES" > "$EXAMPLES_FILE"
+# Write the updated content back to examples.json with tab indentation
+echo "$UPDATED_EXAMPLES" | jq --tab '.' > "$EXAMPLES_FILE"
 
 echo "Finished contributor update process. ✅"
