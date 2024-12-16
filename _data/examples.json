@@ -1,370 +1,256 @@
 [
-  {
-    "slug": "block-dynamic-rendering-64756b",
-    "description": "Basic Block with Dynamic Rendering",
-    "tags": [
-      "dynamic-rendering",
-      "create-block"
-    ],
-    "contributors": [
-      "fai-sal",
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-10-10T09:49:59+01:00",
-    "lastModified": "2024-08-29T18:11:33+02:00"
-  },
-  {
-    "slug": "basic-block-translations-3df23d",
-    "description": "Basic Block with Translations",
-    "tags": [
-      "static-rendering"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-10-10T12:18:16+01:00",
-    "lastModified": "2024-12-13T06:13:26+01:00"
-  },
-  {
-    "slug": "block-static-rendering-b16608",
-    "description": "Block with Static Rendering",
-    "tags": [
-      "static-rendering",
-      "create-block"
-    ],
-    "contributors": [
-      "fai-sal",
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-10-10T09:49:59+01:00",
-    "lastModified": "2024-08-29T18:17:57+02:00"
-  },
-  {
-    "slug": "editable-block-1b8c51",
-    "description": "Block Editable",
-    "tags": [],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-09-17T19:25:19+01:00",
-    "lastModified": "2024-08-29T18:27:38+02:00"
-  },
-  {
-    "slug": "non-block-react-wp-data-56d6f3",
-    "description": "Non-block wp data with React",
-    "tags": [
-      "no-block",
-      "wp-data"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-09-02T19:19:29+01:00",
-    "lastModified": "2024-08-30T07:32:27+02:00"
-  },
-  {
-    "slug": "minimal-block-ca6eda",
-    "description": "Minimal Block",
-    "tags": [
-      "minimal",
-      "featured"
-    ],
-    "contributors": [
-      "fai-sal",
-      "juanmaguitar"
-    ],
-    "created": "2023-10-08T08:14:37+01:00",
-    "lastModified": "2024-08-29T18:53:23+02:00"
-  },
-  {
-    "slug": "minimal-block-no-build-e621a6",
-    "description": "Minimal Gutenberg Block (No Build)",
-    "tags": [
-      "minimal",
-      "no-build"
-    ],
-    "contributors": [
-      "adamziel",
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-10-08T07:46:38+01:00",
-    "lastModified": "2024-08-29T18:53:23+02:00"
-  },
-  {
-    "slug": "interactive-blocks-demos-99def1",
-    "description": "Interactive Blocks",
-    "tags": [
-      "interactive-block",
-      "multi-block"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-10-11T22:26:44+01:00",
-    "lastModified": "2024-08-29T18:53:23+02:00"
-  },
-  {
-    "slug": "format-api-f14b86",
-    "description": "Format API",
-    "tags": [
-      "no-block"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-01T11:19:49-04:00",
-    "lastModified": "2024-08-29T18:27:38+02:00"
-  },
-  {
-    "slug": "stylesheets-79a4c3",
-    "description": "Stylesheets",
-    "tags": [
-      "styles",
-      "featured"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-03T12:19:20-04:00",
-    "lastModified": "2024-08-30T07:40:51+02:00"
-  },
-  {
-    "slug": "basic-esnext-a2ab62",
-    "description": "Basic ESNext",
-    "tags": [
-      "minimal"
-    ],
-    "contributors": [
-      "adamziel",
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-03T09:27:58-04:00",
-    "lastModified": "2024-08-29T18:00:48+02:00"
-  },
-  {
-    "slug": "block-supports-6aa4dd",
-    "description": "Block Supports",
-    "tags": [
-      "supports",
-      "featured"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-06T14:50:39-05:00",
-    "lastModified": "2024-08-29T18:17:57+02:00"
-  },
-  {
-    "slug": "dynamic-block-b0bce7",
-    "description": "Dynamic Block",
-    "tags": [
-      "dynamic-rendering"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-06T15:02:03-05:00",
-    "lastModified": "2024-08-29T18:27:38+02:00"
-  },
-  {
-    "slug": "interactivity-api-block-833d15",
-    "description": "Interactivity API Block",
-    "tags": [
-      "create-block-template",
-      "interactive-block",
-      "interactivity-api"
-    ],
-    "contributors": [
-      "juanmaguitar"
-    ],
-    "created": "2023-10-11T13:47:07+01:00",
-    "lastModified": "2024-08-29T18:53:23+02:00"
-  },
-  {
-    "slug": "meta-block-bb1e55",
-    "description": "Meta Block",
-    "tags": [
-      "meta"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-06T15:13:54-05:00",
-    "lastModified": "2024-08-30T07:32:27+02:00"
-  },
-  {
-    "slug": "inner-blocks-dcd824",
-    "description": "Inner Blocks",
-    "tags": [],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-06T14:31:08-05:00",
-    "lastModified": "2024-08-29T18:27:38+02:00"
-  },
-  {
-    "slug": "slotfill-2fb190",
-    "description": "SlotFill",
-    "tags": [
-      "no-block",
-      "slotfill"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-06T14:42:58-05:00",
-    "lastModified": "2024-08-30T07:40:51+02:00"
-  },
-  {
-    "slug": "block-toolbar-ab967f",
-    "description": "Block Toolbar Controls",
-    "tags": [
-      "block-toolbar"
-    ],
-    "contributors": [
-      "juanmaguitar"
-    ],
-    "created": "2023-12-15T16:15:52+01:00",
-    "lastModified": "2024-08-29T18:17:57+02:00"
-  },
-  {
-    "slug": "recipe-card-744e8a",
-    "description": "Recipe",
-    "tags": [],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-07T14:45:18-05:00",
-    "lastModified": "2024-08-30T07:35:14+02:00"
-  },
-  {
-    "slug": "plugin-sidebar-9ee4a6",
-    "description": "Plugin Sidebar",
-    "tags": [
-      "slotfill",
-      "meta",
-      "no-block"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ndiego",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-07T15:13:31-05:00",
-    "lastModified": "2024-08-30T07:32:27+02:00"
-  },
-  {
-    "slug": "data-basics-59c8f8",
-    "description": "Data Basics - @wordpress/data",
-    "tags": [
-      "no-block",
-      "wp-data",
-      "featured"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ryanwelcher"
-    ],
-    "created": "2023-11-12T19:28:19Z",
-    "lastModified": "2024-08-29T18:17:57+02:00"
-  },
-  {
-    "slug": "copyright-date-block-09aac3",
-    "description": "Copyright Date Block",
-    "tags": [
-      "dynamic-rendering",
-      "static-rendering",
-      "create-block",
-      "featured"
-    ],
-    "contributors": [
-      "juanmaguitar"
-    ],
-    "created": "2023-11-20T17:22:20Z",
-    "lastModified": "2024-05-27T08:46:30+01:00"
-  },
-  {
-    "slug": "interactivity-api-countdown-3cd73e",
-    "description": "Interactivity API Countdown",
-    "tags": [
-      "dynamic-rendering",
-      "interactive-block",
-      "interactivity-api",
-      "experimental",
-      "block-toolbar"
-    ],
-    "contributors": [
-      "flexseth",
-      "juanmaguitar"
-    ],
-    "created": "2023-12-11T12:53:38Z",
-    "lastModified": "2024-08-29T18:53:23+02:00"
-  },
-  {
-    "slug": "settings-sidebar-82c525",
-    "description": "Block Settings Sidebar",
-    "tags": [],
-    "contributors": [
-      "juanmaguitar"
-    ],
-    "created": "2023-12-18T12:42:49+01:00",
-    "lastModified": "2024-08-30T07:40:51+02:00"
-  },
-  {
-    "slug": "post-meta-modal-2502fb",
-    "description": "Post Meta Modal",
-    "tags": [
-      "meta",
-      "no-block"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "ndiego"
-    ],
-    "created": "2024-05-09T14:45:05-05:00",
-    "lastModified": "2024-08-30T07:40:51+02:00"
-  },
-  {
-    "slug": "interactivity-api-quiz-1835fa",
-    "description": "Interactivity API Quiz",
-    "tags": [
-      "interactive-block",
-      "interactivity-api"
-    ],
-    "contributors": [
-      "juanmaguitar",
-      "luisherranz"
-    ],
-    "created": "2023-12-12T19:31:15Z",
-    "lastModified": "2024-08-29T18:53:23+02:00"
-  },
-  {
-    "slug": "interactivity-router-2f43f8",
-    "tags": [
-      "interactivity-api",
-      "interactivity-router"
-    ],
-    "description": "Interactivity Router (regions) example",
-    "contributors": [
-      "juanmaguitar"
-    ],
-    "created": "2024-10-03T15:29:11+01:00",
-    "lastModified": "2024-12-13T06:13:26+01:00"
-  }
+	{
+		"slug": "block-dynamic-rendering-64756b",
+		"name": "Basic Block with Dynamic Rendering",
+		"description": "Demonstrates how to create a block that renders its content dynamically on the server side rather than saving static content in the post content.",
+		"tags": [ "dynamic-rendering", "create-block" ],
+		"contributors": [ "fai-sal", "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-10-10T09:49:59+01:00",
+		"lastModified": "2024-08-29T18:11:33+02:00"
+	},
+	{
+		"slug": "basic-block-translations-3df23d",
+		"name": "Basic Block with Translations",
+		"description": "Shows how to implement internationalization (i18n) in a WordPress block using both PHP and JavaScript translations, demonstrating proper setup of translation files and functions.",
+		"tags": [ "static-rendering" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-10-10T12:18:16+01:00",
+		"lastModified": "2024-12-13T06:13:26+01:00"
+	},
+	{
+		"slug": "block-static-rendering-b16608",
+		"name": "Block with Static Rendering",
+		"description": "Illustrates how to create a block that saves its content as static HTML in the post content, showing the basic pattern for static block rendering.",
+		"tags": [ "static-rendering", "create-block" ],
+		"contributors": [ "fai-sal", "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-10-10T09:49:59+01:00",
+		"lastModified": "2024-08-29T18:17:57+02:00"
+	},
+	{
+		"slug": "editable-block-1b8c51",
+		"name": "Block Editable",
+		"description": "Shows how to create a block with editable content using the block editor's core editing components and attributes.",
+		"tags": [],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-09-17T19:25:19+01:00",
+		"lastModified": "2024-08-29T18:27:38+02:00"
+	},
+	{
+		"slug": "non-block-react-wp-data-56d6f3",
+		"name": "Non-block wp data with React",
+		"description": "Demonstrates how to use @wordpress/data with React components outside of the block editor context, showing data management patterns.",
+		"tags": [ "no-block", "wp-data" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-09-02T19:19:29+01:00",
+		"lastModified": "2024-08-30T07:32:27+02:00"
+	},
+	{
+		"slug": "minimal-block-ca6eda",
+		"name": "Minimal Block",
+		"description": "A bare-bones example showing the minimum required code to create a functional WordPress block.",
+		"tags": [ "minimal", "featured" ],
+		"contributors": [ "fai-sal", "juanmaguitar" ],
+		"created": "2023-10-08T08:14:37+01:00",
+		"lastModified": "2024-08-29T18:53:23+02:00"
+	},
+	{
+		"slug": "minimal-block-no-build-e621a6",
+		"name": "Minimal Gutenberg Block (No Build)",
+		"description": "Shows how to create a simple block without a build process, using vanilla JavaScript and WordPress's built-in scripts.",
+		"tags": [ "minimal", "no-build" ],
+		"contributors": [ "adamziel", "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-10-08T07:46:38+01:00",
+		"lastModified": "2024-08-29T18:53:23+02:00"
+	},
+	{
+		"slug": "interactive-blocks-demos-99def1",
+		"name": "Interactive Blocks",
+		"description": "Collection of examples showing how to create blocks with interactive features and client-side functionality.",
+		"tags": [ "interactive-block", "multi-block" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-10-11T22:26:44+01:00",
+		"lastModified": "2024-08-29T18:53:23+02:00"
+	},
+	{
+		"slug": "format-api-f14b86",
+		"name": "Format API",
+		"description": "Demonstrates how to use the WordPress Format API to add custom text formatting options to the editor.",
+		"tags": [ "no-block" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-01T11:19:49-04:00",
+		"lastModified": "2024-08-29T18:27:38+02:00"
+	},
+	{
+		"slug": "stylesheets-79a4c3",
+		"name": "Stylesheets",
+		"description": "Shows different approaches to adding and managing styles in blocks, including editor-specific and front-end styles.",
+		"tags": [ "styles", "featured" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-03T12:19:20-04:00",
+		"lastModified": "2024-08-30T07:40:51+02:00"
+	},
+	{
+		"slug": "basic-esnext-a2ab62",
+		"name": "Basic ESNext",
+		"description": "Demonstrates how to create a basic block using modern JavaScript (ESNext) and JSX syntax with a build process powered by @wordpress/scripts.",
+		"tags": [ "minimal" ],
+		"contributors": [ "adamziel", "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-03T09:27:58-04:00",
+		"lastModified": "2024-08-29T18:00:48+02:00"
+	},
+	{
+		"slug": "block-supports-6aa4dd",
+		"description": "Showcases how to use WordPress block supports to add standard features like alignment, colors, and typography to blocks.",
+		"name": "Block Supports",
+		"tags": [ "supports", "featured" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-06T14:50:39-05:00",
+		"lastModified": "2024-08-29T18:17:57+02:00"
+	},
+	{
+		"slug": "dynamic-block-b0bce7",
+		"description": "Shows how to create blocks that render content dynamically using PHP, including data fetching and server-side rendering.",
+		"name": "Dynamic Block",
+		"tags": [ "dynamic-rendering" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-06T15:02:03-05:00",
+		"lastModified": "2024-08-29T18:27:38+02:00"
+	},
+	{
+		"slug": "interactivity-api-block-833d15",
+		"description": "Demonstrates the usage of WordPress's Interactivity API to create blocks with enhanced interactive capabilities.",
+		"name": "Interactivity API Block",
+		"tags": [
+			"create-block-template",
+			"interactive-block",
+			"interactivity-api"
+		],
+		"contributors": [ "juanmaguitar" ],
+		"created": "2023-10-11T13:47:07+01:00",
+		"lastModified": "2024-08-29T18:53:23+02:00"
+	},
+	{
+		"slug": "meta-block-bb1e55",
+		"description": "Shows how to create blocks that read and save data to post meta, demonstrating integration with WordPress metadata system.",
+		"name": "Meta Block",
+		"tags": [ "meta" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-06T15:13:54-05:00",
+		"lastModified": "2024-08-30T07:32:27+02:00"
+	},
+	{
+		"slug": "inner-blocks-dcd824",
+		"description": "Demonstrates how to create blocks that can contain other blocks using InnerBlocks component.",
+		"name": "Inner Blocks",
+		"tags": [],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-06T14:31:08-05:00",
+		"lastModified": "2024-08-29T18:27:38+02:00"
+	},
+	{
+		"slug": "slotfill-2fb190",
+		"description": "Shows how to use WordPress SlotFill system to extend the editor interface with custom components.",
+		"name": "SlotFill",
+		"tags": [ "no-block", "slotfill" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-06T14:42:58-05:00",
+		"lastModified": "2024-08-30T07:40:51+02:00"
+	},
+	{
+		"slug": "block-toolbar-ab967f",
+		"description": "Demonstrates how to add custom controls to the block toolbar for enhanced block editing capabilities.",
+		"name": "Block Toolbar Controls",
+		"tags": [ "block-toolbar" ],
+		"contributors": [ "juanmaguitar" ],
+		"created": "2023-12-15T16:15:52+01:00",
+		"lastModified": "2024-08-29T18:17:57+02:00"
+	},
+	{
+		"slug": "recipe-card-744e8a",
+		"description": "A practical example showing how to create a complex block for recipe content with multiple editable fields and structured data.",
+		"name": "Recipe",
+		"tags": [],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-07T14:45:18-05:00",
+		"lastModified": "2024-08-30T07:35:14+02:00"
+	},
+	{
+		"slug": "plugin-sidebar-9ee4a6",
+		"description": "Shows how to add a custom sidebar to the editor using SlotFill and integrate it with post meta data.",
+		"name": "Plugin Sidebar",
+		"tags": [ "slotfill", "meta", "no-block" ],
+		"contributors": [ "juanmaguitar", "ndiego", "ryanwelcher" ],
+		"created": "2023-11-07T15:13:31-05:00",
+		"lastModified": "2024-08-30T07:32:27+02:00"
+	},
+	{
+		"slug": "data-basics-59c8f8",
+		"description": "Introduction to using @wordpress/data for state management in WordPress, covering basic concepts and patterns.",
+		"name": "Data Basics - @wordpress/data",
+		"tags": [ "no-block", "wp-data", "featured" ],
+		"contributors": [ "juanmaguitar", "ryanwelcher" ],
+		"created": "2023-11-12T19:28:19Z",
+		"lastModified": "2024-08-29T18:17:57+02:00"
+	},
+	{
+		"slug": "copyright-date-block-09aac3",
+		"description": "Example of a block that combines both static and dynamic rendering to display copyright information.",
+		"name": "Copyright Date Block",
+		"tags": [
+			"dynamic-rendering",
+			"static-rendering",
+			"create-block",
+			"featured"
+		],
+		"contributors": [ "juanmaguitar", "ndiego" ],
+		"created": "2023-11-20T17:22:20Z",
+		"lastModified": "2024-05-27T08:46:30+01:00"
+	},
+	{
+		"slug": "interactivity-api-countdown-3cd73e",
+		"description": "Advanced example showing how to create an interactive countdown timer using the WordPress Interactivity API.",
+		"name": "Interactivity API Countdown",
+		"tags": [
+			"dynamic-rendering",
+			"interactive-block",
+			"interactivity-api",
+			"experimental",
+			"block-toolbar"
+		],
+		"contributors": [ "flexseth", "juanmaguitar" ],
+		"created": "2023-12-11T12:53:38Z",
+		"lastModified": "2024-08-29T18:53:23+02:00"
+	},
+	{
+		"description": "Demonstrates how to add custom settings panels to the block sidebar for additional block configuration options.",
+		"name": "Block Settings Sidebar",
+		"tags": [],
+		"contributors": [ "juanmaguitar" ],
+		"created": "2023-12-18T12:42:49+01:00",
+		"lastModified": "2024-08-30T07:40:51+02:00"
+	},
+	{
+		"description": "Shows how to create a modal interface for editing post meta data outside of the block context.",
+		"name": "Post Meta Modal",
+		"tags": [ "meta", "no-block" ],
+		"contributors": [ "juanmaguitar", "ndiego" ],
+		"created": "2024-05-09T14:45:05-05:00",
+		"lastModified": "2024-08-30T07:40:51+02:00"
+	},
+	{
+		"description": "Demonstrates building an interactive quiz interface using the WordPress Interactivity API.",
+		"name": "Interactivity API Quiz",
+		"tags": [ "interactive-block", "interactivity-api" ],
+		"contributors": [ "juanmaguitar", "luisherranz" ],
+		"created": "2023-12-12T19:31:15Z",
+		"lastModified": "2024-08-29T18:53:23+02:00"
+	},
+	{
+		"description": "Shows how to implement client-side routing in blocks using the WordPress Interactivity API router functionality.",
+		"name": "Interactivity Router (regions) example",
+		"tags": [ "interactivity-api", "interactivity-router" ],
+		"contributors": [ "juanmaguitar" ],
+		"created": "2024-10-03T15:29:11+01:00",
+		"lastModified": "2024-12-13T06:13:26+01:00"
+	}
 ]
