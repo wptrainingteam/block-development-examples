@@ -40,7 +40,7 @@
 		"admin:clear:build": "find ./plugins -path './plugins/*/node_modules/*' -prune -o -name 'build' -type d -exec rm -vrf '{}' +",
 		"admin:clear:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -vrf '{}' +",
 		"admin:reinstall": "npm run admin:clear:node_modules && pnpm install",
-		"gh:deploy": "gh-pages -d _app/build"
+		"gh:deploy": "gh-pages -d _app/dist"
 	},
 	"lint-staged": {
 		"*.js": [

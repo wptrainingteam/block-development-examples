@@ -186,3 +186,8 @@ All notable changes to the build scripts will be documented in this file.
     -   Consistent spacing in type declarations
     -   Proper line endings
     -   Import formatting
+
+## 1.1.0
+
+-   Added script to track contributors for each example plugin
+-   Added script to track creation and modification dates for each example plugin
