@@ -27,6 +27,11 @@ export const URL_WIKI = `${ GITHUB_BASE_URL }/wiki`;
 export const WIKI_PAGE_WHY_ID = '04-Why-an-ID-for-every-example%3F';
 export const WIKI_PAGE_TAGS = '03-Tags';
 
+// App URLS
+export const APP_URL =
+	'https://juanma-wp.github.io/block-development-examples/';
+export const APP_URL_WITH_TAGS = `${ APP_URL }?tags=`;
+
 // Resource URLs
 export const URL_REPO = `${ GITHUB_BASE_URL }/tree/${ REPO_BRANCH }`;
 export const URL_ASSETS = `${ RAW_GITHUB_BASE_URL }/_assets`;

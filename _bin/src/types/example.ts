@@ -1,5 +1,6 @@
 export interface Example {
 	slug: string;
+	name: string;
 	description: string;
 	tags: string[];
 	contributors?: string[];

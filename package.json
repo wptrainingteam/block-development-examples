@@ -82,6 +82,7 @@
 		"chalk": "4.1.1",
 		"commander": "9.2.0",
 		"copyfiles": "^2.4.1",
+		"date-fns": "^4.1.0",
 		"eslint-plugin-jest": "^28.5.0",
 		"execa": "4.0.2",
 		"express": "^4.17.1",

@@ -9,8 +9,7 @@ import {
 	URL_ASSETS,
 	URL_EXAMPLE_ZIP,
 	URL_PLAYGROUND_BLUEPRINT,
-	WIKI_PAGE_TAGS,
-	WIKI_PAGE_WHY_ID,
+	APP_URL_WITH_TAGS,
 	SLUG_EXAMPLE_MARKER,
 } from '../constants';
 import { validatePath, validateRequiredData } from '../utils/errors';
@@ -41,38 +40,38 @@ export const generateTables = withErrorHandling( generateTablesBase );
 function generateTableContent( examples: Example[], tags: Tag[] ): string {
 	const tableRows = examples
 		.map( ( example ) => {
+			const exampleFolder = example.slug; // Fallback to slug if folder is not
 			const tagLinks = example.tags
 				.map(
 					( tag ) =>
-						`<small><code><a href="${ URL_WIKI }/${ WIKI_PAGE_TAGS }#${ tag.toLowerCase() }">${ tag }</a></code></small>`
+						`<small><code><a href="${ APP_URL_WITH_TAGS }${ tag.toLowerCase() }">${ tag }</a></code></small>`
 				)
 				.join( ' ' );
 
 			// Replace the marker in URLs with the actual folder name
 			const exampleZipUrl = URL_EXAMPLE_ZIP.replace(
 				SLUG_EXAMPLE_MARKER,
-				example.folder
+				exampleFolder
 			);
 			const playgroundBlueprintUrl = URL_PLAYGROUND_BLUEPRINT.replace(
 				SLUG_EXAMPLE_MARKER,
-				example.folder
+				exampleFolder
 			);
-			const repoFolderUrl = `${ URL_REPO }/plugins/${ example.folder }`;
+			const repoFolderUrl = `${ URL_REPO }/plugins/${ exampleFolder }`;
 
 			return (
-				`| [📁](${ repoFolderUrl }) | ` +
+				`| [${ example.name }](${ repoFolderUrl }) | ` +
 				`${ example.description } | ` +
 				`${ tagLinks } | ` +
-				`\`${ example.id }\` | ` +
 				`[📦](${ exampleZipUrl } "Install the plugin using this zip and activate it. Then use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") | ` +
 				`[![](${ URL_ASSETS }/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=${ playgroundBlueprintUrl } "Use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") |`
 			);
 		} )
 		.join( '\n' );
 
-	const header = `| Folder | <span style="display: inline-block; width:250px">Short description</span> | Tags | ID ([❓](${ URL_WIKI }/${ WIKI_PAGE_WHY_ID } "Why an ID for every example?")) | Download .zip | Live Demo |`;
+	const header = `| Example | <span style="display: inline-block; width:250px">Description</span> | Tags |Download .zip | Live Demo |`;
 	const separator =
-		'| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |';
+		'| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |';
 
 	return `${ header }\n${ separator }\n${ tableRows }`;
 }

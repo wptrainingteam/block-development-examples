@@ -1,7 +1,5 @@
 import { ValidationError } from './types/errors';
 import { withErrorHandling } from './utils/compose';
-import { contributorsService } from './services/ContributorsService';
-import { datesService } from './services/DatesService';
 
 const command = process.argv[ 2 ];
 const target = process.argv[ 3 ];
@@ -46,9 +44,8 @@ const mainBase = async (): Promise< void > => {
 			validatePath( pluginPath );
 			generateTables( pluginPath );
 		}
-	} else if ( command === 'contributors' ) {
-		await contributorsService.updateContributors();
 	} else if ( command === 'dates' ) {
+		const { datesService } = await import( './services/DatesService' );
 		await datesService.updateDates();
 	} else {
 		throw new ValidationError(
