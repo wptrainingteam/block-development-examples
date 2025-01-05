@@ -27,9 +27,15 @@ jobs:
             - name: Install dependencies
               run: pnpm install
 
+            # Create zips directory
+            - name: Create zips directory
+              run: mkdir -p zips
+
             # Run the plugin-zip script to generate zip files
             - name: Generate zip files
-              run: npm run plugin-zip
+              run: |
+                  npm run deploy
+                  ls -la zips/  # Debug: List contents of zips directory
 
             # Install GitHub CLI
             - name: Install GitHub CLI
@@ -47,7 +53,8 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                  RELEASE_TAG="v$(date +'%Y%m%d%H%M%S')"  # Generate a timestamp-based tag
+                  RELEASE_TAG="v$(date +'%Y%m%d%H%M%S')"
+                  echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
                   gh release create $RELEASE_TAG \
                     --title "Automated Release $RELEASE_TAG" \
                     --notes "This release contains the latest package zips."
@@ -57,7 +64,7 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                  RELEASE_TAG="v$(date +'%Y%m%d%H%M%S')"  # Make sure we use the same tag as created
                   for file in zips/*.zip; do
-                    gh release upload "$RELEASE_TAG" "$file"
+                    [ -e "$file" ] || continue  # Skip if no files match pattern
+                    gh release upload "${{ env.RELEASE_TAG }}" "$file"
                   done
