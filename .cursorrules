@@ -1,0 +1,5 @@
+IMPORTANT: Document changes on each step in a `CHANGELOG.md` file.
+
+-   Create a new minor version on each session and add the current date beside that version
+-   Add patches version on each new set of changes added to `CHANGELOG.md`
+-   Place newer changes (and latest versions) first in `CHANGELOG.md`

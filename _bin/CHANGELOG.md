@@ -1,8 +1,8 @@
 # Changelog
 
-All notable changes to the build scripts will be documented in this file.
+All notable changes to the build scripts are documented in this file.
 
-## [0.1.4] - 2024-03-XX
+## [0.1.4]
 
 ### Changed
 
@@ -33,7 +33,7 @@ All notable changes to the build scripts will be documented in this file.
 -   Eliminated redundant error handling boilerplate
 -   Removed unnecessary path construction duplication
 
-## [0.1.3] - 2024-03-XX
+## [0.1.3]
 
 ### Added
 
@@ -96,7 +96,7 @@ All notable changes to the build scripts will be documented in this file.
     -   Removed extra tabs in TableMarkdownService
     -   Fixed line endings in error type definitions
 
-## [0.1.2] - 2024-03-XX
+## [0.1.2]
 
 ### Added
 
@@ -122,7 +122,7 @@ All notable changes to the build scripts will be documented in this file.
     -   Improved template literal formatting
     -   Simplified table generation formatting
 
-## [0.1.1] - 2024-03-XX
+## [0.1.1]
 
 ### Added
 

@@ -1,6 +1,31 @@
 # Changelog
 
-## [1.2.2] - 2024-03-20
+## [1.2.5] - 2025-01-05
+
+### Added
+
+-   Created comprehensive README.md in \_bin directory
+    -   Added documentation for available scripts
+    -   Added directory structure overview
+    -   Added development guidelines
+    -   Added usage instructions for utility scripts
+
+## [1.2.4] - 2024-12-21
+
+### Changed
+
+-   Modified table generation to show only relevant example in each plugin's README.md
+-   Updated `npm run table:update:all` to respect single example per README rule
+
+## [1.2.3] - 2024-12-21
+
+### Added
+
+-   Support for generating table for a single example by passing its slug
+-   Added validation for example slug existence
+-   Enhanced error messages for missing examples
+
+## [1.2.2] - 2024-12-20
 
 ### Fixed
 
@@ -8,7 +33,7 @@
 -   Added type checking for GitHub API responses
 -   Improved error handling for malformed API responses
 
-## [1.2.1] - 2024-03-20
+## [1.2.1] - 2024-12-20
 
 ### Fixed
 
@@ -16,7 +41,7 @@
 -   Added better error handling for invalid API responses
 -   Added null check for commit authors
 
-## [1.2.0] - 2024-03-20
+## [1.2.0] - 2024-12-20
 
 ### Changed
 
@@ -29,7 +54,7 @@
 -   Improved contributor deduplication logic
 -   Better error handling for API requests
 
-## [1.1.0] - 2024-03-19
+## [1.1.0] - 2024-12-19
 
 ### Added
 
@@ -72,7 +97,7 @@
 -   Added examples.json with block development examples
 -   Added tags.json with initial tag definitions
 
-## 0.2.0 - 2024-03-21
+## 0.2.0 - 2024-12-18
 
 ### 0.2.5
 
