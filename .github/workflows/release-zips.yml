@@ -1,0 +1,60 @@
+name: Generate Package Zips and Create Release
+
+on:
+    push:
+        branches:
+            - main # Or your default branch
+    workflow_dispatch:
+
+jobs:
+    zip-packages:
+        runs-on: ubuntu-latest
+
+        steps:
+            # Checkout the repository
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            # Set up Node.js and install dependencies
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '16' # Use your preferred Node.js version
+                  cache: 'pnpm'
+
+            - name: Install dependencies
+              run: pnpm install
+
+            # Run the plugin-zip script to generate zip files
+            - name: Generate zip files
+              run: pnpm run plugin-zip
+
+            # Install GitHub CLI
+            - name: Install GitHub CLI
+              run: sudo apt-get install -y gh
+
+            # Authenticate with GitHub CLI
+            - name: Authenticate GitHub CLI
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: gh auth login --with-token <<< "${GITHUB_TOKEN}"
+
+            # Create GitHub Release
+            - name: Create GitHub Release
+              id: create_release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  RELEASE_TAG="v$(date +'%Y%m%d%H%M%S')"  # Generate a timestamp-based tag
+                  gh release create $RELEASE_TAG \
+                    --title "Automated Release $RELEASE_TAG" \
+                    --notes "This release contains the latest package zips."
+
+            # Upload the zips to the Release
+            - name: Upload Zips to Release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  for file in zips/*.zip; do
+                    gh release upload ${{ steps.create_release.outputs.tag_name }} "$file"
+                  done
