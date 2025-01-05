@@ -57,6 +57,7 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
+                  RELEASE_TAG="v$(date +'%Y%m%d%H%M%S')"  # Make sure we use the same tag as created
                   for file in zips/*.zip; do
-                    gh release upload ${{ steps.create_release.outputs.tag_name }} "$file"
+                    gh release upload "$RELEASE_TAG" "$file"
                   done
