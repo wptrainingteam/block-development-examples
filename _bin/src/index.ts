@@ -37,12 +37,12 @@ const mainBase = async (): Promise< void > => {
 					'README.md'
 				);
 				validatePath( readmePath );
-				generateTables( readmePath );
+				generateTables( readmePath, folder );
 			} );
 		} else {
 			const pluginPath = path.join( PLUGINS_PATH, target, 'README.md' );
 			validatePath( pluginPath );
-			generateTables( pluginPath );
+			generateTables( pluginPath, target );
 		}
 	} else if ( command === 'dates' ) {
 		const { datesService } = await import( './services/DatesService' );

@@ -16,7 +16,7 @@ import { validatePath, validateRequiredData } from '../utils/errors';
 import { withErrorHandling } from '../utils/compose';
 
 // Base function without error handling
-function generateTablesBase( readmePath: string ): void {
+function generateTablesBase( readmePath: string, targetSlug?: string ): void {
 	info( `📝 Updating ${ readmePath }...` );
 	validatePath( readmePath );
 
@@ -26,8 +26,18 @@ function generateTablesBase( readmePath: string ): void {
 	validateRequiredData( examples, 'No examples data found' );
 	validateRequiredData( tags, 'No tags data found' );
 
+	// Filter examples if a target slug is provided
+	const filteredExamples = targetSlug
+		? examples.filter( ( example ) => example.slug === targetSlug )
+		: examples;
+
+	validateRequiredData(
+		filteredExamples.length,
+		`No example found with slug: ${ targetSlug }`
+	);
+
 	let content = readTextFile( readmePath );
-	const tableContent = generateTableContent( examples, tags );
+	const tableContent = generateTableContent( filteredExamples, tags );
 	content = replaceTableContent( content, tableContent );
 
 	writeFile( readmePath, content );
@@ -63,8 +73,8 @@ function generateTableContent( examples: Example[], tags: Tag[] ): string {
 				`| [${ example.name }](${ repoFolderUrl }) | ` +
 				`${ example.description } | ` +
 				`${ tagLinks } | ` +
-				`[📦](${ exampleZipUrl } "Install the plugin using this zip and activate it. Then use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") | ` +
-				`[![](${ URL_ASSETS }/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=${ playgroundBlueprintUrl } "Use the ID of the block (${ example.id }) to find it and add it to a post to see it in action") |`
+				`[📦](${ exampleZipUrl } "Install the plugin on any WordPress site using this zip and activate it to see the example in action") | ` +
+				`[![](${ URL_ASSETS }/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=${ playgroundBlueprintUrl } "Click here to access a live demo of this example" ) |`
 			);
 		} )
 		.join( '\n' );
