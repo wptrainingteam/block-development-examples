@@ -27,7 +27,7 @@ jobs:
 
             # Run the plugin-zip script to generate zip files
             - name: Generate zip files
-              run: pnpm run plugin-zip
+              run: npm run plugin-zip
 
             # Install GitHub CLI
             - name: Install GitHub CLI
