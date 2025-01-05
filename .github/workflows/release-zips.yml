@@ -38,8 +38,8 @@ jobs:
             # Authenticate with GitHub CLI
             - name: Authenticate GitHub CLI
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: gh auth login --with-token <<< "${GITHUB_TOKEN}"
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: echo "$GH_TOKEN" | gh auth login --with-token
 
             # Create GitHub Release
             - name: Create GitHub Release
