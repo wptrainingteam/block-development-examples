@@ -23,7 +23,6 @@
 		"postcreate-example:new": "pnpm i && npm run table:update",
 		"table:update": "ts-node _bin/src/index.ts generate",
 		"table:update:all": "ts-node _bin/src/index.ts generate all",
-		"contributors:update": "ts-node _bin/src/index.ts contributors",
 		"dates:update": "ts-node _bin/src/index.ts dates",
 		"zips:remove": "rimraf --verbose ./plugins/*/@block-development-examples",
 		"zips:move": "copyfiles --verbose --flat './plugins/**/*.zip' zips",

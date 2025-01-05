@@ -5,7 +5,8 @@
 	"plugins": [ "jest" ],
 	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
 	"ignorePatterns": [
-		"_bin/**/*.js",
+		"_bin/**/*",
+		"_app/**/*",
 		"plugins/minimal-block-no-build-e621a6/**/*.js",
 		"plugins/**/e2e/*.js"
 	],

@@ -14,13 +14,11 @@ You can run these scripts using the npm/pnpm commands defined in the root `packa
 -   `npm run  table:update [example-slug]` - Update README table for a specific example
 -   `npm run  table:update:all` - Updates all tables in the project documentation
 
-### Contributors Management
-
--   `npm run contributors:update` - Updates the contributors information in documentation
-
 ### Date Management
 
 -   `npm run dates:update` - Updates dates across the project files
+
+> Note: the dates update for examples can also be done via the GitHub Action update-dates.yml
 
 ## Script Files Structure
 
@@ -55,9 +53,10 @@ The scripts are written in TypeScript and use various utilities to manage projec
 
 1. Navigate to the appropriate file in the `src` directory
 2. Make your changes
-3. Run `pnpm build` to compile if necessary
-4. Test your changes using the corresponding npm script
+3. Run the code using `ts-node `
+
+As `ts-node` doesn’t check the TypeScript types, it’s strongly recommended to have in Visual Studio Code **a TypeScript linter or type checker like `typescript` enabled in your workspace** to catch type errors during development. Additionally, ensure that **TypeScript IntelliSense is configured properly** to help identify issues in real-time.
 
 ## Note
 
-These scripts are essential for maintaining project consistency and automating routine tasks. Always run them from the root directory of the project.
+These scripts are essential for maintaining project consistency and automating routine tasks. **Always run them from the root directory of the project.**

@@ -49,7 +49,7 @@ const mainBase = async (): Promise< void > => {
 		await datesService.updateDates();
 	} else {
 		throw new ValidationError(
-			'Unknown command. Use "generate", "generate all", "generate <plugin-name>", "contributors", or "dates"'
+			'Unknown command. Use "generate", "generate all", "generate <plugin-name>" or "dates"'
 		);
 	}
 };
