@@ -20,7 +20,9 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: '16' # Use your preferred Node.js version
-                  cache: 'pnpm'
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 8.7.1
 
             - name: Install dependencies
               run: pnpm install
