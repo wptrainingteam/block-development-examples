@@ -1,17 +1,20 @@
 {
-    "landingPage": "/wp-admin/admin.php?page=my-custom-gutenberg-app",
-    "steps": [
-      {
-        "step": "installPlugin",
-        "pluginZipFile": {
-          "resource": "url",
-          "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/data-basics-59c8f8.zip"
-        }
-      },
-      {
-        "step": "login",
-        "username": "admin",
-        "password": "password"
-      }
-    ]
-  }
+	"landingPage": "/wp-admin/admin.php?page=my-custom-gutenberg-app",
+	"login": true,
+	"steps": [
+		{
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/wp-content/plugins/data-basics-59c8f8",
+			"filesTree": {
+				"resource": "git:directory",
+				"url": "https://github.com/juanma-wp/block-development-examples.git",
+				"ref": "trunk",
+				"path": "src/data-basics-59c8f8"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "data-basics-59c8f8/plugin.php"
+		}
+	]
+}

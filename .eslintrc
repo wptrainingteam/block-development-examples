@@ -8,7 +8,8 @@
 		"_bin/**/*",
 		"_app/**/*",
 		"plugins/minimal-block-no-build-e621a6/**/*.js",
-		"plugins/**/e2e/*.js"
+		"plugins/**/e2e/*.js",
+		"build/**/*"
 	],
 	"rules": {
 		"@wordpress/i18n-text-domain": [

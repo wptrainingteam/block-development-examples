@@ -45,7 +45,7 @@ build-types/
 dist/
 
 # Ingnore "build" folders 
-build/
+
 
 # Project files
 node_modules/
