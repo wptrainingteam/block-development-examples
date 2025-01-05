@@ -53,18 +53,45 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
+                  # Create a dated tag for version tracking
                   RELEASE_TAG="v$(date +'%Y%m%d%H%M%S')"
                   echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
+
+                  # Create the new release
                   gh release create $RELEASE_TAG \
-                    --title "Automated Release $RELEASE_TAG" \
+                    --title "Release $RELEASE_TAG" \
                     --notes "This release contains the latest package zips."
 
-            # Upload the zips to the Release
+            # Upload the zips to the Release with consistent names
             - name: Upload Zips to Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   for file in zips/*.zip; do
-                    [ -e "$file" ] || continue  # Skip if no files match pattern
+                    [ -e "$file" ] || continue
+                    # Extract the base name without path and extension
+                    filename=$(basename "$file")
+                    # Upload to the versioned release
                     gh release upload "${{ env.RELEASE_TAG }}" "$file"
+                  done
+
+            # Update or create the "latest" release tag
+            - name: Update Latest Release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  # Delete existing latest tag and release if they exist
+                  gh release delete latest --yes || true
+                  git push origin :latest || true
+
+                  # Create new latest release
+                  gh release create latest \
+                    --title "Latest Release" \
+                    --notes "This is always the latest release. For permanent links, use the dated releases." \
+                    --latest
+
+                  # Upload files to latest release
+                  for file in zips/*.zip; do
+                    [ -e "$file" ] || continue
+                    gh release upload latest "$file" --clobber
                   done
