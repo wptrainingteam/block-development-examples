@@ -1,4 +1,4 @@
-name: __Update Creation and Modification Dates
+name: Update Creation and Modification Dates
 
 on:
     workflow_dispatch:

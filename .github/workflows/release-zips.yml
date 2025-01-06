@@ -1,4 +1,4 @@
-name: Generate Examples Zips and Create Release
+name: * Generate Examples Zips and Create Release
 
 on:
     push:
