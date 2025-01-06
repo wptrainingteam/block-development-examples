@@ -7,7 +7,7 @@
 			"pluginData": {
 				"resource": "git:directory",
 				"url": "https://github.com/juanma-wp/block-development-examples",
-				"ref": "trunk",
+				"ref": "HEAD",
 				"path": "plugins/data-basics-59c8f8"
 			},
 			"options": {
