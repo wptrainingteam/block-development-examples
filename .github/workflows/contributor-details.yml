@@ -1,4 +1,4 @@
-name: _Contributor Details
+name: Contributor Details
 
 on:
     workflow_dispatch:
