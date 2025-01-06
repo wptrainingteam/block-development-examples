@@ -1,4 +1,4 @@
-name: *Static Linting
+name: "🔍 Static Linting"
 
 on:
     pull_request:
