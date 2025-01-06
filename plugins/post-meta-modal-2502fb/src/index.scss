@@ -1,11 +1,11 @@
 /**
  * Editor-specific styles.
  */
-.post_meta_modal_2502fb_container {
+.post-meta-modal-2502fb-container {
 
 	.components-modal__content {
 
-		> div:not(.components-modal__header) {
+		> div:not( .components-modal__header ) {
 			display: flex;
 			flex-direction: column;
 			gap: 16px;

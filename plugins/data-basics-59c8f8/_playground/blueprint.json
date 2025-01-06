@@ -3,18 +3,16 @@
 	"login": true,
 	"steps": [
 		{
-			"step": "writeFiles",
-			"writeToPath": "/wordpress/wp-content/plugins/data-basics-59c8f8",
-			"filesTree": {
+			"step": "installPlugin",
+			"pluginData": {
 				"resource": "git:directory",
-				"url": "https://github.com/juanma-wp/block-development-examples.git",
+				"url": "https://github.com/juanma-wp/block-development-examples",
 				"ref": "trunk",
-				"path": "src/data-basics-59c8f8"
+				"path": "plugins/data-basics-59c8f8"
+			},
+			"options": {
+				"activate": true
 			}
-		},
-		{
-			"step": "activatePlugin",
-			"pluginPath": "data-basics-59c8f8/plugin.php"
 		}
 	]
 }
