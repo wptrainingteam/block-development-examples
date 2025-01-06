@@ -1,10 +1,19 @@
 {
 	"landingPage": "/wp-admin/post.php?post=10&action=edit",
 	"login": true,
-	"plugins": [
-		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/recipe-card-744e8a.zip"
-	],
 	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/juanma-wp/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/recipe-card-744e8a"
+			},
+			"options": {
+				"activate": true
+			}
+		},
 		{
 			"step": "resetData"
 		},

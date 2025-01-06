@@ -1,0 +1,31 @@
+{
+  "apiVersion": 3,
+  "name": "block-development-examples/counter-jquery-99def1",
+  "title": "Counter (jQuery)",
+  "category": "media",
+  "icon": "smiley",
+  "description": "This is the final counter, implemented with jQuery",
+  "keywords": [
+    "99def1"
+  ],
+  "textdomain": "block-development-examples",
+  "attributes": {
+    "initial": {
+      "type": "number",
+      "default": 0
+    },
+    "increment": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "supports": {
+    "align": true
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": [
+    "file:./view.js"
+  ]
+}

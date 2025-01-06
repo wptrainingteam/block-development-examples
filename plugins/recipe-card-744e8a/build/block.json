@@ -1,0 +1,91 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/recipe-card-744e8a",
+  "version": "0.1.0",
+  "title": "Recipe Card 744e8a",
+  "category": "widgets",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    },
+    "mediaID": {
+      "type": "number"
+    },
+    "mediaURL": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "src"
+    },
+    "ingredients": {
+      "type": "string",
+      "source": "html",
+      "selector": ".ingredients"
+    },
+    "instructions": {
+      "type": "string",
+      "source": "html",
+      "selector": ".steps"
+    }
+  },
+  "example": {
+    "attributes": {
+      "title": "Chocolate Chip Cookies",
+      "mediaID": 1,
+      "mediaURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/320px-2ChocolateChipCookies.jpg",
+      "ingredients": [
+        {
+          "type": "li",
+          "props": {
+            "children": [
+              "flour"
+            ]
+          }
+        },
+        {
+          "type": "li",
+          "props": {
+            "children": [
+              "sugar"
+            ]
+          }
+        },
+        {
+          "type": "li",
+          "props": {
+            "children": [
+              "chocolate"
+            ]
+          }
+        },
+        {
+          "type": "li",
+          "props": {
+            "children": [
+              "💖"
+            ]
+          }
+        }
+      ],
+      "instructions": [
+        {
+          "type": "p",
+          "props": {
+            "children": [
+              "Mix, Bake, Enjoy!"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "keywords": [
+    "744e8a"
+  ]
+}

@@ -1,17 +1,19 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/post.php?post=1&action=edit",
+	"login": true,
 	"steps": [
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
-			"resource": "url",
-			"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/post-meta-modal-2502fb.zip"
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/juanma-wp/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/post-meta-modal-2502fb"
+			},
+			"options": {
+				"activate": true
 			}
-		},
-		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
 		}
 	]
 }

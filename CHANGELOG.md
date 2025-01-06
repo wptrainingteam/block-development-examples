@@ -123,9 +123,24 @@
 
 -   Enhanced date formatting in example tables to use "MMM Dth, YYYY" format (e.g., "Jan 3rd, 2024")
 
-## 1.1.0 (2024-01-06)
+## [0.1.1] - 2024-03-19
 
-### 1.1.1
+### Fixed
 
--   Updated blueprint.json in basic-block-translations plugin to use installPlugin step
--   Standardized plugin installation method across example plugins
+-   Updated GitHub CLI authentication to use `gh auth setup-git` command for better token handling
+
+## [0.1.0] - 2024-03-19
+
+### Fixed
+
+-   GitHub CLI authentication in release workflow by using GH_TOKEN environment variable
+-   Updated authentication command to use proper syntax with gh auth login
+
+## 0.1.0 (2024-03-19)
+
+### 0.1.1
+
+-   Fixed stylelint errors in data-basics plugin:
+    -   Reordered selectors to fix descending specificity
+    -   Improved SCSS nesting structure
+    -   Fixed selector naming conventions

@@ -1,0 +1,23 @@
+{
+	"apiVersion": 3,
+	"title": "Editable Block No Build",
+	"name": "block-development-examples/basic-editable-block-no-build-1b8c51",
+	"category": "media",
+	"icon": "universal-access-alt",
+	"keywords": [ "1b8c51" ],
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		}
+	},
+	"example": {
+		"attributes": {
+			"content": "Hello world"
+		}
+	},
+	"editorScript": "file:./block.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}

@@ -5,19 +5,20 @@
 	"steps": [
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/slotfill-2fb190.zip"
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/juanma-wp/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/slotfill-2fb190"
+			},
+			"options": {
+				"activate": true
 			}
 		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/plugins/slotfill-2fb190/individual-example-add-on.php",
 			"data": "<?php /* SLOTFILL_2FB190_EXAMPLE_LOAD can set to load individual slotFillExamples at src/index.js */ define('SLOTFILL_2FB190_EXAMPLE_LOAD', ''); function set_individual_example() { wp_add_inline_script( 'slotfill-2fb190', 'window.slotFill2FB190ExampleLoad = \"'.SLOTFILL_2FB190_EXAMPLE_LOAD.'\"', 'before' ); }"
-		},
-		{
-			"step": "activatePlugin",
-			"pluginPath": "slotfill-2fb190/slotfill-2fb190.php"
 		}
 	]
 }

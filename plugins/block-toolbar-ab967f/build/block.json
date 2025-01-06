@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/block-toolbar-ab967f",
+  "version": "0.1.0",
+  "title": "Block Toolbar ab967f",
+  "category": "widgets",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "none"
+    }
+  },
+  "example": {
+    "attributes": {
+      "content": "Hello World",
+      "alignment": "right"
+    }
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "keywords": [
+    "ab967f"
+  ]
+}
