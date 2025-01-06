@@ -9,7 +9,7 @@
 
 Welcome to the `block-development-examples` repo on GitHub. Here you can find a bunch of block-related examples for WordPress that you can use to learn about Block Development.
 
-**Check the code, download the plugin zip 📦 or see a [playground](https://developer.wordpress.org/playground/)-powered live demo ![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg) of each example**
+**Check the code, download the plugin zip 📦 or see a [playground](https://developer.wordpress.org/playground/)-powered live demo ![](https://raw.githubusercontent.com/juanma-wp/block-development-examples/trunk/_assets/icon-wp.svg) of each example**
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -48,10 +48,10 @@ Welcome to the `block-development-examples` repo on GitHub. Here you can find a 
 
 ## More info
 
-Check the [WIKI](https://github.com/WordPress/block-development-examples/wiki) of this repo for more info about it:
+Check the [WIKI](https://github.com/juanma-wp/block-development-examples/wiki) of this repo for more info about it:
 
-1. **[Getting Started](https://github.com/WordPress/block-development-examples/wiki/01-Getting-Started)**
-2. **[Examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples)**
-3. **[Local Development Guide](https://github.com/WordPress/block-development-examples/wiki/05-Local-Development-Guide)**
-4. **[Conventions for examples](https://github.com/WordPress/block-development-examples/wiki/06-Conventions-for-examples)**
-5. **[Adding new examples](https://github.com/WordPress/block-development-examples/wiki/07-Adding-new-examples)**
+1. **[Getting Started](https://github.com/juanma-wp/block-development-examples/wiki/01-Getting-Started)**
+2. **[Examples](https://github.com/juanma-wp/block-development-examples/wiki/02-Examples)**
+3. **[Local Development Guide](https://github.com/juanma-wp/block-development-examples/wiki/05-Local-Development-Guide)**
+4. **[Conventions for examples](https://github.com/juanma-wp/block-development-examples/wiki/06-Conventions-for-examples)**
+5. **[Adding new examples](https://github.com/juanma-wp/block-development-examples/wiki/07-Adding-new-examples)**
