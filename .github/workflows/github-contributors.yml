@@ -1,4 +1,4 @@
-name: Update GitHub Contributors
+name: _Update GitHub Contributors
 
 on:
     workflow_dispatch:

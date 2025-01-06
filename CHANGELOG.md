@@ -122,3 +122,10 @@
 ### 0.2.1
 
 -   Enhanced date formatting in example tables to use "MMM Dth, YYYY" format (e.g., "Jan 3rd, 2024")
+
+## 1.1.0 (2024-01-06)
+
+### 1.1.1
+
+-   Updated blueprint.json in basic-block-translations plugin to use installPlugin step
+-   Standardized plugin installation method across example plugins

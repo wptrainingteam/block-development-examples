@@ -11,7 +11,7 @@ export const EXAMPLES_DATA_PATH = path.join( DATA_PATH, 'examples.json' );
 export const TAGS_DATA_PATH = path.join( DATA_PATH, 'tags.json' );
 
 // Repository info
-export const REPO_ORIGIN = 'WordPress/block-development-examples';
+export const REPO_ORIGIN = 'juanma-wp/block-development-examples';
 export const REPO_BRANCH = 'trunk';
 export const PROJECT_FOLDER_NAME = 'bde-fork';
 
@@ -35,7 +35,7 @@ export const APP_URL_WITH_TAGS = `${ APP_URL }?tags=`;
 // Resource URLs
 export const URL_REPO = `${ GITHUB_BASE_URL }/tree/${ REPO_BRANCH }`;
 export const URL_ASSETS = `${ RAW_GITHUB_BASE_URL }/_assets`;
-export const URL_EXAMPLE_ZIP = `https://raw.githubusercontent.com/${ REPO_ORIGIN }/deploy/zips/${ SLUG_EXAMPLE_MARKER }.zip`;
+export const URL_EXAMPLE_ZIP = `https://github.com/${ REPO_ORIGIN }/releases/download/latest/${ SLUG_EXAMPLE_MARKER }.zip`;
 export const URL_PLAYGROUND_BLUEPRINT = `${ RAW_GITHUB_BASE_URL }/plugins/${ SLUG_EXAMPLE_MARKER }/_playground/blueprint.json`;
 
 // Playground URLs
