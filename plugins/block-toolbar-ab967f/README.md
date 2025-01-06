@@ -12,18 +12,18 @@ The goal of this example is to show how to implement custom "Block Toolbar" cont
 ## Understanding the Example Code
 
 Interesting things of this example are:
-- The use of `BlockControls` to wrap up the controls to display in the Block Toolbar when the block is selected
-- The import of custom icons from `@wordpress/icons` to use them in buttons
-- The use of standard UI elements from `@wordpress/components` (`ToolbarGroup` and  `ToolbarButton`) to shape the Block Toolbar ;
+
+-   The use of `BlockControls` to wrap up the controls to display in the Block Toolbar when the block is selected
+-   The import of custom icons from `@wordpress/icons` to use them in buttons
+-   The use of standard UI elements from `@wordpress/components` (`ToolbarGroup` and `ToolbarButton`) to shape the Block Toolbar ;
 
 ## Related resources
 
-- [Storybook for WordPress components](https://wordpress.github.io/gutenberg/?path=/docs/docs-introduction--page)
-- [@wordpress/block-editor](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/)
-- [@wordpress/components](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/)
+-   [Storybook for WordPress components](https://wordpress.github.io/gutenberg/?path=/docs/docs-introduction--page)
+-   [@wordpress/block-editor](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/)
+-   [@wordpress/components](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-components/)
 
-----
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
-
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

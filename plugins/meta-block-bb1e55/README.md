@@ -1,6 +1,14 @@
-### Block Development Examples - Meta Block bb1e55
+# WordPress Post Meta Integration with Blocks
 
-The goal of this example is to ...
+This example demonstrates how to create blocks that interact with WordPress post meta data, allowing you to store and retrieve custom data associated with posts. Learn how to integrate your blocks with WordPress's metadata system for persistent data storage.
+
+Key concepts covered:
+
+-   Post meta registration and handling
+-   Meta field integration with blocks
+-   Data persistence strategies
+-   WordPress REST API meta endpoints
+-   Block attributes and meta synchronization
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -11,13 +19,67 @@ The goal of this example is to ...
 
 ## Understanding the Example Code
 
-Overview of the code in bullet point form.
+### Meta Integration
 
-## Related resources
+1. **Meta Registration**
 
-Bulleted list of references
+    - Register meta fields with `register_post_meta`
+    - Configure meta field permissions
+    - Set up REST API access
+    - Define meta field schema
 
-----
+2. **Block Implementation**
+    - Meta data retrieval and storage
+    - Block attribute synchronization
+    - Real-time meta updates
+    - Error handling and validation
+
+### Technical Components
+
+1. **Meta Registration**
+
+    ```php
+    register_post_meta('post', 'example_meta_field', [
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+        'auth_callback' => function() {
+            return current_user_can('edit_posts');
+        }
+    ]);
+    ```
+
+2. **Block Integration**
+
+    ```javascript
+    import { useSelect, useDispatch } from '@wordpress/data';
+    import { useEntityProp } from '@wordpress/core-data';
+
+    // Meta data handling in block
+    const [ metaValue, setMetaValue ] = useEntityProp(
+    	'postType',
+    	'post',
+    	'example_meta_field'
+    );
+    ```
+
+### Best Practices
+
+-   Proper meta field sanitization
+-   Secure permission handling
+-   Efficient meta data querying
+-   Data validation and error handling
+-   REST API security considerations
+
+## Related Resources
+
+-   [Post Meta Registration](https://developer.wordpress.org/reference/functions/register_post_meta/)
+-   [Block Editor Data](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/)
+-   [REST API Handbook](https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/)
+-   [Meta Box API](https://developer.wordpress.org/plugins/metadata/custom-meta-boxes/)
+-   [Data Module Documentation](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-data/)
+
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

@@ -1,6 +1,6 @@
 ### Block Development Examples - Inner Blocks dcd824
 
-The goal of this example is to show how the component `InnerBlocks` allows to create custom blocks that accepts other blocks inside. 
+The goal of this example is to show how the component `InnerBlocks` allows to create custom blocks that accepts other blocks inside.
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -15,10 +15,10 @@ At `edit.js` we can see how we import `InnerBlocks` from `@wordpress/block-edito
 
 ## Related resources
 
-- [Nested Blocks: Using InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
-- [`templateLock` docs](https://github.com/WordPress/gutenberg/blob/bb73da7b19ca11be56b0d3c430434b7b4093059f/packages/block-editor/src/components/inner-blocks/README.md#templatelock)
+-   [Nested Blocks: Using InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
+-   [`templateLock` docs](https://github.com/WordPress/gutenberg/blob/bb73da7b19ca11be56b0d3c430434b7b4093059f/packages/block-editor/src/components/inner-blocks/README.md#templatelock)
 
-----
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

@@ -1,6 +1,14 @@
-### Block Development Examples - Block Supports 6aa4dd
+# Block Supports Implementation
 
-The goal of this example is to showcase the implementation of a block with `supports`
+This example demonstrates how to leverage WordPress block supports to enhance your blocks with standard WordPress features. Block supports provide a declarative way to add common functionality like alignment controls, color settings, and typography options without writing custom code.
+
+Key concepts covered:
+
+-   Block supports configuration in `block.json`
+-   Integration with WordPress core features
+-   Automatic UI controls generation
+-   Standard block behaviors implementation
+-   Property handling in Edit and Save components
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -11,15 +19,62 @@ The goal of this example is to showcase the implementation of a block with `supp
 
 ## Understanding the Example Code
 
-- The block has a [`supports` definition](https://github.com/WordPress/block-development-examples/blob/e804d8416775de94fccae27be6f26ae0ae75b3d9/plugins/block-supports-6aa4dd/src/block.json#L25) in its `block.json`
-- The generated properties for `support` are properly added to the wrapping element of the block in both the `Edit` and `Save` components via the `useBlockProps` hook.
+### Block Supports Configuration
 
-## Related resources
+1. **Core Support Features**
 
-- [Block API: Supports](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/)
-- [`useBlockProps` hook](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops) 
+    - `align`: Controls block alignment options
+    - `color`: Enables background and text color settings
+    - `typography`: Provides font size and other text controls
+    - `spacing`: Allows margin and padding adjustments
 
-----
+2. **Implementation Details**
+    - Supports defined in `block.json` metadata
+    - Properties automatically added via `useBlockProps`
+    - Generated UI controls in block sidebar
+    - Consistent behavior in editor and frontend
+
+### Technical Implementation
+
+1. **Block Registration**
+
+    ```json
+    {
+    	"supports": {
+    		"align": true,
+    		"color": {
+    			"background": true,
+    			"text": true
+    		},
+    		"typography": {
+    			"fontSize": true
+    		}
+    	}
+    }
+    ```
+
+2. **Component Integration**
+    - `useBlockProps` handles support properties
+    - Automatic class generation
+    - Proper attribute management
+    - Consistent rendering between editor and frontend
+
+### Best Practices
+
+-   Use block supports over custom implementations
+-   Maintain WordPress core styling conventions
+-   Ensure proper fallbacks for unsupported features
+-   Follow WordPress accessibility guidelines
+
+## Related Resources
+
+-   [Block API: Supports Documentation](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-supports/)
+-   [Block Editor Handbook - Block Supports](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/block-supports-in-static-blocks/)
+-   [`useBlockProps` Hook Documentation](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops)
+-   [WordPress Core Styles](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/)
+-   [Block Alignment Guide](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/block-alignment/)
+
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

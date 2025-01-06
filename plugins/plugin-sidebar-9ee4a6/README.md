@@ -1,15 +1,14 @@
-# Plugin Sidebar
+# Custom Plugin Sidebar Integration
 
-This example demonstrates how to extend the WordPress block editor by adding a custom sidebar panel using the [`PluginSidebar`](https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-sidebar/) component.
+This example demonstrates how to extend the WordPress block editor by adding a custom sidebar panel using the [`PluginSidebar`](https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-sidebar/) component. The sidebar includes a text input field that saves data to post meta, showcasing the integration between the block editor's UI components and WordPress data management.
 
-The sidebar includes a text input field that saves data to post meta, showcasing the integration between the block editor's UI components and WordPress data management.
+Key concepts covered:
 
-Key features:
-
--   Adds a new sidebar panel to the block editor interface
--   Implements post meta storage and retrieval
--   Demonstrates proper WordPress plugin registration
--   Shows usage of WordPress components and data hooks
+-   Plugin Sidebar implementation
+-   Post meta data integration
+-   WordPress components usage
+-   SlotFill system utilization
+-   Custom UI panel creation
 
 ![Screenshot sidebar](_assets/screenshot.png)
 
@@ -22,21 +21,90 @@ Key features:
 
 ## Understanding the Example Code
 
--   Key implementation points:
-    -   Uses [`registerPlugin()`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-plugins/#registerplugin) to register a new plugin instance
-    -   Implements a custom meta field using [`register_post_meta()`](https://developer.wordpress.org/reference/functions/register_post_meta/) in PHP
-    -   Uses [`useEntityProp`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/#useentityprop) hook to manage post meta data
-    -   Creates a text control input that saves to post meta
--   Main components used:
-    -   [`@wordpress/edit-post`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-edit-post/): Provides `PluginSidebar` component
-    -   [`@wordpress/components`](https://developer.wordpress.org/block-editor/reference-guides/components/): Provides UI components like `TextControl` and `PanelBody`
-    -   [`@wordpress/core-data`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/): Provides `useEntityProp` hook for data management
--   The meta field is registered with:
-    -   Name: `sidebar_plugin_meta_block_field`
-    -   Type: `string`
-    -   Enabled in REST API via `show_in_rest: true`
+### Plugin Implementation
+
+1. **Plugin Registration**
+
+    - Register plugin with `registerPlugin`
+    - Configure sidebar settings
+    - Set up meta field integration
+    - Define UI components
+
+2. **Meta Field Setup**
+    - Register meta field with `register_post_meta`
+    - Configure REST API access
+    - Set up data persistence
+    - Handle permissions
+
+### Technical Components
+
+1. **Plugin Registration**
+
+    ```javascript
+    import { registerPlugin } from '@wordpress/plugins';
+    import { PluginSidebar } from '@wordpress/edit-post';
+
+    registerPlugin( 'sidebar-plugin', {
+    	render: () => (
+    		<PluginSidebar
+    			name="sidebar-plugin"
+    			title="My Plugin Sidebar"
+    			icon="admin-post"
+    		>
+    			// Sidebar content
+    		</PluginSidebar>
+    	),
+    } );
+    ```
+
+2. **Meta Integration**
+
+    ```javascript
+    import { useEntityProp } from '@wordpress/core-data';
+    import { TextControl } from '@wordpress/components';
+
+    const [ metaValue, setMetaValue ] = useEntityProp(
+    	'postType',
+    	'post',
+    	'sidebar_plugin_meta_block_field'
+    );
+    ```
+
+### Component Structure
+
+1. **Main Components Used**
+
+    - `@wordpress/edit-post`: Provides `PluginSidebar`
+    - `@wordpress/components`: UI components
+    - `@wordpress/core-data`: Data management
+    - `@wordpress/plugins`: Plugin registration
+
+2. **Meta Field Configuration**
+    ```php
+    register_post_meta('post', 'sidebar_plugin_meta_block_field', [
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string'
+    ]);
+    ```
+
+### Best Practices
+
+-   Follow WordPress component guidelines
+-   Implement proper data persistence
+-   Handle loading and error states
+-   Consider user permissions
+-   Maintain consistent UI/UX
+
+## Related Resources
+
+-   [Plugin Sidebar Documentation](https://developer.wordpress.org/block-editor/reference-guides/slotfills/plugin-sidebar/)
+-   [WordPress Components](https://developer.wordpress.org/block-editor/reference-guides/components/)
+-   [Data Management](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/)
+-   [Plugin API](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-plugins/)
+-   [SlotFill System](https://developer.wordpress.org/block-editor/reference-guides/slotfills/)
 
 ---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

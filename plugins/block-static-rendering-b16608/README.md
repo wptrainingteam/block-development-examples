@@ -1,6 +1,14 @@
-# Block Static Rendering b16608
+# Static Block Rendering Implementation
 
-The goal of this example is to showcase the implementation of a block with static rendering.
+This example demonstrates how to create WordPress blocks that save their content as static HTML in the post content. Unlike dynamic blocks, static blocks store their rendered output directly in the database, making them ideal for content that doesn't need to change between page loads.
+
+Key concepts covered:
+
+-   Static block rendering
+-   Content persistence
+-   Block attributes handling
+-   Save and Edit functions
+-   HTML generation and storage
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -11,13 +19,77 @@ The goal of this example is to showcase the implementation of a block with stati
 
 ## Understanding the Example Code
 
-Overview of the code in bullet point form.
+### Static Rendering Implementation
 
-## Related resources
+1. **Block Registration**
 
-Bulleted list of references
+    ```javascript
+    import { registerBlockType } from '@wordpress/blocks';
+    import { useBlockProps } from '@wordpress/block-editor';
 
-----
+    registerBlockType( 'block-development-examples/static-rendering', {
+    	edit: function Edit( { attributes, setAttributes } ) {
+    		const blockProps = useBlockProps();
+    		return (
+    			<div { ...blockProps }>
+    				<p>Edit: This content will be saved as static HTML</p>
+    			</div>
+    		);
+    	},
+    	// Save function returns the content to be stored
+    	save: function Save( { attributes } ) {
+    		const blockProps = useBlockProps.save();
+    		return (
+    			<div { ...blockProps }>
+    				<p>Saved: This is the static content</p>
+    			</div>
+    		);
+    	},
+    } );
+    ```
+
+2. **Block Configuration**
+    ```json
+    {
+    	"apiVersion": 2,
+    	"name": "block-development-examples/static-rendering",
+    	"title": "Static Rendering Block",
+    	"category": "widgets",
+    	"icon": "editor-code",
+    	"description": "Block with static content rendering.",
+    	"supports": {
+    		"html": true
+    	},
+    	"textdomain": "static-rendering",
+    	"editorScript": "file:./index.js",
+    	"style": "file:./style-index.css"
+    }
+    ```
+
+### Technical Components
+
+1. **Content Storage**
+
+    - HTML stored in post_content
+    - Attributes serialized in HTML comments
+    - Content immediately available
+    - No server-side processing needed
+
+2. **Block Lifecycle**
+    - Edit: User interface in editor
+    - Save: Generate static HTML
+    - Frontend: Direct HTML output
+    - Migration handling when needed
+
+## Related Resources
+
+-   [Static Block Documentation](https://developer.wordpress.org/block-editor/getting-started/fundamentals/#static-or-dynamic-rendering-of-a-block)
+-   [Block Save API](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/)
+-   [Block Validation](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#validation)
+-   [Block Deprecation](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-deprecation/)
+-   [Block Attributes](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/)
+
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

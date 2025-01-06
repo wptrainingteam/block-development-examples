@@ -1,6 +1,14 @@
-# Basic Block Translation 3df23d
+# Block Internationalization Implementation
 
-The goal of this example is to showcase how to use translations in a block.
+This example demonstrates how to implement internationalization (i18n) in WordPress blocks, enabling your blocks to be translated into different languages. Learn how to properly set up translation files and functions for both PHP and JavaScript components of your blocks.
+
+Key concepts covered:
+
+-   Translation function implementation
+-   Language file organization
+-   PHP and JavaScript i18n
+-   Translation loading process
+-   Text domain handling
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -11,19 +19,103 @@ The goal of this example is to showcase how to use translations in a block.
 
 ## Understanding the Example Code
 
-Both the `edit.js` and `save.js` files import the `__` function `@wordpress/i18n` to apply translations to the texts used in the code.
+### Translation Implementation
 
--   The [`__` function](https://developer.wordpress.org/reference/functions/__/) receives the text and a namespace as parameters
--   At `index.php` we tell WordPress our JavaScript contains translations, using the `wp_set_script_translations()` function.
--   At `languages/` folder there are all the translations files (the source files and the `.mo` ones actually used to apply the translations)
+1. **JavaScript Translation**
 
-## Related resources
+    - Import translation functions
+    - Apply translations to strings
+    - Handle dynamic content
+    - Manage text domains
 
--   [Internationalization](https://developer.wordpress.org/block-editor/how-to-guides/internationalization/)
+2. **PHP Translation**
+    - Register translation files
+    - Load language resources
+    - Configure text domains
+    - Handle script translations
+
+### Technical Components
+
+1. **JavaScript Side**
+
+    ```javascript
+    import { __ } from '@wordpress/i18n';
+
+    // Translation in edit component
+    function Edit() {
+    	return (
+    		<div>
+    			<h2>
+    				{ __( 'Translatable Title', 'basic-block-translations' ) }
+    			</h2>
+    			<p>
+    				{ __(
+    					'This text can be translated',
+    					'basic-block-translations'
+    				) }
+    			</p>
+    		</div>
+    	);
+    }
+    ```
+
+2. **PHP Side**
+    ```php
+    // Register translations for JavaScript
+    function setup_translations() {
+        wp_set_script_translations(
+            'basic-block-translations-editor-script',
+            'basic-block-translations',
+            plugin_dir_path(__FILE__) . 'languages'
+        );
+    }
+    add_action('init', 'setup_translations');
+    ```
+
+### Translation Structure
+
+1. **Language Files**
+
+    ```
+    languages/
+    ├── basic-block-translations.pot     # Template file
+    ├── basic-block-translations-es_ES.po # Spanish translations
+    ├── basic-block-translations-es_ES.mo # Compiled Spanish
+    └── ...                              # Other languages
+    ```
+
+2. **Translation Process**
+    - Extract translatable strings
+    - Create POT template
+    - Create language-specific PO files
+    - Compile to MO format
+
+### Best Practices
+
+-   Use translation functions consistently
+-   Provide meaningful text domains
+-   Include translator comments
+-   Maintain context information
+-   Keep strings translatable
+
+-   The [`__` function](https://developer.wordpress.org/reference/functions/__/) receives the
+    text and a namespace as parameters
+-   At `index.php` we tell WordPress our JavaScript contains translations, using the
+    `wp_set_script_translations()` function.
+-   At `languages/` folder there are all the translations files (the source files and the `.mo`
+    ones actually used to apply the translations)
+
+## Related Resources
+
+-   [WordPress i18n Documentation](https://developer.wordpress.org/block-editor/how-to-guides/internationalization/)
+-   [Translation Functions](https://developer.wordpress.org/reference/functions/__/)
+-   [Script Translation Setup](https://developer.wordpress.org/reference/functions/wp_set_script_translations/)
+-   [Language File Management](https://developer.wordpress.org/plugins/internationalization/)
+-   [Block Editor i18n](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/)
 -   [`__()`](https://developer.wordpress.org/reference/functions/__/)
 -   [`wp_set_script_translations()`](https://developer.wordpress.org/reference/functions/wp_set_script_translations/)
 
 ---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

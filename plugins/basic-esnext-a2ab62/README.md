@@ -1,6 +1,14 @@
-### Block Development Examples - Basic Esnext a2ab62
+# Basic Block with ESNext and Build Process
 
-The goal of this example is to show how to create a basic block with ESNext and JSX syntax and a build process.
+This example demonstrates how to create a modern WordPress block using ESNext (modern JavaScript) and JSX syntax. It showcases the fundamental setup required for block development with a build process powered by `@wordpress/scripts`, which handles all the necessary tooling configuration.
+
+Key concepts covered:
+
+-   Modern JavaScript (ESNext) and JSX syntax usage
+-   Build process setup with `@wordpress/scripts`
+-   Basic block registration and rendering
+-   Static block implementation
+-   NPM scripts for development and production builds
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -11,13 +19,64 @@ The goal of this example is to show how to create a basic block with ESNext and 
 
 ## Understanding the Example Code
 
-This is a static block (check `src/save.js`) that requires a `build` version that can be registered as a block. To do that the `wp-scripts` provide very handy scripts such as `npm start` and `npm run build`.
+### Build Process
 
-## Related resources
+1. **Development Mode**
 
-- [Block Editor Handbook > Getting Started](https://developer.wordpress.org/block-editor/getting-started/)
-- [Block Editor Handbook > Fundamentals of Block Development > Static or Dynamic rendering of a block](https://developer.wordpress.org/block-editor/getting-started/fundamentals/)
-- [Block Editor Handbook > Fundamentals of Block Development > Registration of a block](https://developer.wordpress.org/block-editor/getting-started/fundamentals/registration-of-a-block/)
+    - Uses `npm start` for development
+    - Provides hot reloading
+    - Generates source maps for debugging
+    - Watches for file changes
+
+2. **Production Build**
+    - Uses `npm run build` for production
+    - Optimizes and minifies code
+    - Generates production-ready assets
+    - Performs tree shaking
+
+### Block Implementation
+
+1. **Block Registration**
+
+    - Block metadata defined in `block.json`
+    - Registered using `registerBlockType`
+    - Uses modern ESNext syntax for cleaner code
+
+2. **Rendering**
+    - Static block implementation in `save.js`
+    - Uses JSX for template rendering
+    - Implements `useBlockProps` for block attributes
+
+### File Structure
+
+```
+src/
+├── edit.js      # Block editor component
+├── save.js      # Saved content component
+├── style.scss   # Frontend & editor styles
+├── editor.scss  # Editor-only styles
+├── block.json   # Block metadata
+└── index.js     # Block registration
+```
+
+### Best Practices
+
+-   Use ESNext features appropriately
+-   Follow WordPress coding standards
+-   Implement proper error handling
+-   Add meaningful comments
+-   Keep components modular
+
+## Related Resources
+
+-   [Block Editor Handbook - Getting Started](https://developer.wordpress.org/block-editor/getting-started/)
+-   [ESNext Standard](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/#esnext)
+-   [Block Registration API](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/)
+-   [@wordpress/scripts Package](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/)
+-   [Static vs Dynamic Blocks](https://developer.wordpress.org/block-editor/getting-started/fundamentals/#static-or-dynamic-rendering-of-a-block)
+-   [Block Metadata](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/)
+
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

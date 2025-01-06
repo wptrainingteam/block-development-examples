@@ -1,24 +1,43 @@
-### Block Development Examples - Stylesheets 79a4c3
+# Styling Blocks with Multiple Approaches
 
-This example shows how to apply styles to blocks using different sources:
-- inline styles (through `useBlockProps`)
-- default classes (`wp-block-block-development-examples-stylesheets-79a4c3`)
-- custom classes (`hasPerspective` through `useBlockProps`)
-- styles only for the editor (`editor.scss`)
-- styles shared by the editor and the frontend (`style.scss`)
+This example demonstrates different techniques for styling WordPress blocks, showcasing best practices for managing CSS in block development. You'll learn how to implement styles using multiple approaches including inline styles, default classes, custom classes, and separate stylesheets for editor and frontend contexts.
+
+Key concepts covered:
+
+-   Inline styles through `useBlockProps`
+-   Default WordPress block classes (`wp-block-block-development-examples-stylesheets-79a4c3`)
+-   Custom class implementation (`hasPerspective` through `useBlockProps`)
+-   Editor-specific styling (`editor.scss`)
+-   Shared frontend/editor styles (`style.scss`)
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
-| Folder                                                                                              | <span style="display: inline-block; width:250px">Short description</span> | Tags                                                                                                                                                                                                                                                           | ID ([❓](https://github.com/WordPress/block-development-examples/wiki/04-Why-an-ID-for-every-example%3F "Why an ID for every example?")) | Download .zip                                                                                                                                                                                                                                                  | Live Demo                                                                                                                                                                                                                                                                                                                                                                          |
-| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [📁](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/stylesheets-79a4c3) | Stylesheets                                                               | <small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#styles">STYLES</a></code></small>, <small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#featured">FEATURED</a></code></small> | `79a4c3`                                                                                                                                | [📦](https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/stylesheets-79a4c3.zip "Install the plugin using this zip and activate it. Then use the ID of the block (79a4c3) to find it and add it to a post to see it in action") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/stylesheets-79a4c3/_playground/blueprint.json "Use the ID of the block (79a4c3) to find it and add it to a post to see it in action") |
+
+| Example                                                                                                      | <span style="display: inline-block; width:250px">Description</span>                                                 | Tags                                                                                                                                                                                                                                          | Download .zip                                                                                                                                                                                                        | Live Demo                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Stylesheets](https://github.com/juanma-wp/block-development-examples/tree/trunk/plugins/stylesheets-79a4c3) | Shows different approaches to adding and managing styles in blocks, including editor-specific and front-end styles. | <small><code><a href="https://juanma-wp.github.io/block-development-examples/?tags=styles">styles</a></code></small> <small><code><a href="https://juanma-wp.github.io/block-development-examples/?tags=featured">featured</a></code></small> | [📦](https://github.com/juanma-wp/block-development-examples/releases/download/latest/stylesheets-79a4c3.zip 'Install the plugin on any WordPress site using this zip and activate it to see the example in action') | [![](https://raw.githubusercontent.com/juanma-wp/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/juanma-wp/block-development-examples/trunk/plugins/stylesheets-79a4c3/_playground/blueprint.json 'Click here to access a live demo of this example') |
+
 <!-- @TABLE EXAMPLES END -->
 
 ## Understanding the Example Code
 
-### CSS output on the frontend
+### Style Implementation Methods
 
-If you look at the source code of the frontend of the post where this block is
+1. **Inline Styles**
+    - Applied directly through `useBlockProps`
+    - Provides dynamic styling capabilities
+2. **CSS Classes**
+    - Default class: `wp-block-block-development-examples-stylesheets-79a4c3`
+    - Custom class: `hasPerspective` (applied conditionally)
+
+### CSS Output Structure
+
+The styles are output in several ways:
+
+1. **Frontend Output**
+    - Block wrapper receives inline styles and classes
+    - Shared styles loaded via `style.scss`
+    - Editor-specific styles isolated in `editor.scss`
 
 ![](./_assets/frontend-view.png)
 
@@ -30,11 +49,14 @@ The styles shared by the editor and the frontend (`style.scss`) have been insert
 
 ![](./_assets/source-code-style-html.png)
 
-## Related resources
+## Related Resources
 
-- [Edit and Save](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/) | Block Editor Handbook
-- [`useBlockProps`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops)
-----
+-   [Block Editor Handbook - Edit and Save](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/)
+-   [`useBlockProps` Documentation](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops)
+-   [WordPress Block Styles](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/)
+-   [CSS in Gutenberg](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#block-styles)
+
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

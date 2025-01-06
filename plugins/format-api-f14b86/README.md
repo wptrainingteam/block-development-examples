@@ -1,6 +1,14 @@
-### Format Api f14b86
+# Custom Text Formatting with WordPress Format API
 
-The goal of this example is to showcase how to define a custom format that is used in the block toolbar.
+This example demonstrates how to extend WordPress's rich text editing capabilities by implementing custom text formats using the Format API. Learn how to add custom formatting options to the block editor's toolbar, enabling users to apply special text styling and markup.
+
+Key concepts covered:
+
+-   Format API implementation
+-   Custom toolbar button creation
+-   Rich text formatting controls
+-   Text format registration
+-   Format application and removal
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
@@ -11,13 +19,69 @@ The goal of this example is to showcase how to define a custom format that is us
 
 ## Understanding the Example Code
 
-Overview of the code in bullet point form.
+### Format Implementation
 
-## Related resources
+1. **Format Registration**
 
-Bulleted list of references
+    - Register format with `registerFormatType`
+    - Define format name and tag
+    - Specify format attributes
+    - Configure toolbar controls
 
-----
+2. **Toolbar Integration**
+    - Custom toolbar button component
+    - Format toggle functionality
+    - Active state management
+    - Icon and label configuration
+
+### Technical Components
+
+1. **Format Definition**
+
+    ```javascript
+    registerFormatType( 'block-development-examples/format', {
+    	title: 'Custom Format',
+    	tagName: 'span',
+    	className: 'custom-format',
+    	edit: ( { isActive, value, onChange } ) => {
+    		// Toolbar button implementation
+    	},
+    } );
+    ```
+
+2. **Rich Text Integration**
+
+    ```javascript
+    import { RichTextToolbarButton } from '@wordpress/block-editor';
+    import { toggleFormat } from '@wordpress/rich-text';
+
+    // Format toggle implementation
+    const onToggle = () => {
+    	onChange(
+    		toggleFormat( value, {
+    			type: 'block-development-examples/format',
+    		} )
+    	);
+    };
+    ```
+
+### Best Practices
+
+-   Follow WordPress format naming conventions
+-   Implement proper format toggling
+-   Handle format conflicts appropriately
+-   Consider accessibility in format application
+-   Maintain clean and semantic markup
+
+## Related Resources
+
+-   [Format API Documentation](https://developer.wordpress.org/block-editor/reference-guides/richtext/)
+-   [Rich Text Component](https://developer.wordpress.org/block-editor/reference-guides/components/rich-text/)
+-   [Format Type Registration](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-rich-text/#registerformattype)
+-   [Toolbar Components](https://developer.wordpress.org/block-editor/reference-guides/components/toolbar-button/)
+-   [Text Formatting Guide](https://developer.wordpress.org/block-editor/how-to-guides/format-api/)
+
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

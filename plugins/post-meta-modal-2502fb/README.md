@@ -19,12 +19,12 @@ The plugin utilizes the [`PluginMoreMenuItem`](https://developer.wordpress.org/b
 
 ## Related resources
 
-- [SlotFills Reference](https://developer.wordpress.org/block-editor/reference-guides/slotfills/)
-- [Component Reference](https://developer.wordpress.org/block-editor/reference-guides/components/)
-- [@wordpress/commands](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-commands/#usecommand) package reference
-- [`register_post_meta`](https://developer.wordpress.org/reference/functions/register_post_meta/) documentation
+-   [SlotFills Reference](https://developer.wordpress.org/block-editor/reference-guides/slotfills/)
+-   [Component Reference](https://developer.wordpress.org/block-editor/reference-guides/components/)
+-   [@wordpress/commands](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-commands/#usecommand) package reference
+-   [`register_post_meta`](https://developer.wordpress.org/reference/functions/register_post_meta/) documentation
 
-----
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

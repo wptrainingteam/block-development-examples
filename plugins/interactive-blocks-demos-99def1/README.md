@@ -3,11 +3,12 @@
 The goal of this example is to showcase the use of different ways of creating interactive blocks in [Gutenberg](https://github.com/WordPress/gutenberg).
 
 This example shows how to add interactivity to a block using:
-- Alpine
-- jQuery
-- React
-- Plain JS
-- Web Components
+
+-   Alpine
+-   jQuery
+-   React
+-   Plain JS
+-   Web Components
 
 _This example has been adapted from [the original one](https://github.com/wptrainingteam/interactive-blocks-demos) that was used in the lightning talk **[Creating interactive blocks: old, new, and good ways](https://europe.wordcamp.org/2022/session/lightning-talks/)** at the [WordCamp Europe 2022](https://europe.wordcamp.org/2022/) (see [video](https://www.youtube.com/watch?v=91anxAgQGJw&t=15939s) and [slides](https://github.com/WordPress/block-development-examples/blob/trunk/plugins/interactive-blocks-demos-99def1/_assets/interactive-blocks-talk-slides.pdf) of this talk)_
 
@@ -26,7 +27,7 @@ Overview of the code in bullet point form.
 
 Bulleted list of references
 
-----
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/juanma-wp/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)
