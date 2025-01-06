@@ -1,10 +1,11 @@
-name: Generate Package Zips and Create Release
+name: Generate Examples Zips and Create Release
 
 on:
     push:
         branches:
-            - main # Or your default branch
+            - trunk # Or your default branch
     workflow_dispatch:
+
 
 jobs:
     zip-packages:
