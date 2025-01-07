@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;EACC;EACA;AACD,C","sources":["webpack://@block-development-examples/inner-blocks-dcd824/./src/editor.scss"],"sourcesContent":[".wp-block-block-development-examples-inner-blocks-dcd824 {\n\tborder: 2px solid #9c9;\n\tpadding: 10px;\n}\n"],"names":[],"sourceRoot":""}
