@@ -4,69 +4,66 @@ This directory contains GitHub Actions workflows that automate various tasks in 
 
 ## Main Workflows
 
-### 🚀 Zips on Deploy Branch (`main.yml`)
+### 🚀 Generate Examples Zips and Create Release (`release-zips.yml`)
 
-Handles the deployment process when changes are pushed to the trunk branch:
+Handles the creation and deployment of plugin zip packages:
 
--   Merges trunk branch into deploy branch
--   Installs dependencies
--   Runs deployment tasks
--   Commits and pushes changes to deploy branch
+-   Generates zip files for all examples
+-   Creates versioned releases with date-based tags
+-   Maintains a "latest" release that's always up to date
+-   Can be triggered manually or on push to trunk branch
+-   Uses pnpm for dependency management
+-   Runs on Node.js environment
 
-### 🔍 Static Linting (`pull-request-actions.yml`)
+### 🔍 Static Linting (`static-linting.yml`)
 
-Runs linting checks on pull requests and trunk branch pushes:
+Performs comprehensive code quality checks:
 
--   PHP file linting
+-   PHP file linting using Composer
 -   JavaScript file linting
 -   CSS file linting
 -   Runs on Node.js 18 and latest LTS versions
+-   Uses pnpm for package management
+-   Triggered on pull requests and trunk branch pushes
 
 ## Data Management Workflows
 
-### 👥 Update GitHub Contributors (`github-contributors.yml`)
+### 👥 GitHub Contributors Management
 
-Updates the list of project contributors:
+#### Update Contributors List (`github-contributors.yml`)
 
--   Fetches contributor information
--   Updates `_data/examples.json`
+-   Updates basic contributor information
+-   Maintains contributor records
 -   Can be manually triggered
 
-### 📊 Contributor Details (`contributor-details.yml`)
+#### Contributor Details (`contributor-details.yml`)
 
-Maintains detailed contributor information:
+-   Fetches and updates detailed contributor information
+-   Updates contributor metadata
+-   Supports manual triggering
 
--   Fetches detailed contributor data
--   Updates `_data/contributors.json`
--   Can be manually triggered
+### 📅 Date Management (`update-dates.yml`)
 
-### 📅 Update Creation and Modification Dates (`update-dates.yml`)
+-   Maintains creation and modification dates
+-   Updates example metadata
+-   Runs on a schedule and supports manual triggers
 
-Maintains file metadata:
+## Scripts Directory
 
--   Updates creation and modification dates
--   Updates `_data/examples.json`
--   Runs monthly and can be manually triggered
+The `scripts/` directory contains supporting shell scripts used by these workflows.
 
-## Scripts
+## Workflow Permissions
 
-The `scripts/` directory contains shell scripts used by these workflows:
+Workflows require appropriate GitHub permissions for:
 
--   `fetch_contributors.sh`: Fetches basic contributor information
--   `fetch_contributor_details.sh`: Retrieves detailed contributor data
--   `update_dates.sh`: Updates file timestamps
+-   Creating and updating releases
+-   Pushing to branches
+-   Managing workflow artifacts
+-   Updating repository data
 
-## Permissions
+## Trigger Methods
 
-Most workflows require write permissions to:
-
--   Push changes to branches
--   Update JSON data files
--   Commit changes
-
-## Triggers
-
--   `main.yml`: Triggered on push to trunk branch
--   `pull-request-actions.yml`: Triggered on pull requests and trunk pushes
--   `update-dates.yml`: Runs monthly and manual trigger
--   Others: Can be manually triggered via workflow_dispatch
+-   Push to trunk branch
+-   Pull request events
+-   Manual triggers via workflow_dispatch
+-   Scheduled runs (for specific workflows)
