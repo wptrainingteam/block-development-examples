@@ -6,6 +6,9 @@ on:
 jobs:
     update-contributor-details:
         runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
 
         steps:
             - uses: actions/checkout@v3
@@ -20,15 +23,20 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Commit changes
-              run: |
-                  git config --local user.email "action@github.com"
-                  git config --local user.name "GitHub Action"
-                  git add _data/contributors.json
-                  git diff --quiet && git diff --staged --quiet || git commit -m "Update contributor details"
+            # Remove temp file before creating PR
+            - name: Clean up temp file
+              run: rm -f .temp.json
 
-            - name: Push changes
-              uses: ad-m/github-push-action@master
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v5
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  branch: ${{ github.ref }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  commit-message: Update contributor details
+                  title: 'chore: Update contributor details'
+                  body: |
+                      This PR updates the contributor details in contributors.json.
+
+                      This is an automated PR created by the Contributor Details workflow.
+                  branch: update/contributor-details
+                  base: trunk
+                  delete-branch: true

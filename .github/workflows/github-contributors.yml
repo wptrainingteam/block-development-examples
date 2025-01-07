@@ -23,6 +23,10 @@ jobs:
                   REPO_NAME: ${{ github.event.repository.name }}
               run: ./.github/workflows/scripts/fetch_contributors.sh
 
+            # Remove temp file before creating PR
+            - name: Clean up temp file
+              run: rm -f .temp.json
+
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v5
               with:
