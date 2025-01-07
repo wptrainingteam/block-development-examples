@@ -93,5 +93,10 @@
 		"slug": "interactivity-router",
 		"name": "INTERACTIVITY ROUTER",
 		"description": "These examples demonstrate how to implement client-side routing using the WordPress Interactivity API's router functionality."
+	},
+	{
+		"slug": "server-side-rendering",
+		"name": "SERVER SIDE RENDERING",
+		"description": "These examples demonstrate how to build a simple block that is rendered on the server and displayed in the Editor using the [`ServerSideRender` component](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-server-side-render/)."
 	}
 ]

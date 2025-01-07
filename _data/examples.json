@@ -400,10 +400,11 @@
 		"description": "This example demonstrates how to build a simple block that is rendered on the server and displayed in the Editor using the `ServerSideRender` component.",
 		"name": "Server Side Render Block",
 		"tags": [
-			"dynamic-rendering"
+			"server-side-rendering"
 		],
 		"contributors": [
-			"ndiego"
+			"ndiego",
+			"juanmaguitar"
 		],
 		"created": "2024-12-13T06:13:26+01:00",
 		"lastModified": "2024-12-13T06:13:26+01:00"

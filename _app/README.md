@@ -4,15 +4,15 @@ A modern web application built with React, TypeScript, and Tailwind CSS that sho
 
 ## Features
 
-- 🔍 Search functionality across all examples
-- 🏷️ Filter by multiple tags
-- 📱 Responsive design
-- 🔗 URL-based filtering (shareable filtered views)
-- 📅 Automatic sorting by last update date
-- 📄 Pagination support
-- Built with Vite for fast development experience
-- Uses TypeScript for type safety
-- Styled with Tailwind CSS
+-   🔍 Search functionality across all examples
+-   🏷️ Filter by multiple tags
+-   📱 Responsive design
+-   🔗 URL-based filtering (shareable filtered views)
+-   📅 Automatic sorting by last update date
+-   📄 Pagination support
+-   Built with Vite for fast development experience
+-   Uses TypeScript for type safety
+-   Styled with Tailwind CSS
 
 ## Project Structure
 
@@ -39,27 +39,41 @@ src/
 
 ### Prerequisites
 
-- Node.js 16.x or later
-- npm 7.x or later
+-   Node.js 16.x or later
+-   npm 7.x or later
 
 ### Installation
 
-- Install dependencies:
+-   Install dependencies:
 
 ```bash
 npm install
 ```
 
-- Start the development server:
+-   Start the development server:
 
 ```bash
 npm run dev
 ```
 
-- Open your browser and visit:
+-   Open your browser and visit:
 
 ```
 http://localhost:5173
+```
+
+### Production
+
+To generate a production build we do from `/_app`
+
+```bash
+npm run build
+```
+
+To deployy the production build we do from the root of the project `/`
+
+```bash
+npm run gh:deploy
 ```
 
 ## License
