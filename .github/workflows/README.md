@@ -42,12 +42,6 @@ Performs comprehensive code quality checks:
 -   Updates contributor metadata
 -   Supports manual triggering
 
-### 📅 Date Management (`update-dates.yml`)
-
--   Maintains creation and modification dates
--   Updates example metadata
--   Runs on a schedule and supports manual triggers
-
 ## Scripts Directory
 
 The `scripts/` directory contains supporting shell scripts used by these workflows.
