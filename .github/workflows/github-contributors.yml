@@ -7,7 +7,8 @@ jobs:
     github-contributors:
         runs-on: ubuntu-latest
         permissions:
-            contents: write # Needed to push changes
+            contents: write
+            pull-requests: write
 
         steps:
             - uses: actions/checkout@v4
@@ -22,15 +23,16 @@ jobs:
                   REPO_NAME: ${{ github.event.repository.name }}
               run: ./.github/workflows/scripts/fetch_contributors.sh
 
-            - name: Commit changes
-              run: |
-                  git config --local user.email "github-actions[bot]@users.noreply.github.com"
-                  git config --local user.name "github-actions[bot]"
-                  git add _data/examples.json
-                  git diff --quiet && git diff --staged --quiet || git commit -m "Update contributors"
-
-            - name: Push changes
-              uses: ad-m/github-push-action@master
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v5
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  branch: ${{ github.ref }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  commit-message: Update GitHub contributors
+                  title: 'chore: Update GitHub contributors'
+                  body: |
+                      This PR updates the GitHub contributors in examples.json.
+
+                      This is an automated PR created by the GitHub Contributors workflow.
+                  branch: update/github-contributors
+                  base: trunk
+                  delete-branch: true
