@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/settings-sidebar-82c525",
+  "version": "0.1.0",
+  "title": "Settings Sidebar 82c525",
+  "category": "widgets",
+  "example": {},
+  "attributes": {
+    "message": {
+      "type": "string",
+      "source": "text",
+      "selector": "div",
+      "default": ""
+    },
+    "bg_color": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "text_color": {
+      "type": "string",
+      "default": "#ffffff"
+    }
+  },
+  "textdomain": "block-development-examples",
+  "editorScript": "file:./index.js",
+  "keywords": [
+    "82c525"
+  ]
+}

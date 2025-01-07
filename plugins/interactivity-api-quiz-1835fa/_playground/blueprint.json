@@ -1,26 +1,22 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/?p=10",
+	"login": true,
 	"steps": [
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/interactivity-api-quiz-1835fa.zip"
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/interactivity-api-quiz-1835fa"
+			},
+			"options": {
+				"activate": true
 			}
 		},
 		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
-		},
-		{
-			"step": "runSql",
-			"sql": {
-				"resource": "literal",
-				"name": "schema.sql",
-				"contents": "DELETE FROM wp_posts"
-			}
+			"step": "resetData"
 		},
 		{
 			"step": "importWxr",

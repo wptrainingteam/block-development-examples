@@ -1,0 +1,27 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"login": true,
+	"landingPage": "/wp-admin/post.php?post=1&action=edit",
+	"steps": [
+		{
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/wp-content/plugins/slotfill-2fb190",
+			"filesTree": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/slotfill-2fb190"
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/slotfill-2fb190/individual-example-add-on.php",
+			"data": "<?php /* SLOTFILL_2FB190_EXAMPLE_LOAD can set to load individual slotFillExamples at src/index.js */ define('SLOTFILL_2FB190_EXAMPLE_LOAD', 'PluginDocumentSettingPanel'); function set_individual_example() { wp_add_inline_script( 'slotfill-2fb190', 'window.slotFill2FB190ExampleLoad = \"'.SLOTFILL_2FB190_EXAMPLE_LOAD.'\"', 'before' ); }"
+		},
+		{
+			"step": "activatePlugin",
+			"pluginName": "Block Development Examples - Slotfill 2fb190",
+			"pluginPath": "/wordpress/wp-content/plugins/slotfill-2fb190"
+		}
+	]
+}

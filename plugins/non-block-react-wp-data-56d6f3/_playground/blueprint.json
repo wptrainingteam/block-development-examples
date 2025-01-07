@@ -1,7 +1,19 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/admin.php?page=react-example",
 	"login": true,
-	"plugins": [
-		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/non-block-react-wp-data-56d6f3.zip"
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/non-block-react-wp-data-56d6f3"
+			},
+			"options": {
+				"activate": true
+			}
+		}
 	]
 }

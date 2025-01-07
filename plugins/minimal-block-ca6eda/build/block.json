@@ -1,0 +1,11 @@
+{
+  "apiVersion": 3,
+  "title": "Minimal Gutenberg Block ca6eda",
+  "name": "block-development-examples/minimal-block-ca6eda",
+  "category": "media",
+  "icon": "smiley",
+  "keywords": [
+    "ca6eda"
+  ],
+  "editorScript": "file:./index.js"
+}

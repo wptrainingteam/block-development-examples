@@ -1,0 +1,38 @@
+name: _Update Creation and Modification Dates
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 0 1 * *' # Run monthly on the first day at midnight
+
+jobs:
+    update-dates:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # Fetch all history for all branches and tags
+
+            - name: Make script executable
+              run: chmod +x .github/workflows/scripts/update_dates.sh
+
+            - name: Update dates
+              env:
+                  EXAMPLES_FILE: '_data/examples.json'
+              run: ./.github/workflows/scripts/update_dates.sh
+
+            - name: Commit changes
+              run: |
+                  git config --local user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --local user.name "github-actions[bot]"
+                  git add _data/examples.json
+                  git diff --quiet && git diff --staged --quiet || git commit -m "Update creation and modification dates"
+
+            - name: Push changes
+              uses: ad-m/github-push-action@master
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  branch: ${{ github.ref }}

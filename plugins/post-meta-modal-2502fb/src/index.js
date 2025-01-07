@@ -48,7 +48,7 @@ function MetaModalManager() {
 			</PluginMoreMenuItem>
 			{ isModalOpen && (
 				<Modal
-					className="post_meta_modal_2502fb_container"
+					className="post-meta-modal-2502fb-container"
 					title={ __(
 						'Manage Post Meta',
 						'block-development-examples'

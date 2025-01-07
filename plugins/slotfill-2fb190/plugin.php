@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       WP Block Development Examples - Slotfill 2fb190
+ * Plugin Name:       Block Development Examples - Slotfill 2fb190
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0

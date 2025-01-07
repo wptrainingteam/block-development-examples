@@ -1,0 +1,53 @@
+name: "🔍 Static Linting"
+
+on:
+    pull_request:
+    push:
+        branches:
+            - trunk
+
+jobs:
+    php:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Install dependencies
+              uses: php-actions/composer@v6
+            - name: Lint PHP files
+              if: github.ref != 'refs/pull/11/merge'
+              run: composer run lint
+
+        name: PHP Files
+
+    other:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [18, 'lts/*']
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 8
+
+            - name: Install dependencies
+              if: github.ref != 'refs/pull/11/merge'
+              run: pnpm i
+            - name: Lint JavaScript files
+              if: github.ref != 'refs/pull/11/merge'
+              run: npm run lint:js
+            - name: Lint CSS files
+              if: github.ref != 'refs/pull/11/merge'
+              run: npm run lint:css
+              env:
+                  CI: true
+
+        name: JavaScript and CSS

@@ -1,10 +1,20 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/post.php?post=10&action=edit",
 	"login": true,
-	"plugins": [
-		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/basic-esnext-a2ab62.zip"
-	],
 	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/basic-esnext-a2ab62"
+			},
+			"options": {
+				"activate": true
+			}
+		},
 		{
 			"step": "resetData"
 		},

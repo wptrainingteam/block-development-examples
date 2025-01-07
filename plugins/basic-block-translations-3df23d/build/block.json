@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 3,
+  "name": "block-development-examples/basic-block-translations-3df23d",
+  "title": "Basic block Translations",
+  "textdomain": "block-development-examples",
+  "icon": "smiley",
+  "category": "widgets",
+  "example": {},
+  "editorScript": "file:./index.js",
+  "keywords": [
+    "3df23d"
+  ]
+}

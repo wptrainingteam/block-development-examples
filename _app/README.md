@@ -1,31 +1,81 @@
-# DataViews for block-development-examples
+# Block Development Examples Directory
 
-## What is it?
+A modern web application built with React, TypeScript, and Tailwind CSS that showcases a curated collection of WordPress block development examples. The directory helps developers find and explore practical examples for building custom blocks and extending the WordPress Block Editor.
 
-This app aims to provide a nicer way to navigate through the examples at [block-development-examples](https://github.com/WordPress/block-development-examples) repo leveraring the `@wordpress/dataviews` [npm package](https://www.npmjs.com/package/@wordpress/dataviews).
+## Features
 
-`@wordpress/dataviews` is a UI component developed by WordPress contributors as part of [the Gutenberg project](https://github.com/wordPress/gutenberg). DataViews is a component that provides an API to render datasets using different types of layouts (table, grid, list, etc.).
+-   🔍 Search functionality across all examples
+-   🏷️ Filter by multiple tags
+-   📱 Responsive design
+-   🔗 URL-based filtering (shareable filtered views)
+-   📅 Automatic sorting by last update date
+-   📄 Pagination support
+-   Built with Vite for fast development experience
+-   Uses TypeScript for type safety
+-   Styled with Tailwind CSS
 
-See [documentation](https://github.com/WordPress/gutenberg/tree/trunk/packages/dataviews) for more info.
+## Project Structure
 
-Besides providing developers a nicer way to navigate through the examples of this repo, this implementation may also be a good reference for:
-
--   Have a React App using Dataviews deployed to GH pages of any repo
--   Using Dataviews to help users navigate through the info of a specific repo
--   Connecting Dataviews to React Router to provide direct links to filters (or searches)
-
-## Demo
-
-From the `_app` folder
-
-```sh
-npm install
-npm run admin:data:copy
-npm start
+```
+src/
+├── components/
+│   ├── features/
+│   │   ├── Pagination.tsx    # Handles page navigation
+│   │   ├── SampleCard.tsx    # Individual example card
+│   │   └── SearchBar.tsx     # Search input component
+│   └── layout/
+│       ├── Header.tsx        # App header with search
+│       ├── Sidebar.tsx       # Tags filter panel
+│       └── SampleGrid.tsx    # Grid of examples
+├── data/
+│   └── samples.json         # Example data
+├── types/
+│   └── sample.ts           # TypeScript interfaces
+├── App.tsx                 # Main application component
+└── main.tsx               # Application entry point
 ```
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-## Coda
+### Prerequisites
 
-This demo has been bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+-   Node.js 16.x or later
+-   npm 7.x or later
+
+### Installation
+
+-   Install dependencies:
+
+```bash
+npm install
+```
+
+-   Start the development server:
+
+```bash
+npm run dev
+```
+
+-   Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+### Production
+
+To generate a production build we do from `/_app`
+
+```bash
+npm run build
+```
+
+To deployy the production build we do from the root of the project `/`
+
+```bash
+npm run gh:deploy
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

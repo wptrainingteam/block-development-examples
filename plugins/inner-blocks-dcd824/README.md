@@ -1,12 +1,12 @@
-### Block Development Examples - Inner Blocks dcd824
+# Inner Blocks Example
 
-The goal of this example is to show how the component `InnerBlocks` allows to create custom blocks that accepts other blocks inside. 
+The goal of this example is to show how the component `InnerBlocks` allows to create custom blocks that accepts other blocks inside.
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
-| Folder                                                                                               | <span style="display: inline-block; width:250px">Short description</span> | Tags | ID ([❓](https://github.com/WordPress/block-development-examples/wiki/04-Why-an-ID-for-every-example%3F "Why an ID for every example?")) | Download .zip                                                                                                                                                                                                                                                   | Live Demo                                                                                                                                                                                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [📁](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/inner-blocks-dcd824) | Inner Blocks                                                              |      | `dcd824`                                                                                                                                | [📦](https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/inner-blocks-dcd824.zip "Install the plugin using this zip and activate it. Then use the ID of the block (dcd824) to find it and add it to a post to see it in action") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/inner-blocks-dcd824/_playground/blueprint.json "Use the ID of the block (dcd824) to find it and add it to a post to see it in action") |
+| Example | <span style="display: inline-block; width:250px">Description</span> | Tags |Download .zip | Live Demo |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Inner Blocks](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/inner-blocks-dcd824) | Demonstrates how to create blocks that can contain other blocks using InnerBlocks component. |  | [📦](https://github.com/WordPress/block-development-examples/releases/download/latest/inner-blocks-dcd824.zip "Install the plugin on any WordPress site using this zip and activate it to see the example in action") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/inner-blocks-dcd824/_playground/blueprint.json "Click here to access a live demo of this example" ) |
 <!-- @TABLE EXAMPLES END -->
 
 ## Understanding the Example Code
@@ -15,10 +15,10 @@ At `edit.js` we can see how we import `InnerBlocks` from `@wordpress/block-edito
 
 ## Related resources
 
-- [Nested Blocks: Using InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
-- [`templateLock` docs](https://github.com/WordPress/gutenberg/blob/bb73da7b19ca11be56b0d3c430434b7b4093059f/packages/block-editor/src/components/inner-blocks/README.md#templatelock)
+-   [Nested Blocks: Using InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
+-   [`templateLock` docs](https://github.com/WordPress/gutenberg/blob/bb73da7b19ca11be56b0d3c430434b7b4093059f/packages/block-editor/src/components/inner-blocks/README.md#templatelock)
 
-----
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

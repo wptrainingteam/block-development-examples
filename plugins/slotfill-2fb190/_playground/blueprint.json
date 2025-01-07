@@ -4,10 +4,13 @@
 	"landingPage": "/wp-admin/post.php?post=1&action=edit",
 	"steps": [
 		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/slotfill-2fb190.zip"
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/wp-content/plugins/slotfill-2fb190",
+			"filesTree": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/slotfill-2fb190"
 			}
 		},
 		{
@@ -17,7 +20,8 @@
 		},
 		{
 			"step": "activatePlugin",
-			"pluginPath": "slotfill-2fb190/slotfill-2fb190.php"
+			"pluginName": "Block Development Examples - Slotfill 2fb190",
+			"pluginPath": "/wordpress/wp-content/plugins/slotfill-2fb190"
 		}
 	]
 }

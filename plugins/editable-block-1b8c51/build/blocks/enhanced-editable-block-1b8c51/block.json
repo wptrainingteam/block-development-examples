@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "block-development-examples/enhanced-editable-block-1b8c51",
+  "title": "Enhanced Editable Block",
+  "textdomain": "block-development-examples",
+  "icon": "universal-access-alt",
+  "category": "widgets",
+  "keywords": [
+    "1b8c51"
+  ],
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    }
+  },
+  "example": {
+    "attributes": {
+      "content": "Hello world"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

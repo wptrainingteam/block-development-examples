@@ -1,35 +1,23 @@
 {
-    "landingPage": "/wp-admin/post.php?post=4&action=edit",
-    "steps": [
-        {
-            "step": "login",
-            "username": "admin",
-            "password": "password"
-        },
-        {
-            "step": "mkdir",
-            "path": "/downloads"
-        },
-        {
-            "step": "writeFile",
-            "path": "/downloads/plugin.zip",
-            "data": {
-            "resource": "url",
-            "url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/minimal-block-no-build-e621a6.zip",
-            "caption": "Downloading plugin..."
-            }
-        },
-        {
-            "step": "installPlugin",
-            "pluginZipFile": {
-            "resource": "vfs",
-            "path": "/downloads/plugin.zip"
-            }
-        },
-        {
-            "step": "runPHP",
-            "code": "<?php require '/wordpress/wp-load.php'; wp_insert_post( array('post_title'    => 'Test block','post_content'  => '<!-- wp:block-development-examples/minimal-block-no-build-e621a6 --><p>Hello World - Frontend</p><!-- /wp:block-development-examples/minimal-block-no-build-e621a6 -->', 'post_status'   => 'publish', 'post_author'   => 1 ) );"
-        }
-    ]
-  }
-  
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/post.php?post=4&action=edit",
+	"login": true,
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/minimal-block-no-build-e621a6"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; wp_insert_post( array('post_title'    => 'Test block','post_content'  => '<!-- wp:block-development-examples/minimal-block-no-build-e621a6 --><p>Hello World - Frontend</p><!-- /wp:block-development-examples/minimal-block-no-build-e621a6 -->', 'post_status'   => 'publish', 'post_author'   => 1 ) );"
+		}
+	]
+}

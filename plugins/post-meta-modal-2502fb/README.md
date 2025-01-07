@@ -1,4 +1,4 @@
-### Post Meta Modal 2502fb
+# Post Meta Modal
 
 This example adds a modal in the Post Editor that allows users to define custom post metadata without having to use the legacy Custom Fields meta box.
 
@@ -6,9 +6,9 @@ This example adds a modal in the Post Editor that allows users to define custom 
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
-| Folder                                                                                                  | <span style="display: inline-block; width:250px">Short description</span> | Tags                                                                                                                                                                                                                                                       | ID ([❓](https://github.com/WordPress/block-development-examples/wiki/04-Why-an-ID-for-every-example%3F "Why an ID for every example?")) | Download .zip                                                                                                          | Live Demo                                                                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [📁](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/post-meta-modal-2502fb) | Post Meta Modal                                                           | <small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#meta">META</a></code></small>, <small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#no-block">NO BLOCK</a></code></small> | `2502fb`                                                                                                                                | [📦](https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/post-meta-modal-2502fb.zip "") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/post-meta-modal-2502fb/_playground/blueprint.json "") |
+| Example | <span style="display: inline-block; width:250px">Description</span> | Tags |Download .zip | Live Demo |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Post Meta Modal](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/post-meta-modal-2502fb) | Shows how to create a modal interface for editing post meta data outside of the block context. | <small><code><a href="https://WordPress.github.io/block-development-examples/?tags=meta">meta</a></code></small> <small><code><a href="https://WordPress.github.io/block-development-examples/?tags=no-block">no-block</a></code></small> | [📦](https://github.com/WordPress/block-development-examples/releases/download/latest/post-meta-modal-2502fb.zip "Install the plugin on any WordPress site using this zip and activate it to see the example in action") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/post-meta-modal-2502fb/_playground/blueprint.json "Click here to access a live demo of this example" ) |
 <!-- @TABLE EXAMPLES END -->
 
 ## Overview
@@ -19,12 +19,12 @@ The plugin utilizes the [`PluginMoreMenuItem`](https://developer.wordpress.org/b
 
 ## Related resources
 
-- [SlotFills Reference](https://developer.wordpress.org/block-editor/reference-guides/slotfills/)
-- [Component Reference](https://developer.wordpress.org/block-editor/reference-guides/components/)
-- [@wordpress/commands](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-commands/#usecommand) package reference
-- [`register_post_meta`](https://developer.wordpress.org/reference/functions/register_post_meta/) documentation
+-   [SlotFills Reference](https://developer.wordpress.org/block-editor/reference-guides/slotfills/)
+-   [Component Reference](https://developer.wordpress.org/block-editor/reference-guides/components/)
+-   [@wordpress/commands](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-commands/#usecommand) package reference
+-   [`register_post_meta`](https://developer.wordpress.org/reference/functions/register_post_meta/) documentation
 
-----
+---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

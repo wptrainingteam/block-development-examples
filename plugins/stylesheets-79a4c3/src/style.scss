@@ -11,11 +11,11 @@
 	border: 2px solid #c99;
 	padding: 20px;
 
-	&.hasPerspective {
-		transform: perspective(400px) rotate3d(1, -1, 0, 8deg);
+	&.has-perspective {
+		transform: perspective( 400px ) rotate3d( 1, -1, 0, 8deg );
 	}
 
-	&.hasPerspective:hover {
-		transform: perspective(400px) rotate3d(1, -1, 0, -8deg);
+	&.has-perspective:hover {
+		transform: perspective( 400px ) rotate3d( 1, -1, 0, -8deg );
 	}
 }

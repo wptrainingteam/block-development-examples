@@ -1,28 +1,22 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"login": true,
 	"steps": [
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/interactive-blocks-demos-99def1.zip"
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/interactive-blocks-demos-99def1"
+			},
+			"options": {
+				"activate": true
 			}
 		},
 		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "gutenberg"
-			}
-		},
-		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
-		},
-		{
-			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+			"step": "resetData"
 		},
 		{
 			"step": "importWxr",

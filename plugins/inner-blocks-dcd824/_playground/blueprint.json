@@ -1,17 +1,19 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"login": true,
 	"steps": [
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/inner-blocks-dcd824.zip"
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/inner-blocks-dcd824"
+			},
+			"options": {
+				"activate": true
 			}
-		},
-		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
 		},
 		{
 			"step": "resetData"

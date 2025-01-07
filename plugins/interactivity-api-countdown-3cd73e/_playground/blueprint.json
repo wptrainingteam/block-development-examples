@@ -1,10 +1,20 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/post.php?post=10&action=edit",
 	"login": true,
-	"plugins": [
-		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/interactivity-api-countdown-3cd73e.zip"
-	],
 	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/interactivity-api-countdown-3cd73e"
+			},
+			"options": {
+				"activate": true
+			}
+		},
 		{
 			"step": "resetData"
 		},

@@ -1,26 +1,22 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"login": true,
 	"steps": [
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/stylesheets-79a4c3.zip"
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/stylesheets-79a4c3"
+			},
+			"options": {
+				"activate": true
 			}
 		},
 		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
-		},
-		{
-			"step": "runSql",
-			"sql": {
-				"resource": "literal",
-				"name": "schema.sql",
-				"contents": "DELETE FROM wp_posts"
-			}
+			"step": "resetData"
 		},
 		{
 			"step": "importWxr",

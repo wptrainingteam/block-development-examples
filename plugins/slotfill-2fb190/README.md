@@ -1,28 +1,44 @@
-### Block Development Examples - Slotfill 2fb190
+# Slotfill Example
 
-The goal of this example is to ...
+This example demonstrates how to use WordPress SlotFill system to extend the editor interface with custom components. It showcases two main SlotFill implementations:
+
+-   `PluginSidebar`: Adds a custom sidebar panel to the editor with form controls
+-   `PluginDocumentSettingPanel`: Extends the document settings panel with custom meta fields
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
-| Folder                                                                                           | <span style="display: inline-block; width:250px">Short description</span> | Tags                                                                                                                                                                                                                                                               | ID ([❓](https://github.com/WordPress/block-development-examples/wiki/04-Why-an-ID-for-every-example%3F "Why an ID for every example?")) | Download .zip                                                                                                   | Live Demo                                                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [📁](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/slotfill-2fb190) | SlotFill                                                                  | <small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#no-block">NO BLOCK</a></code></small>, <small><code><a href="https://github.com/WordPress/block-development-examples/wiki/03-Tags#slotfill">SLOTFILL</a></code></small> | `2fb190`                                                                                                                                | [📦](https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/slotfill-2fb190.zip "") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/slotfill-2fb190/_playground/blueprint.json "") |
+| Example | <span style="display: inline-block; width:250px">Description</span> | Tags |Download .zip | Live Demo |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SlotFill](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/slotfill-2fb190) | Shows how to use WordPress SlotFill system to extend the editor interface with custom components. | <small><code><a href="https://WordPress.github.io/block-development-examples/?tags=no-block">no-block</a></code></small> <small><code><a href="https://WordPress.github.io/block-development-examples/?tags=slotfill">slotfill</a></code></small> | [📦](https://github.com/WordPress/block-development-examples/releases/download/latest/slotfill-2fb190.zip "Install the plugin on any WordPress site using this zip and activate it to see the example in action") | [![](https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/slotfill-2fb190/_playground/blueprint.json "Click here to access a live demo of this example" ) |
 <!-- @TABLE EXAMPLES END -->
 
 See Individual Examples:
 
--   [PluginSidebar](https://playground.wordpress.net/#ewoJIiRzY2hlbWEiOiAiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwKCSJsb2dpbiI6IHRydWUsCgkibGFuZGluZ1BhZ2UiOiAiL3dwLWFkbWluL3Bvc3QucGhwP3Bvc3Q9MSZhY3Rpb249ZWRpdCIsCgkic3RlcHMiOiBbCgkJewoJCQkic3RlcCI6ICJpbnN0YWxsUGx1Z2luIiwKCQkJInBsdWdpblppcEZpbGUiOiB7CgkJCQkicmVzb3VyY2UiOiAidXJsIiwKCQkJCSJ1cmwiOiAiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1dvcmRQcmVzcy9ibG9jay1kZXZlbG9wbWVudC1leGFtcGxlcy9kZXBsb3kvemlwcy9zbG90ZmlsbC0yZmIxOTAuemlwIgoJCQl9CgkJfSwKCQl7CgkJCSJzdGVwIjogIndyaXRlRmlsZSIsCgkJCSJwYXRoIjogIi93b3JkcHJlc3Mvd3AtY29udGVudC9wbHVnaW5zL3Nsb3RmaWxsLTJmYjE5MC9pbmRpdmlkdWFsLWV4YW1wbGUtYWRkLW9uLnBocCIsCgkJCSJkYXRhIjogIjw/cGhwIC8qIFNMT1RGSUxMXzJGQjE5MF9FWEFNUExFX0xPQUQgY2FuIHNldCB0byBsb2FkIGluZGl2aWR1YWwgc2xvdEZpbGxFeGFtcGxlcyBhdCBzcmMvaW5kZXguanMgKi8gZGVmaW5lKCdTTE9URklMTF8yRkIxOTBfRVhBTVBMRV9MT0FEJywgJ1BsdWdpblNpZGViYXInKTsgZnVuY3Rpb24gc2V0X2luZGl2aWR1YWxfZXhhbXBsZSgpIHsgd3BfYWRkX2lubGluZV9zY3JpcHQoICdzbG90ZmlsbC0yZmIxOTAnLCAnd2luZG93LnNsb3RGaWxsMkZCMTkwRXhhbXBsZUxvYWQgPSBcIicuU0xPVEZJTExfMkZCMTkwX0VYQU1QTEVfTE9BRC4nXCInLCAnYmVmb3JlJyApOyB9IgoJCX0sCgkJewoJCQkic3RlcCI6ICJhY3RpdmF0ZVBsdWdpbiIsCgkJCSJwbHVnaW5QYXRoIjogInNsb3RmaWxsLTJmYjE5MC9zbG90ZmlsbC0yZmIxOTAucGhwIgoJCX0KCV0KfQo=)
--   [PluginDocumentSettingPanel](https://playground.wordpress.net/#ewogICIkc2NoZW1hIjogImh0dHBzOi8vcGxheWdyb3VuZC53b3JkcHJlc3MubmV0L2JsdWVwcmludC1zY2hlbWEuanNvbiIsCiAgImxvZ2luIjogdHJ1ZSwKICAibGFuZGluZ1BhZ2UiOiAiL3dwLWFkbWluL3Bvc3QucGhwP3Bvc3Q9MSZhY3Rpb249ZWRpdCIsCiAgInN0ZXBzIjogWwogICAgewogICAgICAic3RlcCI6ICJpbnN0YWxsUGx1Z2luIiwKICAgICAgInBsdWdpblppcEZpbGUiOiB7CiAgICAgICAgInJlc291cmNlIjogInVybCIsCiAgICAgICAgInVybCI6ICJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vV29yZFByZXNzL2Jsb2NrLWRldmVsb3BtZW50LWV4YW1wbGVzL2RlcGxveS96aXBzL3Nsb3RmaWxsLTJmYjE5MC56aXAiCiAgICAgIH0KICAgIH0sCiAgICB7CiAgICAgICJzdGVwIjogIndyaXRlRmlsZSIsCiAgICAgICJwYXRoIjogIi93b3JkcHJlc3Mvd3AtY29udGVudC9wbHVnaW5zL3Nsb3RmaWxsLTJmYjE5MC9pbmRpdmlkdWFsLWV4YW1wbGUtYWRkLW9uLnBocCIsCiAgICAgICJkYXRhIjogIjw/cGhwIC8qIFNMT1RGSUxMXzJGQjE5MF9FWEFNUExFX0xPQUQgY2FuIHNldCB0byBsb2FkIGluZGl2aWR1YWwgc2xvdEZpbGxFeGFtcGxlcyBhdCBzcmMvaW5kZXguanMgKi8gZGVmaW5lKCdTTE9URklMTF8yRkIxOTBfRVhBTVBMRV9MT0FEJywgJ1BsdWdpbkRvY3VtZW50U2V0dGluZ1BhbmVsJyk7IGZ1bmN0aW9uIHNldF9pbmRpdmlkdWFsX2V4YW1wbGUoKSB7IHdwX2FkZF9pbmxpbmVfc2NyaXB0KCAnc2xvdGZpbGwtMmZiMTkwJywgJ3dpbmRvdy5zbG90RmlsbDJGQjE5MEV4YW1wbGVMb2FkID0gXCInLlNMT1RGSUxMXzJGQjE5MF9FWEFNUExFX0xPQUQuJ1wiJywgJ2JlZm9yZScgKTsgfSIKICAgIH0sCiAgICB7CiAgICAgICJzdGVwIjogImFjdGl2YXRlUGx1Z2luIiwKICAgICAgInBsdWdpblBhdGgiOiAic2xvdGZpbGwtMmZiMTkwL3Nsb3RmaWxsLTJmYjE5MC5waHAiCiAgICB9CiAgXQp9Cg==)
+-   [PluginSidebar](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/slotfill-2fb190/_playground/blueprint-slot1.json)
+-   [PluginDocumentSettingPanel](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/slotfill-2fb190/_playground/blueprint-slot2.json)
 
 ## Understanding the Example Code
 
-Overview of the code in bullet point form.
+The example demonstrates several key technical concepts:
+
+-   Uses `registerPlugin` from `@wordpress/plugins` to register custom editor extensions
+-   Implements two different SlotFill components:
+    -   `PluginSidebar`: Creates a collapsible sidebar with custom UI components
+    -   `PluginDocumentSettingPanel`: Adds a panel to the Document Settings sidebar
+-   Demonstrates state management using React hooks (`useState`)
+-   Shows integration with WordPress data layer through `useEntityProp` and `useSelect`
+-   Implements post meta handling with proper registration and REST API support
+-   Uses WordPress components library for consistent UI (`TextControl`, `SelectControl`, `Button`, etc.)
 
 ## Related resources
 
-Bulleted list of references
+-   [SlotFill Reference](https://developer.wordpress.org/block-editor/reference-guides/slotfills/)
+-   [Plugin Extensibility](https://developer.wordpress.org/block-editor/how-to-guides/plugin-sidebar-0/)
+-   [Components & UI](https://developer.wordpress.org/block-editor/reference-guides/components/)
+-   [Data Module Reference](https://developer.wordpress.org/block-editor/reference-guides/data/)
+-   [WordPress Components Storybook](https://wordpress.github.io/gutenberg/?path=/docs/docs-introduction--page)
 
 ---
 
 > **Note**
-> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/02-Examples#start-guide-for-local-development-with-the-examples)
+> Check the [Start Guide for local development with the examples](https://github.com/WordPress/block-development-examples/wiki/Examples#start-guide-for-local-development-with-the-examples)

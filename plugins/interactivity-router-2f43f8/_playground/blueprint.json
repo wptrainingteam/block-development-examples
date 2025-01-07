@@ -2,21 +2,29 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/",
 	"login": true,
-	"plugins": [
-		"https://raw.githubusercontent.com/WordPress/block-development-examples/deploy/zips/interactivity-router-2f43f8.zip"
-	],
 	"features": {
 		"networking": true
 	},
 	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/block-development-examples",
+				"ref": "HEAD",
+				"path": "plugins/interactivity-router-2f43f8"
+			},
+			"options": {
+				"activate": true
+			}
+		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
 			"data": "<?php add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
 		},
 		{
-			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; $wpdb->query('delete from wp_posts');"
+			"step": "resetData"
 		},
 		{
 			"step": "importWxr",
