@@ -8,7 +8,7 @@
 			"writeToPath": "/wordpress/wp-content/plugins/slotfill-2fb190",
 			"filesTree": {
 				"resource": "git:directory",
-				"url": "https://github.com/juanma-wp/block-development-examples",
+				"url": "https://github.com/WordPress/block-development-examples",
 				"ref": "HEAD",
 				"path": "plugins/slotfill-2fb190"
 			}

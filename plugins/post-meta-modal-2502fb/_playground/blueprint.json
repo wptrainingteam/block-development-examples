@@ -7,7 +7,7 @@
 			"step": "installPlugin",
 			"pluginData": {
 				"resource": "git:directory",
-				"url": "https://github.com/juanma-wp/block-development-examples",
+				"url": "https://github.com/WordPress/block-development-examples",
 				"ref": "HEAD",
 				"path": "plugins/post-meta-modal-2502fb"
 			},

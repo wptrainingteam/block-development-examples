@@ -11,7 +11,7 @@ export const EXAMPLES_DATA_PATH = path.join( DATA_PATH, 'examples.json' );
 export const TAGS_DATA_PATH = path.join( DATA_PATH, 'tags.json' );
 
 // Repository info
-export const REPO_ORIGIN = 'juanma-wp/block-development-examples';
+export const REPO_ORIGIN = 'WordPress/block-development-examples';
 export const REPO_BRANCH = 'trunk';
 export const PROJECT_FOLDER_NAME = 'bde-fork';
 
@@ -29,7 +29,7 @@ export const WIKI_PAGE_TAGS = '03-Tags';
 
 // App URLS
 export const APP_URL =
-	'https://juanma-wp.github.io/block-development-examples/';
+	'https://WordPress.github.io/block-development-examples/';
 export const APP_URL_WITH_TAGS = `${ APP_URL }?tags=`;
 
 // Resource URLs
