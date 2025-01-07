@@ -12,9 +12,11 @@ Key concepts covered:
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 <!-- @TABLE EXAMPLES BEGIN -->
-| Example | <span style="display: inline-block; width:250px">Description</span> | Tags |Download .zip | Live Demo |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Basic ESNext](https://github.com/juanma-wp/block-development-examples/tree/trunk/plugins/basic-esnext-a2ab62) | Demonstrates how to create a basic block using modern JavaScript (ESNext) and JSX syntax with a build process powered by @wordpress/scripts. | <small><code><a href="https://juanma-wp.github.io/block-development-examples/?tags=minimal">minimal</a></code></small> | [📦](https://github.com/juanma-wp/block-development-examples/releases/download/latest/basic-esnext-a2ab62.zip "Install the plugin on any WordPress site using this zip and activate it to see the example in action") | [![](https://raw.githubusercontent.com/juanma-wp/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/juanma-wp/block-development-examples/trunk/plugins/basic-esnext-a2ab62/_playground/blueprint.json "Click here to access a live demo of this example" ) |
+
+| Example                                                                                                        | <span style="display: inline-block; width:250px">Description</span>                                                                          | Tags                                                                                                                   | Download .zip                                                                                                                                                                                                         | Live Demo                                                                                                                                                                                                                                                                                                                                       |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Basic ESNext](https://github.com/juanma-wp/block-development-examples/tree/trunk/plugins/basic-esnext-a2ab62) | Demonstrates how to create a basic block using modern JavaScript (ESNext) and JSX syntax with a build process powered by @wordpress/scripts. | <small><code><a href="https://juanma-wp.github.io/block-development-examples/?tags=minimal">minimal</a></code></small> | [📦](https://github.com/juanma-wp/block-development-examples/releases/download/latest/basic-esnext-a2ab62.zip 'Install the plugin on any WordPress site using this zip and activate it to see the example in action') | [![](https://raw.githubusercontent.com/juanma-wp/block-development-examples/trunk/_assets/icon-wp.svg)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/juanma-wp/block-development-examples/trunk/plugins/basic-esnext-a2ab62/_playground/blueprint.json 'Click here to access a live demo of this example') |
+
 <!-- @TABLE EXAMPLES END -->
 
 ## Understanding the Example Code
@@ -58,14 +60,6 @@ src/
 ├── block.json   # Block metadata
 └── index.js     # Block registration
 ```
-
-### Best Practices
-
--   Use ESNext features appropriately
--   Follow WordPress coding standards
--   Implement proper error handling
--   Add meaningful comments
--   Keep components modular
 
 ## Related Resources
 

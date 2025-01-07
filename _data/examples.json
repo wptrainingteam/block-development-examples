@@ -394,5 +394,18 @@
 		],
 		"created": "2024-10-03T15:29:11+01:00",
 		"lastModified": "2024-12-13T06:13:26+01:00"
+	},
+	{
+		"slug": "server-side-render-block-d26119",
+		"description": "This example demonstrates how to build a simple block that is rendered on the server and displayed in the Editor using the `ServerSideRender` component.",
+		"name": "Server Side Render Block",
+		"tags": [
+			"dynamic-rendering"
+		],
+		"contributors": [
+			"ndiego"
+		],
+		"created": "2024-12-13T06:13:26+01:00",
+		"lastModified": "2024-12-13T06:13:26+01:00"
 	}
 ]

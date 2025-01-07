@@ -23,8 +23,6 @@ The block of the example has dynamic render defined at `render.php` and it enabl
 -   The markup used in `render.php` use directives such as [`data-wp-interactive`](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/docs/2-api-reference.md#wp-interactive), [`data-wp-on--click`](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/docs/2-api-reference.md#wp-on), [`data-wp-bind--hidden`](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/docs/2-api-reference.md#wp-bind), [`data-wp-context`](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/docs/2-api-reference.md#wp-context) or [`data-wp-effect`](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/docs/2-api-reference.md#wp-effect)
 -   The [store](https://github.com/WordPress/gutenberg/blob/trunk/packages/interactivity/docs/2-api-reference.md#the-store) for the block is defined at `view.js` that will be loaded in the frontend when the block is displayed
 
-## Related Resources
-
 ## Related resources
 
 Check the following resources for more info about the Interactivity API:

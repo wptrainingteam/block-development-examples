@@ -16,7 +16,7 @@
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/plugins/slotfill-2fb190/individual-example-add-on.php",
-			"data": "<?php /* SLOTFILL_2FB190_EXAMPLE_LOAD can set to load individual slotFillExamples at src/index.js */ define('SLOTFILL_2FB190_EXAMPLE_LOAD', ''); function set_individual_example() { wp_add_inline_script( 'slotfill-2fb190', 'window.slotFill2FB190ExampleLoad = \"'.SLOTFILL_2FB190_EXAMPLE_LOAD.'\"', 'before' ); }"
+			"data": "<?php /* SLOTFILL_2FB190_EXAMPLE_LOAD can set to load individual slotFillExamples at src/index.js */ define('SLOTFILL_2FB190_EXAMPLE_LOAD', 'PluginSidebar'); function set_individual_example() { wp_add_inline_script( 'slotfill-2fb190', 'window.slotFill2FB190ExampleLoad = \"'.SLOTFILL_2FB190_EXAMPLE_LOAD.'\"', 'before' ); }"
 		},
 		{
 			"step": "activatePlugin",
