@@ -1,4 +1,4 @@
-### Interactive Blocks Demos
+# Interactive Blocks Demos
 
 The goal of this example is to showcase the use of different ways of creating interactive blocks in [Gutenberg](https://github.com/WordPress/gutenberg).
 

@@ -1,4 +1,4 @@
-### Data Basics `@wordpress/data`
+# Data Basics `@wordpress/data`
 
 This example shows how to create a React app in a WordPress admin page. A detailed description of this project is available in the "How to Guide": [Create your First App with Gutenberg Data](https://developer.wordpress.org/block-editor/how-to-guides/data-basics/) (in the [Block Editor Handbook](https://developer.wordpress.org/block-editor))
 

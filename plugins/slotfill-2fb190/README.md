@@ -1,4 +1,4 @@
-### Slotfill Example
+# Slotfill Example
 
 This example demonstrates how to use WordPress SlotFill system to extend the editor interface with custom components. It showcases two main SlotFill implementations:
 

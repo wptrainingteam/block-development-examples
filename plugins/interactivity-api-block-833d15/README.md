@@ -1,4 +1,4 @@
-# Interactive Block 833d15
+# Interactive Block using Interactivity API
 
 > **Warning** > **This block requires Gutenberg 17.2 or superior to work**. The Interactivity API is, at the moment, not part of WordPress Core as it is still very experimental, and very likely to change.
 

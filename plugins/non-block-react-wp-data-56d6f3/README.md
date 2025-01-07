@@ -1,4 +1,4 @@
-# Non block React wp-data 56d6f3
+# Non block React wp-data
 
 This example demonstrates how to create a React application within the WordPress admin interface that leverages the `@wordpress/data` package for state management outside of the block editor context. It showcases practical patterns for integrating React components with WordPress data stores, making it an excellent reference for developers building admin-side applications that need to interact with WordPress data.
 
