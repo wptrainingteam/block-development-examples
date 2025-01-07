@@ -13,7 +13,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-10-10T09:49:59+01:00",
-		"lastModified": "2024-08-29T18:11:33+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "basic-block-translations-3df23d",
@@ -27,7 +27,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-10-10T12:18:16+01:00",
-		"lastModified": "2024-12-13T06:13:26+01:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "block-static-rendering-b16608",
@@ -43,7 +43,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-10-10T09:49:59+01:00",
-		"lastModified": "2024-08-29T18:17:57+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "editable-block-1b8c51",
@@ -55,7 +55,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-09-17T19:25:19+01:00",
-		"lastModified": "2024-08-29T18:27:38+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "non-block-react-wp-data-56d6f3",
@@ -70,7 +70,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-09-02T19:19:29+01:00",
-		"lastModified": "2024-08-30T07:32:27+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "minimal-block-ca6eda",
@@ -85,7 +85,7 @@
 			"juanmaguitar"
 		],
 		"created": "2023-10-08T08:14:37+01:00",
-		"lastModified": "2024-08-29T18:53:23+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "minimal-block-no-build-e621a6",
@@ -101,7 +101,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-10-08T07:46:38+01:00",
-		"lastModified": "2024-08-29T18:53:23+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "interactive-blocks-demos-99def1",
@@ -116,7 +116,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-10-11T22:26:44+01:00",
-		"lastModified": "2024-08-29T18:53:23+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "format-api-f14b86",
@@ -130,7 +130,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-01T11:19:49-04:00",
-		"lastModified": "2024-08-29T18:27:38+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "stylesheets-79a4c3",
@@ -145,7 +145,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-03T12:19:20-04:00",
-		"lastModified": "2024-08-30T07:40:51+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "basic-esnext-a2ab62",
@@ -160,7 +160,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-03T09:27:58-04:00",
-		"lastModified": "2024-08-29T18:00:48+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "block-supports-6aa4dd",
@@ -175,7 +175,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-06T14:50:39-05:00",
-		"lastModified": "2024-08-29T18:17:57+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "dynamic-block-b0bce7",
@@ -189,7 +189,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-06T15:02:03-05:00",
-		"lastModified": "2024-08-29T18:27:38+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "interactivity-api-block-833d15",
@@ -204,7 +204,7 @@
 			"juanmaguitar"
 		],
 		"created": "2023-10-11T13:47:07+01:00",
-		"lastModified": "2024-08-29T18:53:23+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "meta-block-bb1e55",
@@ -218,7 +218,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-06T15:13:54-05:00",
-		"lastModified": "2024-08-30T07:32:27+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "inner-blocks-dcd824",
@@ -230,7 +230,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-06T14:31:08-05:00",
-		"lastModified": "2024-08-29T18:27:38+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "slotfill-2fb190",
@@ -245,7 +245,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-06T14:42:58-05:00",
-		"lastModified": "2024-08-30T07:40:51+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "block-toolbar-ab967f",
@@ -258,7 +258,7 @@
 			"juanmaguitar"
 		],
 		"created": "2023-12-15T16:15:52+01:00",
-		"lastModified": "2024-08-29T18:17:57+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "recipe-card-744e8a",
@@ -270,7 +270,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-07T14:45:18-05:00",
-		"lastModified": "2024-08-30T07:35:14+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "plugin-sidebar-9ee4a6",
@@ -287,7 +287,7 @@
 			"ryanwelcher"
 		],
 		"created": "2023-11-07T15:13:31-05:00",
-		"lastModified": "2024-12-17T10:53:10+01:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "data-basics-59c8f8",
@@ -302,8 +302,8 @@
 			"juanmaguitar",
 			"ryanwelcher"
 		],
-		"created": "2023-11-12T19:28:19Z",
-		"lastModified": "2024-08-29T18:17:57+02:00"
+		"created": "2023-11-12T19:28:19+00:00",
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "copyright-date-block-09aac3",
@@ -319,8 +319,8 @@
 			"juanmaguitar",
 			"ndiego"
 		],
-		"created": "2023-11-20T17:22:20Z",
-		"lastModified": "2024-05-27T08:46:30+01:00"
+		"created": "2023-11-20T17:22:20+00:00",
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "interactivity-api-countdown-3cd73e",
@@ -337,8 +337,8 @@
 			"flexseth",
 			"juanmaguitar"
 		],
-		"created": "2023-12-11T12:53:38Z",
-		"lastModified": "2024-08-29T18:53:23+02:00"
+		"created": "2023-12-11T12:53:38+00:00",
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "settings-sidebar-82c525",
@@ -349,7 +349,7 @@
 			"juanmaguitar"
 		],
 		"created": "2023-12-18T12:42:49+01:00",
-		"lastModified": "2024-08-30T07:40:51+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "post-meta-modal-2502fb",
@@ -364,7 +364,7 @@
 			"ndiego"
 		],
 		"created": "2024-05-09T14:45:05-05:00",
-		"lastModified": "2024-08-30T07:40:51+02:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "interactivity-api-quiz-1835fa",
@@ -378,8 +378,8 @@
 			"juanmaguitar",
 			"luisherranz"
 		],
-		"created": "2023-12-12T19:31:15Z",
-		"lastModified": "2024-08-29T18:53:23+02:00"
+		"created": "2023-12-12T19:31:15+00:00",
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "interactivity-router-2f43f8",
@@ -393,7 +393,7 @@
 			"juanmaguitar"
 		],
 		"created": "2024-10-03T15:29:11+01:00",
-		"lastModified": "2024-12-13T06:13:26+01:00"
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
 		"slug": "server-side-render-block-d26119",
@@ -406,7 +406,7 @@
 			"ndiego",
 			"juanmaguitar"
 		],
-		"created": "2024-12-13T06:13:26+01:00",
-		"lastModified": "2024-12-13T06:13:26+01:00"
+		"created": "2024-10-22T15:15:38-05:00",
+		"lastModified": "2025-01-07T18:25:53+01:00"
 	}
 ]
