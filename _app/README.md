@@ -50,6 +50,12 @@ src/
 npm install
 ```
 
+-   Copy the latest metadata of the examples that will be used in the app
+
+```bash
+npm run data:copy
+```
+
 -   Start the development server:
 
 ```bash
@@ -64,17 +70,25 @@ http://localhost:5173
 
 ### Production
 
-To generate a production build we do from `/_app`
+First ensure the latest metadata of the examples are copied in the app's project
+
+```bash
+npm run data:copy
+```
+
+To generate a production build do from `/_app`
 
 ```bash
 npm run build
 ```
 
-To deployy the production build we do from the root of the project `/`
+To deploy the production build do from the root of the project `/`
 
 ```bash
 npm run gh:deploy
 ```
+
+This will deploy the app in https://wordpress.github.io/block-development-examples/
 
 ## License
 
