@@ -1,9 +1,9 @@
 # Interactive Blocks Demos
 
 > [!IMPORTANT]  
-> WordPress now provides an [Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/), the official a recommended way to add interactivity in the Frontend for WordPress sites. Check the [Interactive Block using Interactivity API example](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/interactivity-api-block-833d15)
+> WordPress now provides the [Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/), the official a recommended way to add interactivity in the Frontend for WordPress sites. Check the [Interactive Block using Interactivity API example](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/interactivity-api-block-833d15)
 >
-> To better understand the benefits of using the Interactivity API versus other aporoaches you can check the docs [About the Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/iapi-about) and [Frequently Asked Questions](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/iapi-faq/)
+> To better understand the benefits of using the Interactivity API versus other approaches you can check the docs [About the Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/iapi-about) and [Frequently Asked Questions](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/iapi-faq/)
 
 The goal of this example is to showcase the use of different ways of creating interactive blocks in [Gutenberg](https://github.com/WordPress/gutenberg).
 
