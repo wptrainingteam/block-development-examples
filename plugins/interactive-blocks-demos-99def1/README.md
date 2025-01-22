@@ -37,12 +37,12 @@ The example demonstrates several key technical concepts:
 
 ## Related Resources
 
--   [Block Editor Handbook - Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-interactivity/)
+-   [Block Editor Handbook - Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/)
+-   [Interactivity API Examples](https://wordpress.github.io/block-development-examples/?tags=interactivity-api)
 -   [Alpine.js Documentation](https://alpinejs.dev/docs)
 -   [React Documentation](https://react.dev/)
 -   [Web Components Introduction](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 -   [jQuery in WordPress](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/#jquery)
--   [Block Interactivity Examples](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-library/src/interactive-blocks)
 -   [WordCamp Europe 2022 Talk](https://www.youtube.com/watch?v=91anxAgQGJw&t=15939s)
 
 ---
