@@ -1,13 +1,8 @@
 # Interactive Block using Interactivity API
 
-> **Warning** > **This block requires Gutenberg 17.2 or superior to work**. The Interactivity API is, at the moment, not part of WordPress Core as it is still very experimental, and very likely to change.
-
-> **Note**
-> This block uses the API shared at [Proposal: The Interactivity API – A better developer experience in building interactive blocks](https://make.wordpress.org/core/2023/03/30/proposal-the-interactivity-api-a-better-developer-experience-in-building-interactive-blocks/).
-
 <!-- @TABLE EXAMPLES BEGIN -->
 
-This block has been created with the `create-block-interactive-template` and shows a basic structure of an interactive block that uses the Interactivity API.
+This block has been created with the `create-block-interactive-template` and shows a basic structure of an interactive block that uses the [Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/).
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 
