@@ -82,7 +82,13 @@ jobs:
               run: |
                   # Check if the latest release exists
                   if gh release view latest; then
-                    # Update the existing release instead of deleting
+                    # Check if the release is a draft and publish it
+                    if gh release view latest --json draft --jq '.draft'; then
+                      echo "Publishing the draft release..."
+                      gh release edit latest --draft=false
+                    fi
+                    
+                    # Update the existing release with new details
                     gh release edit latest \
                       --title "Latest Release" \
                       --notes "This is always the latest release. For permanent links, use the dated releases." \
