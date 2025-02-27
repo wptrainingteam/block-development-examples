@@ -408,5 +408,19 @@
 		],
 		"created": "2024-10-22T15:15:38-05:00",
 		"lastModified": "2025-01-07T18:25:53+01:00"
-	}
+	},
+	{
+		"slug": "post-meta-testimonial",
+		"description": "Shows how to create a testimonial block that uses post meta data to store and display testimonial information.",
+		"name": "Post Meta Testimonial",
+		"tags": [
+			"meta",
+			"block"
+		],
+		"contributors": [
+			"juanmaguitar",
+			"ryanwelcher"
+		],
+		"created": "2025-02-27T15:15:38-05:00",
+		"lastModified": "2025-02-27T15:15:38-05:00"
 ]
