@@ -10,7 +10,7 @@ import {
 	TextControl,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
-import { PluginMoreMenuItem } from '@wordpress/edit-post';
+import { PluginMoreMenuItem } from '@wordpress/editor';
 import { useEntityProp } from '@wordpress/core-data';
 import { useCommand } from '@wordpress/commands';
 import { blockMeta } from '@wordpress/icons';
@@ -20,6 +20,7 @@ import { blockMeta } from '@wordpress/icons';
  */
 import './index.scss';
 
+console.log( 'sds' );
 /**
  * Toggle the Preset Manager.
  *
