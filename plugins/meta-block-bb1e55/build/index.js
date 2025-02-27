@@ -1,1 +1,242 @@
-(()=>{"use strict";var e,o={620:()=>{const e=window.wp.blocks,o=window.React,t=window.wp.components,r=window.wp.data,l=window.wp.coreData,n=window.wp.blockEditor,a=JSON.parse('{"UU":"block-development-examples/meta-block-bb1e55"}');(0,e.registerBlockType)(a.UU,{edit:function(){const e=(0,n.useBlockProps)(),a=(0,r.useSelect)((e=>e("core/editor").getCurrentPostType()),[]),[i,c]=(0,l.useEntityProp)("postType",a,"meta"),p=i.myguten_meta_block_field;return(0,o.createElement)("div",{...e},(0,o.createElement)(t.TextControl,{label:"Meta Block Field",value:p,onChange:e=>{c({...i,myguten_meta_block_field:e})}}))}})}},t={};function r(e){var l=t[e];if(void 0!==l)return l.exports;var n=t[e]={exports:{}};return o[e](n,n.exports,r),n.exports}r.m=o,e=[],r.O=(o,t,l,n)=>{if(!t){var a=1/0;for(s=0;s<e.length;s++){for(var[t,l,n]=e[s],i=!0,c=0;c<t.length;c++)(!1&n||a>=n)&&Object.keys(r.O).every((e=>r.O[e](t[c])))?t.splice(c--,1):(i=!1,n<a&&(a=n));if(i){e.splice(s--,1);var p=l();void 0!==p&&(o=p)}}return o}n=n||0;for(var s=e.length;s>0&&e[s-1][2]>n;s--)e[s]=e[s-1];e[s]=[t,l,n]},r.o=(e,o)=>Object.prototype.hasOwnProperty.call(e,o),(()=>{var e={57:0,350:0};r.O.j=o=>0===e[o];var o=(o,t)=>{var l,n,[a,i,c]=t,p=0;if(a.some((o=>0!==e[o]))){for(l in i)r.o(i,l)&&(r.m[l]=i[l]);if(c)var s=c(r)}for(o&&o(t);p<a.length;p++)n=a[p],r.o(e,n)&&e[n]&&e[n][0](),e[n]=0;return r.O(s)},t=globalThis.webpackChunk_block_development_examples_meta_block_bb1e55=globalThis.webpackChunk_block_development_examples_meta_block_bb1e55||[];t.forEach(o.bind(null,0)),t.push=o.bind(null,t.push.bind(t))})();var l=r.O(void 0,[350],(()=>r(620)));l=r.O(l)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/block.json":
+/*!************************!*\
+  !*** ./src/block.json ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"block-development-examples/meta-block-bb1e55","version":"0.1.0","title":"Meta Block bb1e55","category":"widgets","example":{},"textdomain":"block-development-examples","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","keywords":["bb1e55"]}');
+
+/***/ }),
+
+/***/ "./src/edit.js":
+/*!*********************!*\
+  !*** ./src/edit.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/core-data */ "@wordpress/core-data");
+/* harmony import */ var _wordpress_core_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_core_data__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__);
+
+/**
+ * WordPress dependencies.
+ */
+
+
+
+
+function Edit() {
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)();
+  const postType = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select('core/editor').getCurrentPostType(), []);
+  const [meta, setMeta] = (0,_wordpress_core_data__WEBPACK_IMPORTED_MODULE_3__.useEntityProp)('postType', postType, 'meta');
+  const metaFieldValue = meta.myguten_meta_block_field;
+  const updateMetaValue = newValue => {
+    setMeta({
+      ...meta,
+      myguten_meta_block_field: newValue
+    });
+  };
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...blockProps
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+    label: "Meta Block Field",
+    value: metaFieldValue,
+    onChange: updateMetaValue
+  }));
+}
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/core-data":
+/*!**********************************!*\
+  !*** external ["wp","coreData"] ***!
+  \**********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["coreData"];
+
+/***/ }),
+
+/***/ "@wordpress/data":
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["data"];
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = window["React"];
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './style.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/block.json");
+/**
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, {
+  /**
+   * @see ./edit.js
+   */
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=index.js.map
