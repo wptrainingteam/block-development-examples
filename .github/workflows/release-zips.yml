@@ -76,22 +76,32 @@ jobs:
                     gh release upload "${{ env.RELEASE_TAG }}" "$file"
                   done
 
-            # Update or create the "latest" release tag
-            - name: Update Latest Release
+            - name: Update or Create Latest Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                  # Delete existing latest tag and release if they exist
-                  gh release delete latest --yes || true
-                  git push origin :latest || true
-
-                  # Create new latest release
-                  gh release create latest \
-                    --title "Latest Release" \
-                    --notes "This is always the latest release. For permanent links, use the dated releases." \
-                    --latest
-
-                  # Upload files to latest release
+                  # Check if the latest release exists
+                  if gh release view latest; then
+                    # Check if the release is a draft and publish it if needed
+                    if gh release view latest --json isDraft --jq '.isDraft'; then
+                      echo "Publishing the draft release..."
+                      gh release edit latest --draft=false
+                    fi
+            
+                    # Update the existing release
+                    gh release edit latest \
+                      --title "Latest Release" \
+                      --notes "This is always the latest release. For permanent links, use the dated releases." \
+                      --latest
+                  else
+                    # Create the latest release if it doesn't exist
+                    gh release create latest \
+                      --title "Latest Release" \
+                      --notes "This is always the latest release. For permanent links, use the dated releases." \
+                      --latest
+                  fi
+            
+                  # Upload files to the latest release
                   for file in zips/*.zip; do
                     [ -e "$file" ] || continue
                     gh release upload latest "$file" --clobber
