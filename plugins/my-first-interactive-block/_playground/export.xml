@@ -100,7 +100,11 @@ Commenter avatars come from <a href="https://en.gravatar.com/">Gravatar</a>.]]><
 <p>Click the <code>Toggle</code> button - open the browser console to see the logs</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:block-development-examples/my-first-interactive-block /-->]]></content:encoded>
+<!-- wp:create-block/my-first-interactive-block /-->
+
+<!-- wp:create-block/my-first-interactive-block /-->
+
+<!-- wp:create-block/my-first-interactive-block /-->]]></content:encoded>
 			<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 			<wp:post_id>10</wp:post_id>
 			<wp:post_date><![CDATA[2023-11-13 16:17:57]]></wp:post_date>
