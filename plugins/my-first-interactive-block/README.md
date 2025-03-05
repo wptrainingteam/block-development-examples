@@ -2,7 +2,7 @@
 
 <!-- @TABLE EXAMPLES BEGIN -->
 
-This block has been created with the `create-block-interactive-template` and shows a basic structure of an interactive block that uses the [Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/).
+This block has been created with the `create-block-interactive-template` as explained in [Reference Guides > Interactivity API Reference > Quick start guide](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/iapi-quick-start-guide/). This example shows a basic structure of an interactive block that uses the [Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/).
 
 <!-- Please, do not remove these @TABLE EXAMPLES BEGIN and @TABLE EXAMPLES END comments or modify the table inside. This table is automatically generated from the data at _data/examples.json and _data/tags.json -->
 
