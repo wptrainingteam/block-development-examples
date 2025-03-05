@@ -1,7 +1,7 @@
 # Interactive Blocks Demos
 
 > [!IMPORTANT]  
-> WordPress now provides the [Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/), the official a recommended way to add interactivity in the Frontend for WordPress sites. Check the [Interactive Block using Interactivity API example](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/interactivity-api-block-833d15)
+> WordPress now provides the [Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/), the official a recommended way to add interactivity in the Frontend for WordPress sites. Check the [Interactive Block using Interactivity API example](https://github.com/WordPress/block-development-examples/tree/trunk/plugins/my-first-interactive-block)
 >
 > To better understand the benefits of using the Interactivity API versus other approaches you can check the docs [About the Interactivity API](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/iapi-about) and [Frequently Asked Questions](https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/iapi-faq/)
 

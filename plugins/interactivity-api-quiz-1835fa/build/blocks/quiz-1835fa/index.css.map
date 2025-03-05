@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/quiz-1835fa/index.css","mappings":";;;AAAA;CACC,eAAe;AAChB","sources":["webpack://@block-development-examples/interactivity-api-quiz-1835fa/./src/blocks/quiz-1835fa/editor.css"],"sourcesContent":[".wp-block-block-development-examples-quiz-1835fa .rich-text {\n\tdisplay: inline;\n}\n"],"names":[],"sourceRoot":""}

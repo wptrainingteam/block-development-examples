@@ -10,6 +10,13 @@ const config = {
 				printWidth: 1,
 			},
 		},
+		// Configure SCSS files to use double quotes
+		{
+			files: [ '*.scss' ],
+			options: {
+				singleQuote: false,
+			},
+		},
 	],
 };
 // Useful for editor integrations.

@@ -1,18 +1,17 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "block-development-examples/interactivity-api-block-833d15",
+	"name": "create-block/my-first-interactive-block",
 	"version": "0.1.0",
-	"title": "⭐️ Interactivity API Block",
+	"title": "My First Interactive Block",
 	"category": "widgets",
 	"icon": "media-interactive",
-	"description": "An interactive block with the Interactivity API",
+	"description": "An interactive block with the Interactivity API.",
 	"example": {},
-	"keywords": [ "833d15" ],
 	"supports": {
 		"interactivity": true
 	},
-	"textdomain": "block-development-examples",
+	"textdomain": "my-first-interactive-block",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

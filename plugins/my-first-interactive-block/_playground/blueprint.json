@@ -9,7 +9,7 @@
 				"resource": "git:directory",
 				"url": "https://github.com/WordPress/block-development-examples",
 				"ref": "HEAD",
-				"path": "plugins/interactivity-api-block-833d15"
+				"path": "plugins/my-first-interactive-block"
 			},
 			"options": {
 				"activate": true
@@ -22,7 +22,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/interactivity-api-block-833d15/_playground/export.xml"
+				"url": "https://raw.githubusercontent.com/WordPress/block-development-examples/trunk/plugins/my-first-interactive-block/_playground/export.xml"
 			}
 		}
 	]

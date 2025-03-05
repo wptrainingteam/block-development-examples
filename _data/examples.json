@@ -192,7 +192,7 @@
 		"lastModified": "2025-01-07T18:25:53+01:00"
 	},
 	{
-		"slug": "interactivity-api-block-833d15",
+		"slug": "my-first-interactive-block",
 		"description": "Demonstrates the usage of WordPress's Interactivity API to create blocks with enhanced interactive capabilities.",
 		"name": "Interactivity API Block",
 		"tags": [

@@ -3,11 +3,19 @@
  */
 import { store, getContext } from '@wordpress/interactivity';
 
-store( 'interactivity-api-block-833d15__store', {
+const { state } = store( 'create-block', {
+	state: {
+		get themeText() {
+			return state.isDark ? state.darkText : state.lightText;
+		},
+	},
 	actions: {
-		toggle: () => {
+		toggleOpen() {
 			const context = getContext();
 			context.isOpen = ! context.isOpen;
+		},
+		toggleTheme() {
+			state.isDark = ! state.isDark;
 		},
 	},
 	callbacks: {

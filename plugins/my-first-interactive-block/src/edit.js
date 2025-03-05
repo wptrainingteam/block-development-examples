@@ -19,7 +19,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
- * @return {WPElement} Element to render.
+ * @return {Element} Element to render.
  */
 export default function Edit() {
 	const blockProps = useBlockProps();
@@ -27,7 +27,7 @@ export default function Edit() {
 	return (
 		<p { ...blockProps }>
 			{ __(
-				'Example Interactivity API Block – hello from the editor!',
+				'My First Interactive Block – hello from the editor!',
 				'block-development-examples'
 			) }
 		</p>

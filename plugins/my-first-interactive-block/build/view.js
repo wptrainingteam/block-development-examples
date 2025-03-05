@@ -53,9 +53,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__wordpress_interactivity_8e89b257__;
 var __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
-/*!****************************************!*\
-  !*** ./src/blocks/quiz-1835fa/view.js ***!
-  \****************************************/
+/*!*********************!*\
+  !*** ./src/view.js ***!
+  \*********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/interactivity */ "@wordpress/interactivity");
 /**
@@ -64,32 +64,28 @@ __webpack_require__.r(__webpack_exports__);
 
 const {
   state
-} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('quiz-1835fa-project-store', {
+} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('create-block', {
   state: {
-    get answered() {
-      return Object.values(state.quizzes).filter(v => v.current !== null).length;
-    },
-    get allAnswered() {
-      return state.answered === Object.keys(state.quizzes).length;
-    },
-    get correct() {
-      return state.showAnswers ? Object.values(state.quizzes).filter(v => v.current === v.correct).length : '?';
-    },
-    get allCorrect() {
-      return state.correct === Object.keys(state.quizzes).length;
+    get themeText() {
+      return state.isDark ? state.darkText : state.lightText;
     }
   },
   actions: {
-    checkAnswers: () => {
-      state.showAnswers = true;
-      state.selected = null;
+    toggleOpen() {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      context.isOpen = !context.isOpen;
     },
-    reset: () => {
-      state.showAnswers = false;
-      state.selected = null;
-      Object.values(state.quizzes).forEach(quiz => {
-        quiz.current = null;
-      });
+    toggleTheme() {
+      state.isDark = !state.isDark;
+    }
+  },
+  callbacks: {
+    logIsOpen: () => {
+      const {
+        isOpen
+      } = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      // Log the value of `isOpen` each time it changes.
+      console.log(`Is open: ${isOpen}`);
     }
   }
 });

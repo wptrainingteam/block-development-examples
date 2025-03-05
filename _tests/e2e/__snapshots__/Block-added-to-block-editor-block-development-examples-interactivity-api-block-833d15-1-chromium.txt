@@ -1,1 +1,1 @@
-<!-- wp:block-development-examples/interactivity-api-block-833d15 /-->
+<!-- wp:block-development-examples/my-first-interactive-block /-->
